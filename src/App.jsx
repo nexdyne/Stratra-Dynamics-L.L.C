@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { 
   Home, 
@@ -6,7 +6,9 @@ import {
   Linkedin, 
   Phone, 
   Mail, 
-  MapPin
+  MapPin, 
+  Menu,
+  X
 } from 'lucide-react';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
@@ -32,6 +34,16 @@ import ContactPage from './pages/ContactPage';
 
 // Main App Component with Navigation
 const App = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <Router>
       <ScrollToTop />
@@ -63,17 +75,17 @@ const App = () => {
             <div className="flex justify-between items-center py-4">
               {/* Logo - Positioned to the left */}
               <div className="flex items-center">
-                <Link to="/" className="text-2xl font-bold">
+                <Link to="/" className="text-2xl font-bold" onClick={closeMobileMenu}>
                   <span className="text-gray-800">Centauri-</span>
                   <span className="text-orange-500">Pro</span>
-                  <span className="text-gray-600 text-lg ml-2">Consulting</span>
+                  <span className="text-gray-600 text-lg ml-2 hidden sm:inline">Consulting</span>
                 </Link>
-                <div className="ml-4 text-sm text-gray-600">
+                <div className="ml-4 text-sm text-gray-600 hidden lg:block">
                   Proximity to the Future. Precision for Today.
                 </div>
               </div>
 
-              {/* Navigation Links */}
+              {/* Desktop Navigation Links */}
               <div className="hidden md:flex items-center space-x-8">
                 <Link to="/#services" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
                   Services
@@ -94,7 +106,72 @@ const App = () => {
                   Contact
                 </Link>
               </div>
+
+              {/* Mobile Hamburger Menu Button */}
+              <div className="md:hidden">
+                <button
+                  onClick={toggleMobileMenu}
+                  className="text-gray-700 hover:text-orange-600 focus:outline-none focus:text-orange-600 transition-colors"
+                  aria-label="Toggle mobile menu"
+                >
+                  {isMobileMenuOpen ? (
+                    <X className="w-6 h-6" />
+                  ) : (
+                    <Menu className="w-6 h-6" />
+                  )}
+                </button>
             </div>
+            </div>
+
+            {/* Mobile Navigation Menu */}
+            {isMobileMenuOpen && (
+              <div className="md:hidden">
+                <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                  <Link 
+                    to="/#services" 
+                    className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                    onClick={closeMobileMenu}
+                  >
+                    Services
+                  </Link>
+                  <Link 
+                    to="/projects" 
+                    className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                    onClick={closeMobileMenu}
+                  >
+                    Projects
+                  </Link>
+                  <Link 
+                    to="/about" 
+                    className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                    onClick={closeMobileMenu}
+                  >
+                    About
+                  </Link>
+                  <Link 
+                    to="/news" 
+                    className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                    onClick={closeMobileMenu}
+                  >
+                    News
+                  </Link>
+                  <Link 
+                    to="/careers" 
+                    className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                    onClick={closeMobileMenu}
+                  >
+                    Careers
+                  </Link>
+                  <Link 
+                    to="/contact" 
+                    className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                    onClick={closeMobileMenu}
+                  >
+                    Contact
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </nav>
 
