@@ -32,3 +32,4 @@ Professional website for Centauri-Pro Consulting (Stratra Dynamics L.L.C) — a 
 
           - **Production**: https://stratra-dynamics-llc-production.up.railway.app
           - - **Backup (Vercel)**: https://stratra-dynamics-l-l-c.vercel.app# Stratra-Dynamics-L.L.C
+
