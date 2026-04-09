@@ -1,0 +1,26 @@
+name: Cleanup bloat files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remove bloat files
+        run: |
+          git rm -r --cached node_modules/ || true
+          git rm -r --cached dist/ || true
+          git rm -r --cached src/assets/ || true
+          git rm --cached .DS_Store || true
+          git rm --cached src/.DS_Store || true
+          git rm --cached public/assets/react.svg || true
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: remove node_modules, dist, src/assets, and .DS_Store from repo"
+          git push
