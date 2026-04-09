@@ -3,6 +3,9 @@ name: Cleanup bloat files
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   cleanup:
     runs-on: ubuntu-latest
@@ -11,12 +14,12 @@ jobs:
 
       - name: Remove bloat files
         run: |
-          git rm -r --cached node_modules/ || true
-          git rm -r --cached dist/ || true
-          git rm -r --cached src/assets/ || true
-          git rm --cached .DS_Store || true
-          git rm --cached src/.DS_Store || true
-          git rm --cached public/assets/react.svg || true
+          git rm -r node_modules/ || true
+          git rm -r dist/ || true
+          git rm -r src/assets/ || true
+          git rm .DS_Store || true
+          git rm src/.DS_Store || true
+          git rm public/assets/react.svg || true
 
       - name: Commit and push
         run: |
