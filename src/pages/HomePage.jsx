@@ -22,7 +22,7 @@ const HomePage = () => {
     },
     {
       title: "Full-Lifecycle Environmental Solutions",
-      subtitle: "From assessment through remediation â one partner, complete accountability.",
+      subtitle: "From assessment through remediation — one partner, complete accountability.",
       image: '/assets/hero2.jpg?' + Date.now(),
     },
     {
@@ -159,7 +159,7 @@ const HomePage = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
             <div className="w-16 h-1 bg-orange-500 mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl">
-              We deliver a full range of environmental and construction services â from hazardous materials assessment through remediation, renovation, and compliance.
+              We deliver a full range of environmental and construction services — from hazardous materials assessment through remediation, renovation, and compliance.
             </p>
           </div>
 
@@ -349,7 +349,7 @@ const HomePage = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to start your project?</h2>
           <p className="text-gray-400 mb-8 text-lg">
-            From lead assessment to full remediation â let's discuss how we can help.
+            From lead assessment to full remediation — let's discuss how we can help.
           </p>
           <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded font-semibold transition-colors inline-flex items-center gap-2">
             Contact Us
