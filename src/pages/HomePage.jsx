@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Shield,
@@ -8,40 +8,62 @@ import {
   BarChart3,
   GraduationCap,
   ChevronRight,
-  ArrowRight
+  ArrowRight,
+  Award,
+  Users,
+  Building2,
+  Clock
 } from 'lucide-react';
 
-const HomePage = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+// Scroll-reveal hook
+const useInView = (threshold = 0.15) => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+      { threshold }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold]);
+  return [ref, isVisible];
+};
 
-  const heroSlides = [
-    {
-      title: "Protecting People. Restoring Environments.",
-      subtitle: "Certified lead abatement and hazardous materials removal for federal, commercial, and residential facilities.",
-      image: '/assets/hero1.jpeg?' + Date.now(),
-    },
-    {
-      title: "Full-Lifecycle Environmental Solutions",
-      subtitle: "From assessment through remediation — one partner, complete accountability.",
-      image: '/assets/hero2.jpg?' + Date.now(),
-    },
-    {
-      title: "Compliance-Driven. Safety-First.",
-      subtitle: "EPA, OSHA, and HUD-aligned processes ensuring regulatory excellence on every project.",
-      image: '/assets/hero3.webp?' + Date.now(),
-    }
-  ];
+// Animated counter
+const Counter = ({ end, suffix = '', duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const [ref, isVisible] = useInView(0.5);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
+    if (!isVisible || hasAnimated.current) return;
+    hasAnimated.current = true;
+    const steps = 60;
+    const increment = end / steps;
+    let current = 0;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+      current += increment;
+      if (current >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
     return () => clearInterval(timer);
-  }, []);
+  }, [isVisible, end, duration]);
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
+  return <span ref={ref}>{count}{suffix}</span>;
+};
+
+const HomePage = () => {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setHeroLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const services = [
     {
@@ -88,78 +110,144 @@ const HomePage = () => {
     }
   ];
 
+  const stats = [
+    { icon: Clock, value: 15, suffix: '+', label: 'Years of Experience' },
+    { icon: Building2, value: 200, suffix: '+', label: 'Projects Delivered' },
+    { icon: Users, value: 50, suffix: '+', label: 'Team Members' },
+    { icon: Award, value: 12, suffix: '', label: 'Certifications Held' },
+  ];
+
+  // Scroll reveal refs for services
+  const [servicesRef, servicesVisible] = useInView(0.1);
+  const [aboutRef, aboutVisible] = useInView(0.1);
+  const [newsRef, newsVisible] = useInView(0.1);
+
   return (
     <div className="bg-white">
-      {/* Hero Section with Carousel */}
-      <section className="relative h-[75vh] min-h-[500px] overflow-hidden">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
-              <div className="absolute inset-0 bg-black/50"></div>
-            </div>
-            <div className="relative z-10 flex items-center h-full">
-              <div className="max-w-7xl mx-auto px-4 w-full">
-                <div className="max-w-3xl">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-                    {slide.title}
-                  </h1>
-                  <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed">
-                    {slide.subtitle}
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded font-semibold transition-colors inline-flex items-center gap-2">
-                      Request Consultation
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                    <Link to="/#services" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded font-semibold transition-colors">
-                      Our Services
-                    </Link>
-                  </div>
+      {/* Hero Section - Single powerful image */}
+      <section className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[20000ms] ease-linear"
+          style={{
+            backgroundImage: 'url(/assets/hero1.jpeg)',
+            transform: heroLoaded ? 'scale(1.08)' : 'scale(1)',
+          }}
+        >
+          {/* Gradient overlay - lighter, more professional */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-gray-900/20"></div>
+        </div>
+
+        <div className="relative z-10 flex items-center h-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-2xl">
+              {/* Eyebrow */}
+              <div
+                className="transition-all duration-1000 ease-out"
+                style={{
+                  opacity: heroLoaded ? 1 : 0,
+                  transform: heroLoaded ? 'translateY(0)' : 'translateY(20px)',
+                }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-px bg-orange-500"></div>
+                  <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">
+                    Environmental Services & Construction Management
+                  </span>
                 </div>
+              </div>
+
+              {/* Headline */}
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-[1.1] transition-all duration-1000 delay-200 ease-out"
+                style={{
+                  opacity: heroLoaded ? 1 : 0,
+                  transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
+                }}
+              >
+                Built to protect people
+                <span className="block text-orange-400">and restore environments.</span>
+              </h1>
+
+              {/* Subtitle - brief */}
+              <p
+                className="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed max-w-xl transition-all duration-1000 delay-400 ease-out"
+                style={{
+                  opacity: heroLoaded ? 1 : 0,
+                  transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
+                }}
+              >
+                From hazardous materials assessment through full remediation
+                and construction closeout. One partner, complete accountability.
+              </p>
+
+              {/* Single CTA */}
+              <div
+                className="transition-all duration-1000 delay-500 ease-out"
+                style={{
+                  opacity: heroLoaded ? 1 : 0,
+                  transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
+                }}
+              >
+                <Link
+                  to="/contact"
+                  className="group bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded font-semibold transition-all duration-300 inline-flex items-center gap-3 text-lg"
+                >
+                  Start a Conversation
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
-        ))}
+        </div>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`h-1 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-orange-500 w-8' : 'bg-white/50 w-4'
-              }`}
-            />
-          ))}
+        {/* Scroll indicator */}
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 transition-all duration-1000 delay-700"
+          style={{ opacity: heroLoaded ? 1 : 0 }}
+        >
+          <span className="text-white/50 text-xs tracking-widest uppercase">Scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent animate-pulse"></div>
         </div>
       </section>
 
-      {/* Tagline Bar */}
-      <section className="bg-gray-900 py-6">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-lg md:text-xl text-gray-300 font-light tracking-wide">
-            One partner. Full lifecycle environmental accountability.
-          </p>
+      {/* Stats / Credibility Bar */}
+      <section className="bg-gray-900 py-10 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <Icon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">
+                    <Counter end={stat.value} suffix={stat.suffix} />
+                  </div>
+                  <div className="text-gray-400 text-sm tracking-wide">{stat.label}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - with scroll reveal */}
       <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            ref={servicesRef}
+            className="mb-16 transition-all duration-700 ease-out"
+            style={{
+              opacity: servicesVisible ? 1 : 0,
+              transform: servicesVisible ? 'translateY(0)' : 'translateY(30px)',
+            }}
+          >
+            <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">What We Do</span>
+            <h2 className="text-4xl font-bold text-gray-900 mt-3 mb-4">Our Services</h2>
             <div className="w-16 h-1 bg-orange-500 mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl">
-              We deliver a full range of environmental and construction services — from hazardous materials assessment through remediation, renovation, and compliance.
+              We deliver a full range of environmental and construction services,
+              from hazardous materials assessment through remediation, renovation, and compliance.
             </p>
           </div>
 
@@ -170,14 +258,19 @@ const HomePage = () => {
                 <Link
                   key={index}
                   to={service.link}
-                  className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-300"
+                  className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-500"
+                  style={{
+                    opacity: servicesVisible ? 1 : 0,
+                    transform: servicesVisible ? 'translateY(0)' : 'translateY(40px)',
+                    transitionDelay: `${200 + index * 100}ms`,
+                  }}
                 >
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-4 left-4">
@@ -207,12 +300,20 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - with scroll reveal */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
+        <div
+          ref={aboutRef}
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-out"
+          style={{
+            opacity: aboutVisible ? 1 : 0,
+            transform: aboutVisible ? 'translateY(0)' : 'translateY(30px)',
+          }}
+        >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">About Centauri-Pro Consulting</h2>
+              <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Who We Are</span>
+              <h2 className="text-4xl font-bold text-gray-900 mt-3 mb-4">About Centauri-Pro Consulting</h2>
               <div className="w-16 h-1 bg-orange-500 mb-6"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 We are an environmental services and construction management firm specializing in
@@ -286,12 +387,20 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Latest News Section */}
+      {/* Latest News Section - with scroll reveal */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div
+          ref={newsRef}
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-out"
+          style={{
+            opacity: newsVisible ? 1 : 0,
+            transform: newsVisible ? 'translateY(0)' : 'translateY(30px)',
+          }}
+        >
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest News</h2>
+              <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Insights</span>
+              <h2 className="text-4xl font-bold text-gray-900 mt-3 mb-4">Latest News</h2>
               <div className="w-16 h-1 bg-orange-500"></div>
             </div>
             <Link to="/news" className="hidden md:inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
@@ -321,7 +430,15 @@ const HomePage = () => {
                 link: "/news/michigan-lead-abatement-demand"
               }
             ].map((article, index) => (
-              <div key={index} className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-orange-200 transition-all duration-300">
+              <div
+                key={index}
+                className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-orange-200 transition-all duration-500"
+                style={{
+                  opacity: newsVisible ? 1 : 0,
+                  transform: newsVisible ? 'translateY(0)' : 'translateY(30px)',
+                  transitionDelay: `${200 + index * 150}ms`,
+                }}
+              >
                 <div className="p-6">
                   <div className="text-orange-600 text-sm font-semibold mb-3">{article.date}</div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">{article.title}</h3>
@@ -351,9 +468,9 @@ const HomePage = () => {
           <p className="text-gray-400 mb-8 text-lg">
             From lead assessment to full remediation — let's discuss how we can help.
           </p>
-          <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded font-semibold transition-colors inline-flex items-center gap-2">
+          <Link to="/contact" className="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded font-semibold transition-all duration-300 inline-flex items-center gap-2 text-lg group">
             Contact Us
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>
