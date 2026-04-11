@@ -216,11 +216,8 @@ const LeadAbatementPage = () => {
           </Link>
         </div>
       </section>
-  
-  
-    </div>
-  
-  
-  Ý
-  
-eqÕÜY][XYX][Y[YÙN
+    </div>
+  )
+}
+
+export default LeadAbatementPage
