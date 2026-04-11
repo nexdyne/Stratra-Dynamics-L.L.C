@@ -55,7 +55,7 @@ const ConstructionRenovationPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <Building className="v-10 h-10 text-orange-600 mb-4" />
+              <Building className="w-10 h-10 text-orange-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Owner's Representation</h3>
               <p className="text-gray-600">
                 Dedicated oversight ensuring your interests are protected throughout construction and renovation projects.
@@ -153,7 +153,7 @@ const ConstructionRenovationPage = () => {
                   <Shield className="w-6 h-6 text-orange-600 mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Asbestos</h4>
-                    <p className="text-gray-600 text-sm">Common in insulation, tiles, roofingârequires specialized removal</p>
+                    <p className="text-gray-600 text-sm">Common in insulation, tiles, roofing—requires specialized removal</p>
                   </div>
                 </div>
 
