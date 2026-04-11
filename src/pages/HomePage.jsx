@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Building, 
-  Zap, 
-  Monitor, 
-  Package, 
-  Truck, 
+import {
+  Shield,
+  FlaskConical,
+  HardHat,
+  Leaf,
   BarChart3,
-  ChevronLeft,
-  ChevronRight
+  GraduationCap,
+  ChevronRight,
+  ArrowRight
 } from 'lucide-react';
 
 const HomePage = () => {
@@ -16,18 +16,18 @@ const HomePage = () => {
 
   const heroSlides = [
     {
-      title: "Building Tomorrow's Government Solutions",
-      subtitle: "Modern infrastructure for federal missions",
+      title: "Protecting People. Restoring Environments.",
+      subtitle: "Certified lead abatement and hazardous materials removal for federal, commercial, and residential facilities.",
       image: '/assets/hero1.jpeg?' + Date.now(),
     },
     {
-      title: "Delivering Mission-Critical Infrastructure",
-      subtitle: "Precision execution for government projects",
+      title: "Full-Lifecycle Environmental Solutions",
+      subtitle: "From assessment through remediation â one partner, complete accountability.",
       image: '/assets/hero2.jpg?' + Date.now(),
     },
     {
-      title: "Powering Smart Government Operations",
-      subtitle: "AI-driven solutions for federal agencies",
+      title: "Compliance-Driven. Safety-First.",
+      subtitle: "EPA, OSHA, and HUD-aligned processes ensuring regulatory excellence on every project.",
       image: '/assets/hero3.webp?' + Date.now(),
     }
   ];
@@ -39,22 +39,59 @@ const HomePage = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
-
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
 
+  const services = [
+    {
+      icon: Shield,
+      title: "Lead Abatement & Hazardous Materials Removal",
+      description: "Safe, compliant removal of lead-based paint, asbestos, mold, PCBs, and other hazardous materials from federal, commercial, and residential facilities.",
+      link: "/services/lead-abatement-hazardous-materials",
+      image: "/assets/Incident-and-Compliance-Management-for-Construction.webp",
+    },
+    {
+      icon: FlaskConical,
+      title: "Environmental Consulting & Industrial Hygiene",
+      description: "Comprehensive environmental surveys, air quality testing, industrial hygiene assessments, and risk evaluation by certified professionals.",
+      link: "/services/environmental-consulting-industrial-hygiene",
+      image: "/assets/iot.jpg",
+    },
+    {
+      icon: HardHat,
+      title: "Construction & Renovation Management",
+      description: "Owner's representation, design management, and construction oversight for renovation and new-build projects requiring environmental compliance.",
+      link: "/services/construction-renovation-management",
+      image: "/assets/federal-pro.jpg",
+    },
+    {
+      icon: Leaf,
+      title: "Commissioning, Energy & Sustainability",
+      description: "Smart building commissioning, energy optimization, and sustainable systems integration for government and commercial facilities.",
+      link: "/services/commissioning-energy-sustainability",
+      image: "/assets/enery.jpg",
+    },
+    {
+      icon: BarChart3,
+      title: "Estimating, Scheduling & Risk Management",
+      description: "Project forecasting, cost estimating, schedule management, and predictive risk assessment for complex environmental and construction projects.",
+      link: "/services/estimating-scheduling-risk-management",
+      image: "/assets/est.jpg",
+    },
+    {
+      icon: GraduationCap,
+      title: "Training & Compliance Services",
+      description: "HAZWOPER, Lead-Safe RRP, asbestos supervisor, and safety certification training with regulatory compliance program development.",
+      link: "/services/training-compliance-services",
+      image: "/assets/perdictive-analytics.webp",
+    }
+  ];
+
   return (
-    <div className=" bg-white">
+    <div className="bg-white">
       {/* Hero Section with Carousel */}
-      <section className="relative h-96 md:h-[70vh] overflow-hidden">
+      <section className="relative h-[75vh] min-h-[500px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
@@ -66,180 +103,182 @@ const HomePage = () => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="absolute inset-0 bg-opacity-40"></div>
+              <div className="absolute inset-0 bg-black/50"></div>
             </div>
-            <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
-              <div className="max-w-4xl">
-                <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                  {slide.title}
-                </h1>
-                <p className="text-xl md:text-2xl mb-8 text-gray-200">
-                  {slide.subtitle}
-                </p>
-                <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                  REQUEST CONSULTATION
-                </Link>
+            <div className="relative z-10 flex items-center h-full">
+              <div className="max-w-7xl mx-auto px-4 w-full">
+                <div className="max-w-3xl">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+                    {slide.title}
+                  </h1>
+                  <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed">
+                    {slide.subtitle}
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded font-semibold transition-colors inline-flex items-center gap-2">
+                      Request Consultation
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/#services" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded font-semibold transition-colors">
+                      Our Services
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         ))}
 
-        {/* Navigation Arrows */}
-        {/* <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all"
-        >
-          <ChevronRight size={24} />
-        </button> */}
-
         {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide ? 'bg-orange-500' : 'bg-white bg-opacity-50'
+              className={`h-1 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-orange-500 w-8' : 'bg-white/50 w-4'
               }`}
             />
           ))}
         </div>
       </section>
 
+      {/* Tagline Bar */}
+      <section className="bg-gray-900 py-6">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <p className="text-lg md:text-xl text-gray-300 font-light tracking-wide">
+            One partner. Full lifecycle environmental accountability.
+          </p>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-10 bg-gray-50">
+      <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-6">
-            <h2 className="text-4xl font-bold text-gray-700 mb-4">Our Services</h2>
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <div className="w-16 h-1 bg-orange-500 mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl">
+              We deliver a full range of environmental and construction services â from hazardous materials assessment through remediation, renovation, and compliance.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Construction & Infrastructure Management",
-                description: "Modern federal facility construction with AI-driven project oversight and compliance management.",
-                image: "/assets/Incident-and-Compliance-Management-for-Construction.webp",
-                
-              },
-              {
-                title: "Commissioning, Energy & Sustainability",
-                description: "Smart building systems and energy optimization for government facilities with IoT integration.",
-                image: "/assets/enery.jpg",
-                
-              },
-              {
-                title: "Smart City & Government IT Solutions",
-                description: "Digital transformation and technology integration for modern government operations.",
-                image: "/assets/smart-city.jpg",
-                
-              },
-              {
-                title: "Government Supply & Procurement Solutions",
-                description: "Streamlined procurement processes with digital supply chain management and compliance tracking.",
-                image: "/assets/gove.webp",
-                
-              },
-              {
-                title: "Public Sector Logistics & Distribution",
-                description: "Efficient logistics coordination with real-time tracking and automated delivery systems.",
-                image: "/assets/log.jpg",
-                
-              },
-              {
-                title: "Estimating, Scheduling & Risk Management",
-                description: "AI-powered project forecasting with predictive analytics and automated risk assessment.",
-                image: "/assets/est.jpg",
-                
-              }
-            ].map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                {/* Image Header Section */}
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0  flex items-center justify-center text-center p-6">
-                    <h3 className="text-xl font-bold text-white leading-tight">{service.title}</h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <Link
+                  key={index}
+                  to={service.link}
+                  className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all duration-300"
+                >
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <div className="bg-orange-500 text-white p-2 rounded">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                
-                {/* White Content Section */}
-                <div className="p-6">
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <Link 
-                    to={`/services/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
-                    className={`inline-block   text-orange-600   font-medium transition-colors`}
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {service.description}
+                    </p>
+                    <span className="inline-flex items-center text-orange-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                      Learn More
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-10 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-6 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">About Centauri-Pro Consulting</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We are a forward-thinking government solutions firm specializing in AI-driven project management, 
-                compliance-by-design approaches, and comprehensive federal contracting services.
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">About Centauri-Pro Consulting</h2>
+              <div className="w-16 h-1 bg-orange-500 mb-6"></div>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                We are an environmental services and construction management firm specializing in
+                hazardous materials abatement, industrial hygiene consulting, and compliance-driven
+                project delivery for government and commercial clients.
               </p>
-              <div className="bg-gray-50 border-l-4  p-6 mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Our Dashboard Advantage</h3>
-                <ul className="text-gray-700 space-y-2">
-                  <li>• Real-time task completion and field reporting</li>
-                  <li>• Automated compliance documentation and audit readiness</li>
-                  <li>• Predictive risk indicators across schedule, performance, and staffing</li>
-                  <li>• Integrated field team quality assurance and safety metrics</li>
+              <div className="bg-white border-l-4 border-orange-500 p-6 mb-6 rounded-r-lg shadow-sm">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Our Approach</h3>
+                <ul className="text-gray-700 space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    EPA, OSHA, and HUD regulatory compliance on every project
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    Certified Industrial Hygienists and licensed abatement professionals
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    Real-time project tracking with automated compliance documentation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    Single-source accountability from assessment through remediation
+                  </li>
                 </ul>
               </div>
-              <p className="text-gray-600">
-                Our TBM (Technology Business Model) approach ensures NIST-aligned governance while delivering 
-                measurable outcomes for federal agencies.
-              </p>
+              <Link to="/about" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
+                Learn more about us
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
-            <div className="bg-gray-100 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="bg-orange-500 text-white p-2 rounded-full mr-4 mt-1">
-                    <Building className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Proven Experience</h4>
-                    <p className="text-gray-600">Leadership team with extensive government contracting background</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-orange-500 text-white p-2 rounded-full mr-4 mt-1">
-                    <Monitor className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">AI-Driven Innovation</h4>
-                    <p className="text-gray-600">Cutting-edge technology integration for superior project outcomes</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-orange-500 text-white p-2 rounded-full mr-4 mt-1">
-                    <BarChart3 className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Compliance Excellence</h4>
-                    <p className="text-gray-600">NIST-aligned processes ensuring regulatory compliance</p>
-                  </div>
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+                <h3 className="text-xl font-bold text-gray-900 mb-6">Why Choose Us</h3>
+                <div className="space-y-5">
+                  {[
+                    {
+                      icon: Shield,
+                      title: "Licensed & Certified",
+                      desc: "EPA Lead-Safe certified, HAZWOPER trained, CIH-backed assessments"
+                    },
+                    {
+                      icon: HardHat,
+                      title: "Full-Service Capability",
+                      desc: "Assessment, abatement, construction, and commissioning under one roof"
+                    },
+                    {
+                      icon: BarChart3,
+                      title: "Compliance Excellence",
+                      desc: "NIST-aligned processes with automated audit readiness and documentation"
+                    }
+                  ].map((item, i) => {
+                    const ItemIcon = item.icon;
+                    return (
+                      <div key={i} className="flex items-start gap-4">
+                        <div className="bg-orange-50 text-orange-600 p-2.5 rounded-lg flex-shrink-0">
+                          <ItemIcon className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                          <p className="text-gray-600 text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -248,45 +287,74 @@ const HomePage = () => {
       </section>
 
       {/* Latest News Section */}
-      <section className="py-10 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest News</h2>
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest News</h2>
+              <div className="w-16 h-1 bg-orange-500"></div>
+            </div>
+            <Link to="/news" className="hidden md:inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
+              View all news
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                date: "December 15, 2024",
-                title: "AI in Government Contracting: The Future is Now",
-                description: "Exploring how artificial intelligence is transforming government project management and compliance oversight.",
-                link: "/news/ai-government-contracting"
+                date: "March 2026",
+                title: "EPA Updates Lead-Safe RRP Rule: What Contractors Need to Know",
+                description: "New regulations expand renovation, repair, and painting requirements for pre-1978 buildings. Here's how to stay compliant.",
+                link: "/news/epa-lead-safe-rrp-update"
               },
               {
-                date: "December 10, 2024",
-                title: "Sustainable Infrastructure: Building for Tomorrow",
-                description: "How energy optimization and smart building systems are revolutionizing government facilities.",
-                link: "/news/sustainable-infrastructure"
+                date: "February 2026",
+                title: "Centauri-Pro Achieves HAZWOPER Certification Milestone",
+                description: "Our team completes advanced hazardous materials operations training, expanding our federal contracting capabilities.",
+                link: "/news/hazwoper-certification"
               },
               {
-                date: "December 5, 2024",
-                title: "Digital Transformation in Federal Programs",
-                description: "The role of digital twins and BIM technology in modern construction project management.",
-                link: "/news/digital-transformation"
+                date: "January 2026",
+                title: "Michigan Lead Abatement: Growing Demand for Certified Contractors",
+                description: "State and federal funding is driving unprecedented demand for licensed lead abatement professionals across Michigan.",
+                link: "/news/michigan-lead-abatement-demand"
               }
             ].map((article, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div key={index} className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-orange-200 transition-all duration-300">
                 <div className="p-6">
-                  <div className="text-orange-600 text-sm font-semibold mb-2">{article.date}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h3>
-                  <p className="text-gray-600 mb-4">{article.description}</p>
-                  <Link to={article.link} className="text-orange-600 hover:text-orange-700 font-semibold">
-                    Read more →
+                  <div className="text-orange-600 text-sm font-semibold mb-3">{article.date}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">{article.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{article.description}</p>
+                  <Link to={article.link} className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm">
+                    Read more
+                    <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-8 text-center md:hidden">
+            <Link to="/news" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
+              View all news
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gray-900 py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to start your project?</h2>
+          <p className="text-gray-400 mb-8 text-lg">
+            From lead assessment to full remediation â let's discuss how we can help.
+          </p>
+          <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded font-semibold transition-colors inline-flex items-center gap-2">
+            Contact Us
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
     </div>
