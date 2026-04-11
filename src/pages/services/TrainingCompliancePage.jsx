@@ -96,7 +96,7 @@ const TrainingCompliancePage = () => {
 
             <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <Users className="w-10 h-10 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Reculatory Documentation</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Regulatory Documentation</h3>
               <p className="text-gray-600">
                 Complete regulatory documentation, record-keeping, and certification management.
               </p>
@@ -144,7 +144,47 @@ const TrainingCompliancePage = () => {
               <p className="text-gray-600 mb-6">
                 EPA-approved training for Renovate, Repair and Paint rule compliance. Essential for anyone working on pre-1978 structures.
               </p>
-<AHERA compliance training</span>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">EPA RRP certification training</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">Lead-safe work practices</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">Hands-on practical training</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">Ongoing refresher updates</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Asbestos Training</h3>
+              <p className="text-gray-600 mb-6">
+                Comprehensive training for asbestos awareness, identification, and safe handling. Available for contractors and supervisors.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">Asbestos awareness training</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">Contractor certification</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">Supervisor qualification</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600">AHERA compliance training</span>
                 </li>
               </ul>
             </div>
@@ -161,7 +201,7 @@ const TrainingCompliancePage = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">Reculatory safety audits</span>
+                  <span className="text-gray-600">Regulatory safety audits</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
@@ -205,8 +245,8 @@ const TrainingCompliancePage = () => {
                   <span className="text-gray-600">Engaging hands-on instruction</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="v-5 h-5 text-orange-600 mr-3" />
-                  <span className="text-gray-600">ReaR-p�rld case studies and scenarios</span>
+                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3" />
+                  <span className="text-gray-600">Real-world case studies and scenarios</span>
                 </li>
               </ul>
             </div>
@@ -261,7 +301,7 @@ const TrainingCompliancePage = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Reculatory Updates</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Regulatory Updates</h3>
                 <p className="text-gray-600 text-sm">
                   We keep you informed of changes to EPA, OSHA, and state regulations, updating training content accordingly.
                 </p>
@@ -293,8 +333,7 @@ const TrainingCompliancePage = () => {
         </div>
       </section>
     </div>
-  
-  B) 
-}
+  )
+}
 
 export default TrainingCompliancePage
