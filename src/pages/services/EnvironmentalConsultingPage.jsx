@@ -234,11 +234,7 @@ const EnvironmentalConsultingPage = () => {
           </Link>
         </div>
       </section>
-  
-  
-    
-  
-  </div>
+    </div>
   )
 }
 
