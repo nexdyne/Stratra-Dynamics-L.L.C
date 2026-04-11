@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {
-  Home,
-  Facebook,
-  Linkedin,
-  Phone,
   Mail,
   MapPin,
   Menu,
@@ -62,43 +58,36 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-white">
-        {/* Top Bar */}
-        <div className="bg-gray-900 text-gray-400 py-2 text-sm">
-          <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-            <span className="hidden sm:inline">Proximity to the Future. Precision for Today.</span>
-            <div className="flex items-center space-x-4 ml-auto">
-              <a href="#" className="hover:text-white transition-colors">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <span className="text-gray-600">|</span>
-              <a href="tel:+1234567890" className="hover:text-white transition-colors flex items-center gap-1">
-                <Phone className="w-3 h-3" />
-                <span className="hidden sm:inline">(555) 123-4567</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Main Navigation */}
-        <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between items-center py-4">
+        <nav className="bg-white sticky top-0 z-50 border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Utility Row */}
+            <div className="hidden md:flex justify-end items-center py-2 text-sm border-b border-gray-100">
+              <Link to="/careers" className="text-gray-500 hover:text-gray-900 transition-colors">
+                Careers
+              </Link>
+              <span className="text-gray-300 mx-3">|</span>
+              <Link to="/contact" className="text-gray-500 hover:text-gray-900 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+
+            <div className="flex justify-between items-center py-5">
               {/* Logo */}
-              <div className="flex items-center">
-                <Link to="/" className="text-2xl font-bold" onClick={closeMobileMenu}>
-                  <span className="text-gray-900">Centauri-</span>
-                  <span className="text-orange-500">Pro</span>
-                  <span className="text-gray-500 text-lg ml-2 hidden sm:inline">Consulting</span>
+              <div className="flex-shrink-0">
+                <Link to="/" className="flex flex-col" onClick={closeMobileMenu}>
+                  <span className="text-3xl font-bold tracking-tight text-gray-900 leading-none">
+                    CENTAURI-PRO
+                  </span>
+                  <span className="w-8 h-1 bg-orange-500 mt-1"></span>
                 </Link>
               </div>
 
               {/* Desktop Navigation Links */}
-              <div className="hidden md:flex items-center space-x-8">
-                <Link to="/about" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+              <div className="hidden md:flex items-center space-x-10">
+                <Link to="/about" className="text-sm font-semibold text-gray-700 hover:text-orange-600 tracking-wider uppercase transition-colors flex items-center gap-1">
                   About Us
+                  <ChevronDown className="w-3.5 h-3.5" />
                 </Link>
 
                 {/* Services Dropdown */}
@@ -107,19 +96,19 @@ const App = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <button className="text-gray-700 hover:text-orange-600 font-medium transition-colors flex items-center gap-1">
+                  <button className="text-sm font-semibold text-gray-700 hover:text-orange-600 tracking-wider uppercase transition-colors flex items-center gap-1">
                     Services
-                    <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                   </button>
 
                   {isServicesOpen && (
                     <div className="absolute top-full left-0 mt-0 pt-2">
-                      <div className="bg-white border border-gray-200 rounded-lg shadow-xl py-2 min-w-[320px]">
+                      <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[340px]">
                         {serviceLinks.map((service, i) => (
                           <Link
                             key={i}
                             to={service.path}
-                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                            className="block px-5 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-orange-600 transition-colors"
                             onClick={() => setIsServicesOpen(false)}
                           >
                             {service.name}
@@ -130,17 +119,11 @@ const App = () => {
                   )}
                 </div>
 
-                <Link to="/projects" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+                <Link to="/projects" className="text-sm font-semibold text-gray-700 hover:text-orange-600 tracking-wider uppercase transition-colors">
                   Projects
                 </Link>
-                <Link to="/news" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-                  News
-                </Link>
-                <Link to="/careers" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-                  Careers
-                </Link>
-                <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 rounded font-medium transition-colors text-sm">
-                  Contact Us
+                <Link to="/news" className="text-sm font-semibold text-gray-700 hover:text-orange-600 tracking-wider uppercase transition-colors">
+                  News & Events
                 </Link>
               </div>
 
@@ -166,7 +149,7 @@ const App = () => {
                 <div className="py-3 space-y-1">
                   <Link
                     to="/about"
-                    className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                    className="block px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
                     onClick={closeMobileMenu}
                   >
                     About Us
@@ -176,7 +159,7 @@ const App = () => {
                   <div>
                     <button
                       onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                      className="w-full flex items-center justify-between px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md"
+                      className="w-full flex items-center justify-between px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
                     >
                       Services
                       <ChevronDown className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -197,18 +180,20 @@ const App = () => {
                     )}
                   </div>
 
-                  <Link to="/projects" className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md" onClick={closeMobileMenu}>
+                  <Link to="/projects" className="block px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md" onClick={closeMobileMenu}>
                     Projects
                   </Link>
-                  <Link to="/news" className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md" onClick={closeMobileMenu}>
-                    News
+                  <Link to="/news" className="block px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md" onClick={closeMobileMenu}>
+                    News & Events
                   </Link>
-                  <Link to="/careers" className="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-medium transition-colors rounded-md" onClick={closeMobileMenu}>
-                    Careers
-                  </Link>
-                  <Link to="/contact" className="block px-3 py-2 text-orange-600 hover:bg-orange-50 font-medium transition-colors rounded-md" onClick={closeMobileMenu}>
-                    Contact Us
-                  </Link>
+                  <div className="border-t border-gray-100 mt-2 pt-2">
+                    <Link to="/careers" className="block px-3 py-2.5 text-gray-500 hover:text-orange-600 hover:bg-gray-50 text-sm transition-colors rounded-md" onClick={closeMobileMenu}>
+                      Careers
+                    </Link>
+                    <Link to="/contact" className="block px-3 py-2.5 text-gray-500 hover:text-orange-600 hover:bg-gray-50 text-sm transition-colors rounded-md" onClick={closeMobileMenu}>
+                      Contact Us
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}
