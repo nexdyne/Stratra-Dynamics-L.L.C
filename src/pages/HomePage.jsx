@@ -8,11 +8,7 @@ import {
   BarChart3,
   GraduationCap,
   ChevronRight,
-  ArrowRight,
-  Award,
-  Users,
-  Building2,
-  Clock
+  ArrowRight
 } from 'lucide-react';
 
 // Scroll-reveal hook
@@ -28,33 +24,6 @@ const useInView = (threshold = 0.15) => {
     return () => observer.disconnect();
   }, [threshold]);
   return [ref, isVisible];
-};
-
-// Animated counter
-const Counter = ({ end, suffix = '', duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-  const [ref, isVisible] = useInView(0.5);
-  const hasAnimated = useRef(false);
-
-  useEffect(() => {
-    if (!isVisible || hasAnimated.current) return;
-    hasAnimated.current = true;
-    const steps = 60;
-    const increment = end / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [isVisible, end, duration]);
-
-  return <span ref={ref}>{count}{suffix}</span>;
 };
 
 const HomePage = () => {
@@ -108,13 +77,6 @@ const HomePage = () => {
       link: "/services/training-compliance-services",
       image: "/assets/perdictive-analytics.webp",
     }
-  ];
-
-  const stats = [
-    { icon: Clock, value: 15, suffix: '+', label: 'Years of Experience' },
-    { icon: Building2, value: 200, suffix: '+', label: 'Projects Delivered' },
-    { icon: Users, value: 50, suffix: '+', label: 'Team Members' },
-    { icon: Award, value: 12, suffix: '', label: 'Certifications Held' },
   ];
 
   // Scroll reveal refs for services
@@ -208,26 +170,6 @@ const HomePage = () => {
         >
           <span className="text-white/50 text-xs tracking-widest uppercase">Scroll</span>
           <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent animate-pulse"></div>
-        </div>
-      </section>
-
-      {/* Stats / Credibility Bar */}
-      <section className="bg-gray-900 py-10 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div key={index} className="text-center">
-                  <Icon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">
-                    <Counter end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-gray-400 text-sm tracking-wide">{stat.label}</div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </section>
 
