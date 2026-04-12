@@ -1,121 +1,139 @@
 import React from 'react';
-import { Zap, Building, BarChart3 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const CareersPage = () => {
+export default function CareersPage() {
   const jobOpenings = [
     {
       id: 1,
-      title: "Senior Project Manager - Government Contracts",
-      location: "Detroit, Michigan",
-      type: "Full-time",
-      description: "Lead complex government contracting projects with AI-driven oversight and compliance management."
+      title: 'Lead Abatement Project Supervisor',
+      location: 'Detroit, MI',
+      type: 'Full-time',
+      description: 'Oversee lead-based paint abatement projects, ensure EPA RRP compliance, manage field crews'
     },
     {
       id: 2,
-      title: "AI/ML Engineer - Federal Solutions",
-      location: "Ann Arbor, Michigan",
-      type: "Full-time",
-      description: "Develop and implement AI solutions for government infrastructure and compliance automation."
+      title: 'Environmental Consultant / Industrial Hygienist',
+      location: 'Detroit, MI',
+      type: 'Full-time',
+      description: 'Conduct Phase I/II ESAs, air quality testing, industrial hygiene surveys, prepare technical reports'
     },
     {
       id: 3,
-      title: "Compliance Specialist - Federal Programs",
-      location: "Grand Rapids, Michigan",
-      type: "Full-time",
-      description: "Ensure regulatory compliance and audit readiness for federal contracting programs."
+      title: 'Construction Project Coordinator',
+      location: 'Detroit, MI',
+      type: 'Full-time',
+      description: 'Support construction and renovation management projects, coordinate with environmental teams, track schedules and budgets'
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">CAREERS</h1>
-          <p className="text-xl text-gray-600">Join our mission to transform government contracting</p>
-        </div>
-      </div>
+  const benefits = [
+    'Competitive salary and performance bonuses',
+    'Comprehensive health, dental, and vision insurance',
+    '401(k) with company matching',
+    'Professional development and certification support',
+    'Field and office flexibility',
+    'EPA, OSHA, and HAZWOPER training provided'
+  ];
 
-      {/* Company Culture */}
-      <div className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Work at Centauri Pro?</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                We're building the future of government contracting through innovation, integrity, and excellence. Join a team that values creativity, collaboration, and continuous learning.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="bg-orange-500 text-white p-2 rounded-full mr-4">
-                    <Zap className="w-5 h-5" />
-                  </div>
-                  <span className="text-gray-700">Cutting-edge AI and automation projects</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-orange-500 text-white p-2 rounded-full mr-4">
-                    <Building className="w-5 h-5" />
-                  </div>
-                  <span className="text-gray-700">Mission-critical government programs</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-orange-500 text-white p-2 rounded-full mr-4">
-                    <BarChart3 className="w-5 h-5" />
-                  </div>
-                  <span className="text-gray-700">Professional growth and development</span>
-                </div>
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="bg-gray-900 text-white py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <div className="mb-6 text-sm">
+            <Link to="/" className="hover:text-orange-600">Home</Link>
+            <span className="mx-2">/</span>
+            <span>Careers</span>
+          </div>
+
+          {/* Hero Content */}
+          <h1 className="text-5xl font-bold mb-4">Careers at Centauri-Pro</h1>
+          <p className="text-lg text-gray-300 max-w-2xl">
+            Join a team dedicated to environmental protection and public health. Help us build safer communities through expert environmental services and construction management.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Work Here Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Left Column - Editorial Content */}
+            <div className="space-y-6">
+              <div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  At Centauri-Pro Consulting, you will be part of an environmental services and construction management firm committed to protecting communities and advancing public health. Our work spans lead abatement, industrial hygiene, environmental assessments, and comprehensive construction management.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  We are a Michigan-based firm with a track record of government contracts and certified professionals. Our team understands the importance of getting details right and maintaining the highest standards of compliance and safety. When you work here, you are contributing to tangible improvements in environmental health and safety.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  The environmental services sector is growing rapidly, and so is the demand for skilled professionals. Whether you are building your career or expanding your expertise, Centauri-Pro offers the professional development, certifications, and real-world experience to help you advance.
+                </p>
               </div>
             </div>
-            <div className="bg-orange-50 border-l-4 border-orange-500 p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Benefits</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li>• Competitive salary and performance bonuses</li>
-                <li>• Comprehensive health, dental, and vision insurance</li>
-                <li>• 401(k) with company matching</li>
-                <li>• Flexible work arrangements</li>
-                <li>• Professional development opportunities</li>
-                <li>• Cutting-edge technology and tools</li>
-              </ul>
+
+            {/* Right Column - Benefits Card */}
+            <div>
+              <div className="bg-gray-100 p-8 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-6">What We Offer</h3>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Job Openings */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Current Openings</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Current Openings Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Current Openings</h2>
+
+          <div className="grid md:grid-cols-1 gap-6">
             {jobOpenings.map((job) => (
-              <div key={job.id} className="bg-white p-6 rounded-lg shadow-lg">
+              <div key={job.id} className="bg-white border border-gray-200 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
-                <div className="text-gray-600 text-sm mb-4">
-                  <span>{job.location}</span> • <span>{job.type}</span>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-4 text-sm text-gray-600">
+                  <span>{job.location}</span>
+                  <span className="hidden sm:inline">\u2022</span>
+                  <span>{job.type}</span>
                 </div>
-                <p className="text-gray-700 mb-6">{job.description}</p>
-                <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full">
+                <p className="text-gray-700 mb-6 leading-relaxed">{job.description}</p>
+                <Link
+                  to="/contact"
+                  className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+                >
                   Apply Now
-                </button>
+                </Link>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Call to Action */}
-      <div className="py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Make an Impact?</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Don't see the perfect role? We're always looking for talented individuals to join our team.
+      {/* CTA Section */}
+      <section className="bg-gray-100 py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Don't See the Right Role?</h2>
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
+            We are always looking for talented professionals who share our commitment to environmental excellence and public health. Send us your resume and let us talk about how you can grow with Centauri-Pro.
           </p>
-          <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-            Send Us Your Resume
-          </button>
+          <Link
+            to="/contact"
+            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+          >
+            Send Your Resume
+          </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
-};
-
-export default CareersPage;
+}
