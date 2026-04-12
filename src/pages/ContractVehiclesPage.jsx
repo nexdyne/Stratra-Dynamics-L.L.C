@@ -19,7 +19,7 @@ export default function ContractVehiclesPage() {
             <span className="text-gray-900 font-medium">Contract Vehicles</span>
           </nav>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">
             Government Contract Vehicles
           </h1>
           <p className="text-lg text-gray-700 max-w-2xl">
@@ -38,34 +38,34 @@ export default function ContractVehiclesPage() {
             Our firm operates under the following North American Industry Classification System (NAICS) codes, enabling us to serve diverse government contracting opportunities:
           </p>
 
-          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+          <div className="bg-white border border-gray-200 rounded-lg overflow-x-auto">
             <table className="w-full">
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 text-gray-900 font-semibold w-32">562910</td>
-                  <td className="px-6 py-4 text-gray-700">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-900 font-semibold text-xs sm:text-base whitespace-nowrap">562910</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-700 text-xs sm:text-base">
                     Environmental Remediation Services <span className="text-orange-600 font-medium">(Primary)</span>
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 text-gray-900 font-semibold w-32">562211</td>
-                  <td className="px-6 py-4 text-gray-700">Hazardous Waste Treatment and Disposal</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-900 font-semibold text-xs sm:text-base whitespace-nowrap">562211</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-700 text-xs sm:text-base">Hazardous Waste Treatment and Disposal</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 text-gray-900 font-semibold w-32">541620</td>
-                  <td className="px-6 py-4 text-gray-700">Environmental Consulting Services</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-900 font-semibold text-xs sm:text-base whitespace-nowrap">541620</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-700 text-xs sm:text-base">Environmental Consulting Services</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 text-gray-900 font-semibold w-32">541330</td>
-                  <td className="px-6 py-4 text-gray-700">Engineering Services</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-900 font-semibold text-xs sm:text-base whitespace-nowrap">541330</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-700 text-xs sm:text-base">Engineering Services</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 text-gray-900 font-semibold w-32">236220</td>
-                  <td className="px-6 py-4 text-gray-700">Commercial and Institutional Building Construction</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-900 font-semibold text-xs sm:text-base whitespace-nowrap">236220</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-700 text-xs sm:text-base">Commercial and Institutional Building Construction</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 text-gray-900 font-semibold w-32">541350</td>
-                  <td className="px-6 py-4 text-gray-700">Building Inspection Services</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-900 font-semibold text-xs sm:text-base whitespace-nowrap">541350</td>
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-gray-700 text-xs sm:text-base">Building Inspection Services</td>
                 </tr>
               </tbody>
             </table>
@@ -79,8 +79,8 @@ export default function ContractVehiclesPage() {
             Centauri-Pro Consulting holds and pursues key business certifications and designations to serve government entities and maximize contracting opportunities:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xl:gap-8">
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 sm:p-8">
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
@@ -90,7 +90,7 @@ export default function ContractVehiclesPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 sm:p-8">
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
@@ -100,7 +100,7 @@ export default function ContractVehiclesPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 sm:p-8">
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
@@ -110,7 +110,7 @@ export default function ContractVehiclesPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 sm:p-8">
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
@@ -157,17 +157,17 @@ export default function ContractVehiclesPage() {
         </section>
 
         {/* Partner With Us CTA */}
-        <section className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
+        <section className="bg-gray-50 border border-gray-200 rounded-lg p-6 sm:p-8 md:p-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Partner With Us</h2>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-700 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
             Centauri-Pro Consulting is committed to supporting government missions through reliable, compliant, and expert environmental and construction management services. Contact us to discuss partnership opportunities and how we can meet your agency's needs.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-3 bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 transition-colors"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 transition-colors"
           >
             Get in Touch
-            <span className="ml-2">{String.fromCharCode(8594)}</span>
+            <span>{String.fromCharCode(8594)}</span>
           </Link>
         </section>
 
