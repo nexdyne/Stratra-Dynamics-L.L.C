@@ -82,7 +82,7 @@ const ITSolutionsPage = () => {
             What Are Smart City & Government IT Solutions?
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-lg text-gray-600 mb-6">
                 Our Smart City & Government IT Solutions transform traditional government technology infrastructure into intelligent, interconnected systems that improve citizen services while reducing operational costs. We combine cloud-native architectures with AI/ML capabilities to create scalable, secure, and citizen-centric digital government platforms.
