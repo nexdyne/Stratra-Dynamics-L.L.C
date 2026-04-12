@@ -232,7 +232,7 @@ const HomePage = () => {
             }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Built to move the industry forward
+              From hazard to habitat
             </h2>
           </div>
 
