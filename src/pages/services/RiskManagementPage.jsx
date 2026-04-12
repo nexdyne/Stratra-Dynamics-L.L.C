@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom'
 const RiskManagementPage = () => {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gray-900 py-20 xl:py-24">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
+      <section className="bg-gray-900 py-12 md:py-20 xl:py-24">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
           <nav className="flex items-center text-sm text-gray-400 mb-10">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
             <span className="mx-2">/</span><span className="text-gray-500">Services</span>
             <span className="mx-2">/</span><span className="text-white">Estimating, Scheduling & Risk Management</span>
           </nav>
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Estimating, Scheduling & Risk Management</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Estimating, Scheduling & Risk Management</h1>
             <p className="text-lg text-gray-300 leading-relaxed">Rigorous project controls, cost estimation, and risk analysis to keep government and commercial construction programs on budget, on schedule, and fully compliant.</p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 xl:py-20">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <section className="py-10 md:py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Data-driven project controls that protect your investment</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Data-driven project controls that protect your investment</h2>
               <p className="text-gray-700 leading-relaxed mb-4">Government construction programs demand precise cost estimation, realistic scheduling, and proactive risk management. Budget overruns, schedule delays, and unforeseen risks can derail critical projects and trigger audit findings. Centauri-Pro provides the project controls expertise needed to deliver predictable outcomes.</p>
               <p className="text-gray-700 leading-relaxed">Our project controls professionals use industry-standard tools including Primavera P6, RS Means cost databases, and Monte Carlo simulation to develop accurate estimates, realistic schedules, and comprehensive risk registers that enable informed decision-making throughout the project lifecycle.</p>
             </div>
@@ -38,9 +38,9 @@ const RiskManagementPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Project Controls Services</h2>
+      <section className="py-10 md:py-16 bg-gray-50">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Project Controls Services</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">We provide comprehensive estimating, scheduling, and risk management services across the full project lifecycle.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow"><h3 className="text-lg font-bold text-gray-900 mb-3">Cost Estimation & Budgeting</h3><p className="text-gray-600 text-sm leading-relaxed">Detailed cost analysis using RS Means data and historical benchmarks for conceptual estimates, budget development, and independent cost reviews at every project phase.</p></div>
@@ -53,23 +53,23 @@ const RiskManagementPage = () => {
         </div>
       </section>
 
-      <section className="py-16 xl:py-20">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">A structured approach to project controls</h2>
+      <section className="py-10 md:py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">A structured approach to project controls</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">Our methodology follows industry best practices to deliver reliable cost, schedule, and risk data throughout the project lifecycle.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="relative"><span className="text-5xl font-bold text-gray-200 mb-4 block">01</span><h3 className="text-lg font-bold text-gray-900 mb-2">Data Collection & Analysis</h3><p className="text-gray-600 text-sm leading-relaxed">Gather project documents, historical data, and stakeholder input to establish the foundation for estimates and schedules.</p></div>
-            <div className="relative"><span className="text-5xl font-bold text-gray-200 mb-4 block">02</span><h3 className="text-lg font-bold text-gray-900 mb-2">Baseline Development</h3><p className="text-gray-600 text-sm leading-relaxed">Create detailed cost estimates, CPM schedules, and risk registers that serve as the performance measurement baseline.</p></div>
-            <div className="relative"><span className="text-5xl font-bold text-gray-200 mb-4 block">03</span><h3 className="text-lg font-bold text-gray-900 mb-2">Performance Monitoring</h3><p className="text-gray-600 text-sm leading-relaxed">Track cost and schedule performance against baselines, identify variances, and assess risk triggers throughout execution.</p></div>
-            <div className="relative"><span className="text-5xl font-bold text-gray-200 mb-4 block">04</span><h3 className="text-lg font-bold text-gray-900 mb-2">Forecasting & Reporting</h3><p className="text-gray-600 text-sm leading-relaxed">Generate estimate-at-completion forecasts, trend analysis, and executive reports to support proactive decision-making.</p></div>
+            <div className="relative"><span className="text-4xl sm:text-5xl font-bold text-gray-200 mb-4 block">01</span><h3 className="text-lg font-bold text-gray-900 mb-2">Data Collection & Analysis</h3><p className="text-gray-600 text-sm leading-relaxed">Gather project documents, historical data, and stakeholder input to establish the foundation for estimates and schedules.</p></div>
+            <div className="relative"><span className="text-4xl sm:text-5xl font-bold text-gray-200 mb-4 block">02</span><h3 className="text-lg font-bold text-gray-900 mb-2">Baseline Development</h3><p className="text-gray-600 text-sm leading-relaxed">Create detailed cost estimates, CPM schedules, and risk registers that serve as the performance measurement baseline.</p></div>
+            <div className="relative"><span className="text-4xl sm:text-5xl font-bold text-gray-200 mb-4 block">03</span><h3 className="text-lg font-bold text-gray-900 mb-2">Performance Monitoring</h3><p className="text-gray-600 text-sm leading-relaxed">Track cost and schedule performance against baselines, identify variances, and assess risk triggers throughout execution.</p></div>
+            <div className="relative"><span className="text-4xl sm:text-5xl font-bold text-gray-200 mb-4 block">04</span><h3 className="text-lg font-bold text-gray-900 mb-2">Forecasting & Reporting</h3><p className="text-gray-600 text-sm leading-relaxed">Generate estimate-at-completion forecasts, trend analysis, and executive reports to support proactive decision-making.</p></div>
           </div>
         </div>
       </section>
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="py-10 md:py-16 bg-gray-900">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Sectors we serve</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Sectors we serve</h2>
               <p className="text-gray-300 leading-relaxed mb-8">Our project controls professionals support construction and infrastructure programs across government and commercial sectors.</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {['Federal Construction Programs', 'State DOT Infrastructure', 'Military Construction (MILCON)', 'Public Housing Renovation', 'Healthcare Facility Modernization', 'Educational Institution Upgrades'].map((s,i) => (<div key={i} className="flex items-center"><span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span><span className="text-gray-300 text-sm">{s}</span></div>))}
@@ -85,9 +85,9 @@ const RiskManagementPage = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to strengthen your project controls?</h2>
+      <section className="py-10 md:py-16 bg-gray-100">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Ready to strengthen your project controls?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Contact us to discuss cost estimation, scheduling, and risk management support for your construction program.</p>
           <Link to="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded transition-colors">Schedule a Consultation</Link>
         </div>
