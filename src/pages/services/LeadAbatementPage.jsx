@@ -55,7 +55,7 @@ const LeadAbatementPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 py-12 md:py-20 xl:py-24">
+      <section className="bg-gray-900 py-10 md:py-20 xl:py-24">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
           <nav className="flex items-center text-sm text-gray-400 mb-10">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
@@ -66,7 +66,7 @@ const LeadAbatementPage = () => {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Lead Abatement & Hazardous Materials Removal
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed">
@@ -89,7 +89,7 @@ const LeadAbatementPage = () => {
                 Our field teams hold EPA RRP certifications, state lead licenses, and AHERA accreditations. Every project is executed under detailed work plans with continuous air monitoring, proper containment, and documented chain-of-custody for all waste streams.
               </p>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
+            <div className="bg-gray-100 p-6 sm:p-8 rounded-lg">
               <h3 className="text-lg font-bold text-gray-900 mb-6">Key Credentials</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -134,7 +134,7 @@ const LeadAbatementPage = () => {
             We provide end-to-end hazardous materials management, from initial assessment through final clearance and documentation.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, i) => (
               <div key={i} className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -183,7 +183,7 @@ const LeadAbatementPage = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-gray-800 rounded-lg p-8">
+            <div className="bg-gray-800 rounded-lg p-6 sm:p-8">
               <h3 className="text-lg font-bold text-white mb-6">Regulatory Framework</h3>
               <div className="space-y-4">
                 {[
@@ -215,7 +215,7 @@ const LeadAbatementPage = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded transition-colors"
+            className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-4 text-base font-semibold rounded transition-colors min-h-[52px] w-full sm:w-auto text-center"
           >
             Request an Assessment
           </Link>
