@@ -25,7 +25,7 @@ export default function AboutPage() {
       {/* Company Overview */}
       <section className="bg-white py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 xl:gap-16">
             {/* Left Column - Company Story */}
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p>
@@ -119,7 +119,7 @@ export default function AboutPage() {
       {/* Core Values Section */}
       <section className="bg-gray-900 text-white py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 xl:gap-16">
             {/* Left Column */}
             <div>
               <h3 className="text-2xl font-bold mb-8">Our Values</h3>
