@@ -16,6 +16,8 @@ import ScrollToTop from './components/ScrollToTop';
 // Import page components
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import LeadershipPage from './pages/LeadershipPage';
+import ContractVehiclesPage from './pages/ContractVehiclesPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import NewsPage from './pages/NewsPage';
@@ -45,16 +47,20 @@ const serviceLinks = [
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     setIsMobileServicesOpen(false);
+    setIsMobileAboutOpen(false);
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
     setIsMobileServicesOpen(false);
+    setIsMobileAboutOpen(false);
   };
 
   return (
@@ -88,11 +94,38 @@ const App = () => {
 
               {/* Desktop Navigation Links */}
               <div className="hidden md:flex items-center space-x-10">
-                <Link to="/about" className="text-sm font-semibold text-gray-700 hover:text-orange-600 tracking-wider uppercase transition-colors flex items-center gap-1">
-                  About Us
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </Link>
+                {/* About Us Dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setIsAboutOpen(true)}
+                  onMouseLeave={() => setIsAboutOpen(false)}
+                >
+                  <button className="text-sm font-semibold text-gray-700 hover:text-orange-600 tracking-wider uppercase transition-colors flex items-center gap-1">
+                    About Us
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`} />
+                  </button>
 
+                  {isAboutOpen && (
+                    <div className="absolute top-full left-0 mt-0 pt-2">
+                      <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[220px]">
+                        <Link
+                          to="/about/leadership"
+                          className="block px-5 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-orange-600 transition-colors"
+                          onClick={() => setIsAboutOpen(false)}
+                        >
+                          Leadership
+                        </Link>
+                        <Link
+                          to="/about/contract-vehicles"
+                          className="block px-5 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-orange-600 transition-colors"
+                          onClick={() => setIsAboutOpen(false)}
+                        >
+                          Contract Vehicles
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
                 {/* Services Dropdown */}
                 <div
                   className="relative"
@@ -150,13 +183,34 @@ const App = () => {
             {isMobileMenuOpen && (
               <div className="md:hidden border-t border-gray-100">
                 <div className="py-3 space-y-1">
-                  <Link
-                    to="/about"
-                    className="block px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
-                    onClick={closeMobileMenu}
-                  >
-                    About Us
-                  </Link>
+                  {/* Mobile About Us Accordion */}
+                  <div>
+                    <button
+                      onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                      className="w-full flex items-center justify-between px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
+                    >
+                      About Us
+                      <ChevronDown className={`w-4 h-4 transition-transform ${isMobileAboutOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {isMobileAboutOpen && (
+                      <div className="pl-4 pb-2 space-y-1">
+                        <Link
+                          to="/about/leadership"
+                          className="block px-3 py-2 text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md transition-colors"
+                          onClick={closeMobileMenu}
+                        >
+                          Leadership
+                        </Link>
+                        <Link
+                          to="/about/contract-vehicles"
+                          className="block px-3 py-2 text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md transition-colors"
+                          onClick={closeMobileMenu}
+                        >
+                          Contract Vehicles
+                        </Link>
+                      </div>
+                    )}
+                  </div>
 
                   {/* Mobile Services Accordion */}
                   <div>
@@ -207,6 +261,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/about/leadership" element={<LeadershipPage />} />
+          <Route path="/about/contract-vehicles" element={<ContractVehiclesPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:slug" element={<NewsDetailPage />} />
           <Route path="/careers" element={<CareersPage />} />
@@ -256,7 +312,8 @@ const App = () => {
               <div>
                 <h3 className="text-sm font-semibold mb-4 uppercase tracking-wider text-gray-300">Company</h3>
                 <ul className="space-y-2 text-gray-400 text-sm">
-                  <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                  <li><Link to="/about/leadership" className="hover:text-white transition-colors">Leadership</Link></li>
+                  <li><Link to="/about/contract-vehicles" className="hover:text-white transition-colors">Contract Vehicles</Link></li>
                   <li><Link to="/projects" className="hover:text-white transition-colors">Projects</Link></li>
                   <li><Link to="/news" className="hover:text-white transition-colors">News</Link></li>
                   <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
