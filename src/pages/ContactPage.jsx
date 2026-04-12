@@ -56,7 +56,7 @@ export default function ContactPage() {
           </div>
 
           {/* Hero Content */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg text-gray-300 max-w-2xl">
             Get in touch with our team of certified environmental and construction management professionals.
           </p>
@@ -66,7 +66,7 @@ export default function ContactPage() {
       {/* Main Content */}
       <section className="bg-white py-10 md:py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-12 xl:gap-16">
             {/* Left Column - Contact Form */}
             <div className="lg:col-span-3">
               <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-gray-900">Send Us a Message</h2>
@@ -85,7 +85,7 @@ export default function ContactPage() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* First Name and Last Name */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-900 mb-2">
                       First Name
@@ -97,7 +97,7 @@ export default function ContactPage() {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
+                      className="w-full px-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                       placeholder="John"
                     />
                   </div>
@@ -112,14 +112,14 @@ export default function ContactPage() {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
+                      className="w-full px-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                       placeholder="Smith"
                     />
                   </div>
                 </div>
 
                 {/* Email and Phone */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
                       Email Address
@@ -131,7 +131,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
+                      className="w-full px-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
+                      className="w-full px-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -164,7 +164,7 @@ export default function ContactPage() {
                     value={formData.organization}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
+                    className="w-full px-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                     placeholder="Your Organization Name"
                   />
                 </div>
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     value={formData.serviceOfInterest}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors bg-white"
+                    className="w-full px-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors bg-white"
                   >
                     <option value="">Select a service...</option>
                     <option value="lead-abatement">Lead Abatement & Hazardous Materials</option>
@@ -205,7 +205,7 @@ export default function ContactPage() {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
+                    className="w-full px-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                     placeholder="What is this regarding?"
                   />
                 </div>
@@ -222,7 +222,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     rows="6"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 min-h-[120px] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors resize-none"
                     placeholder="Tell us more about your project or inquiry..."
                   />
                 </div>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200"
+                  className="w-full bg-orange-600 text-white font-semibold py-3 min-h-[48px] rounded-lg hover:bg-orange-700 transition-colors duration-200"
                 >
                   Send Message
                 </button>
@@ -239,7 +239,7 @@ export default function ContactPage() {
 
             {/* Right Column - Contact Info */}
             <div className="lg:col-span-2">
-              <div className="bg-gray-50 p-8 rounded-lg">
+              <div className="bg-gray-50 p-6 sm:p-8 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-8">Get In Touch</h3>
 
                 <div className="space-y-6 mb-8">
@@ -290,7 +290,7 @@ export default function ContactPage() {
           </p>
           <a
             href="tel:(313)555-0100"
-            className="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors duration-200"
+            className="inline-block w-full sm:w-auto bg-orange-600 text-white font-semibold px-6 sm:px-8 py-4 min-h-[48px] rounded-lg hover:bg-orange-700 transition-colors duration-200 text-center"
           >
             Call Us Today
           </a>
