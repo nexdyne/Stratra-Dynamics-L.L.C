@@ -57,7 +57,7 @@ const SupplyProcurementPage = () => {
             What Are Government Supply & Procurement Solutions?
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-lg text-gray-600 mb-6">
                 Our Government Supply & Procurement Solutions streamline the complex world of federal procurement with AI-powered vendor management, automated compliance tracking, and intelligent sourcing strategies. We transform traditional procurement processes into strategic advantages that reduce costs while ensuring full regulatory compliance.
