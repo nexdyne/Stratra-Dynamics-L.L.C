@@ -1,307 +1,81 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-const NewsDetailPage = () => {
+const articleData = {
+  'epa-lead-safe-rrp-update': {
+    date: 'March 2026',
+    category: 'Regulatory',
+    title: 'EPA Updates Lead-Safe RRP Rule: What Contractors Need to Know',
+    content: [
+      'The Environmental Protection Agency has expanded its Lead-Safe Renovation, Repair, and Painting (RRP) Rule, significantly broadening the scope of buildings and activities covered under federal lead safety requirements. Effective immediately, contractors working on pre-1978 residential and non-residential buildings must comply with enhanced standards that reflect decades of research into lead dust exposure risks.',
+      'The updated rule lowers the renovation area threshold from 6 square feet to 2 square feet for residential properties, and from 20 square feet to 5 square feet for non-residential buildings. This means that even minor renovation projects now trigger lead safety requirements in older structures. Contractors must conduct lead hazard assessments, use containment protocols, and ensure proper worker training before beginning work on affected properties.',
+      'Certification requirements have also been strengthened. All renovators, dust samplers, and project managers must complete EPA-approved training within the past 12 months. The agency has implemented stricter record-keeping requirements and introduced enhanced verification protocols. Non-compliance can result in civil penalties up to $38,946 per violation, with potential criminal liability for egregious cases involving worker or occupant exposure.',
+      'Property owners should understand that these requirements apply whether or not lead has been visually identified. The \"lead presumption\" rule means that in the absence of test results confirming the building was constructed without lead-based paint, all work on pre-1978 structures must be conducted under RRP protocols. Hiring an EPA-certified contractor is no longer optional\u2014it is a legal requirement.',
+      'For property managers overseeing multi-unit housing, the implications are substantial. Bulk renovation projects now require meticulous planning and coordination with certified professionals. Many property owners have found that working with experienced environmental contractors early in the planning phase reduces delays and ensures compliance from the outset.',
+      'Centauri-Pro Consulting maintains current EPA certification for all team members and stays ahead of regulatory changes. We provide lead hazard assessments, train contractors on compliance protocols, and oversee projects to ensure all work meets current standards. Understanding these regulations is critical for protecting occupant health and avoiding costly penalties.'
+    ]
+  },
+  'hazwoper-certification': {
+    date: 'February 2026',
+    category: 'Company News',
+    title: 'Centauri-Pro Achieves Advanced HAZWOPER Certification',
+    content: [
+      'Centauri-Pro Consulting is proud to announce that our field operations team has successfully completed advanced HAZWOPER (Hazardous Waste Operations and Emergency Response) certification. This intensive 40-hour training program, delivered by OSHA-approved instructors, qualifies our personnel to safely and effectively respond to hazardous materials incidents and manage contaminated site operations.',
+      'HAZWOPER certification is a significant achievement that expands our service capabilities considerably. The comprehensive training covers hazard recognition, personal protective equipment protocols, decontamination procedures, and emergency response procedures. Our team additionally completed specialized site supervisor certification, which authorizes them to direct operations on active contaminated sites and make real-time safety decisions.',
+      'This certification opens new opportunities for Centauri-Pro to support federal agencies, state environmental programs, and private industry in hazardous materials response and remediation projects. We can now take on assignments that require advanced technical expertise in handling lead, asbestos, PCBs, petroleum products, and other regulated substances. Many government contracts explicitly require HAZWOPER-certified personnel, and this credential strengthens our proposal competitiveness.',
+      'The training reflects our commitment to operational excellence and worker safety. Every team member completed not only the technical content but also demonstrated proficiency through hands-on exercises and written examinations. Beyond meeting regulatory requirements, our staff now possesses the judgment and experience to recognize hazards that untrained personnel might miss.',
+      'Moving forward, Centauri-Pro maintains an annual training schedule to keep certifications current and deepen expertise in emerging hazardous materials challenges. We view HAZWOPER certification as foundational to our ability to deliver protective, high-quality services to clients in sensitive and complex environments.',
+      'If you are managing contaminated sites, planning remediation projects, or need environmental professionals qualified to handle hazardous materials, we encourage you to contact us. Our HAZWOPER-certified team brings the expertise and professionalism your project requires.'
+    ]
+  },
+  'michigan-lead-abatement-demand': {
+    date: 'January 2026',
+    category: 'Industry',
+    title: 'Michigan Lead Abatement: Growing Demand for Certified Contractors',
+    content: [
+      'Michigan is experiencing unprecedented demand for lead abatement services, driven by a convergence of federal funding initiatives and state regulatory action. The HUD Lead Hazard Control Program, American Rescue Plan investments, and Michigan Department of Environmental Quality initiatives have allocated hundreds of millions of dollars to address lead hazards in residential properties, particularly in older housing stock.',
+      'The state of Michigan has identified over 400,000 housing units constructed before 1978 where lead-based paint hazards are likely to exist. Historic industrial areas including Detroit, Flint, Gary, and other post-industrial communities have elevated lead exposure in both soil and housing structures. Federal agencies recognize that accelerated lead remediation directly improves public health outcomes, particularly for children under age six, who face the most significant neurological risks from lead exposure.',
+      'Lead abatement contractors across Michigan report order backlogs extending 12-18 months. Property owners seeking to participate in HUD grant programs, state remediation initiatives, or responding to occupant health concerns are competing for limited professional resources. This shortage has driven up project costs and extended timelines. For property managers and owners, the challenge is not only identifying qualified contractors but also planning projects within realistic delivery windows.',
+      'The workforce shortage is acute. Licensed lead abatement supervisors require specialized EPA certification, practical field experience, and documented competency. Michigan currently has insufficient trained personnel to meet market demand. Educational institutions and workforce development programs are expanding training capacity, but qualified professionals remain scarce. This has created genuine economic opportunity for contractors willing to invest in certification and maintain rigorous safety protocols.',
+      'Property owners should understand that lead abatement is not a commodity service. Quality of work, attention to containment and decontamination procedures, and compliance with EPA standards vary significantly among contractors. The cheapest bid often reflects inexperience or corner-cutting. Working with certified, experienced professionals protects property occupants, ensures lasting results, and provides documentation that regulatory requirements were satisfied.',
+      'Centauri-Pro Consulting is actively engaged in Michigan\'s lead abatement market, supporting both public agencies and private property owners. We maintain experienced, certified teams ready to move quickly when projects are approved. As demand continues to grow and funding windows remain open, we encourage property owners and managers to plan assessment and abatement work now rather than facing extended delays later.'
+    ]
+  }
+};
+
+export default function NewsDetailPage() {
   const { slug } = useParams();
-
-  const articleContent = {
-    "ai-government-contracting": {
-      title: "AI in Government Contracting: The Future is Now",
-      date: "December 15, 2024",
-      category: "Technology",
-      content: `The landscape of government contracting is undergoing a revolutionary transformation, driven by the rapid adoption of artificial intelligence technologies. As federal agencies face increasing pressure to deliver projects more efficiently while maintaining strict compliance standards, AI has emerged as a game-changing solution that promises to reshape how government contracts are managed, executed, and delivered.
-
-## The Current State of Government Project Management
-
-Traditional government project management has long been characterized by complex bureaucratic processes, extensive documentation requirements, and multi-layered approval systems. While these safeguards ensure accountability and compliance, they often result in delayed timelines, cost overruns, and reduced operational efficiency.
-
-Federal agencies manage thousands of contracts annually, ranging from infrastructure development to technology modernization, each requiring meticulous oversight and reporting. The manual nature of many oversight processes creates bottlenecks that can significantly impact project delivery and stakeholder satisfaction.
-
-## AI-Powered Solutions Transforming the Industry
-
-Artificial intelligence is addressing these challenges through several key innovations:
-
-### Predictive Analytics and Risk Assessment
-
-AI algorithms can analyze historical project data, current performance metrics, and external factors to predict potential risks before they materialize. This proactive approach enables project managers to implement mitigation strategies early, reducing the likelihood of delays and cost overruns.
-
-### Automated Compliance Monitoring
-
-Machine learning systems can continuously monitor project activities against regulatory requirements, automatically flagging potential compliance issues and generating audit-ready documentation. This reduces the administrative burden on project teams while ensuring adherence to federal standards.
-
-### Intelligent Resource Optimization
-
-AI-driven resource allocation systems can optimize staffing, equipment, and material deployment across multiple projects, maximizing efficiency while minimizing costs. These systems consider factors such as skill requirements, availability, and project priorities to make optimal allocation decisions.
-
-## Real-World Impact and Results
-
-Early adopters of AI in government contracting are already seeing significant benefits:
-
-• **25% reduction in project delivery timelines** through predictive scheduling and resource optimization
-• **40% decrease in compliance-related delays** via automated monitoring and documentation
-• **30% improvement in cost accuracy** through AI-powered estimates and risk modeling
-• **60% faster issue resolution** enabled by real-time monitoring and alert systems
-
-## Challenges and Considerations
-
-While the potential of AI in government contracting is immense, successful implementation requires careful consideration of several factors:
-
-### Data Security and Privacy
-
-Government contracting involves sensitive information that requires the highest levels of security. AI systems must be designed with robust cybersecurity measures and comply with federal data protection standards such as FISMA and NIST guidelines.
-
-### Change Management and Training
-
-The successful adoption of AI technologies requires comprehensive training programs and change management strategies to ensure that government personnel can effectively utilize these new tools.
-
-### Ethical AI and Transparency
-
-Government applications of AI must prioritize transparency, fairness, and accountability. Decision-making algorithms should be explainable and auditable to maintain public trust and regulatory compliance.
-
-## The Path Forward
-
-As we look toward the future, the integration of AI in government contracting will continue to accelerate. Federal agencies are increasingly recognizing the strategic value of these technologies and are investing in pilot programs to demonstrate their capabilities.
-
-The key to success lies in partnering with experienced contractors who understand both the technical capabilities and the unique requirements of government operations. Organizations that can demonstrate proven expertise in AI implementation, regulatory compliance, and government contracting will be best positioned to support agencies in this digital transformation.
-
-## Conclusion
-
-The future of government contracting is undeniably intertwined with artificial intelligence. As these technologies mature and become more accessible, we can expect to see even greater improvements in efficiency, transparency, and outcomes across federal projects.
-
-For government agencies ready to embrace this transformation, the question is not whether to adopt AI, but how quickly and effectively they can integrate these powerful tools into their operations. Those who embrace this transformation today will be the leaders of tomorrow's government contracting landscape.
-
-Ready to Explore AI Solutions for Your Government Projects?
-
-Learn how Centauri Pro's AI-driven approach can transform your project delivery and compliance oversight.`
-    },
-    "sustainable-infrastructure": {
-      title: "Sustainable Infrastructure: Building for Tomorrow",
-      date: "December 10, 2024",
-      category: "Sustainability",
-      content: `As climate change concerns intensify and energy costs continue to rise, government agencies are responding with innovative approaches to building design and construction. Modern sustainable infrastructure architecture leverages emerging technologies to reduce environmental impact, improve operational efficiency, and enhance service delivery.
-
-## The Imperative for Sustainable Government Infrastructure
-
-Federal, state, and local government agencies manage millions of square feet of building stock, from office complexes and courthouses to hospitals and educational facilities. The building infrastructure accounts for a major portion of energy and resource consumption. Making them prime candidates for sustainability improvements that can yield significant environmental and economic benefits.
-
-## Smart Building Technologies Leading the Revolution
-
-The transformation to sustainable infrastructure involves harnessing various technologies including: Energy management systems, building automation, water conservation, air quality optimization, lighting level systems, responsive and sustainable environments.
-
-### Intelligent Energy Management Systems
-
-Advanced building automation systems use AI and machine learning to optimize energy consumption in real time. These systems can automatically adjust lighting, heating, ventilation, and cooling systems based on occupancy, time of day, ambient conditions, and energy pricing, resulting in energy savings of up to 30% or more.
-
-### Smart Sensor Networks
-
-Internet of Things (IoT) sensors throughout building spaces distribute monitoring of environmental conditions, equipment performance, and space utilization. The data collected can optimize for occupant comfort and building efficiency while enabling reactive rather than preventive maintenance schedules that save balance energy supply and demand while maintaining balance and transitions systems.
-
-### Renewable Energy Integration
-
-Solar panels, wind systems, and geothermal technologies are being integrated with smart grid systems to maximize renewable energy utilization. Battery storage systems and advanced electrical capabilities help balance energy supply and demand while maintaining grid autonomy.
-
-## Energy Optimization Strategies
-
-Successful sustainable infrastructure requires comprehensive energy optimization strategies that address both immediate and long-term goals and objectives encompassing peak load energy usage.
-
-### Building Envelope Improvements
-
-High-performance insulation, advanced window systems, and air sealing technologies significantly reduce energy loads. These improvements often require fewer operational costs than alternative green systems, presenting significant opportunities while supporting occupant well-being and productivity.
-
-### LED Lighting and Controls
-
-LED lighting systems with intelligent room sensors can reduce lighting energy consumption by 60-75%. Daylight harvesting components optimize, and consider more lighting higher enhance efficiency while improving occupant well-being and productivity.
-
-### High-Efficiency HVAC Systems
-
-Modern HVAC systems using variable speed drives, heat recovery, and smart controls can dramatically reduce energy consumption. Regular monitoring systems help optimize performance and reduce operational costs while improving efficiency.
-
-## Measurable Impact and Benefits
-
-Government agencies investing in climate infrastructure initiatives are achieving substantial results:
-
-• **50-60% reduction in energy consumption** through comprehensive building optimization
-• **40-50% decrease in water usage** via efficient fixtures and smart water management systems
-• **25-35% reduction in operational costs** through predictive maintenance and advanced automation
-• **30-35% reduction in maintenance costs** through predictive maintenance and equipment with other significant carbon footprint reduction contributing to climate goals and sustainability objectives
-
-## Overcoming Implementation Challenges
-
-While the benefits of sustainable infrastructure are clear, successful implementation requires addressing several key challenges:
-
-### Funding and Budget Constraints
-
-Many sustainable technologies require significant up-front investment. However, innovative financing mechanisms including public-private partnerships, energy service contracts (ESCOs), and green bonds help make these projects more accessible to government agencies with limited capital budgets.
-
-### Technical Complexity and Integration
-
-Modern sustainable infrastructure projects involve complex systems integration requiring specialized expertise. Success requires early involvement of experienced contractors who can advocate and navigate the challenges of multidisciplinary expertise in a single partner.
-
-### Change Management and Training
-
-Government buildings may require change management training programs for facility management staff. Effective training programs ensure the full functionality of sustainable systems and technology to maximize return on investment for building systems and operations within a timeframe of years.
-
-## The Role of Commissioning and Ongoing Optimization
-
-Projects commissioning is critical to ensuring that sustainable technologies achieve their intended performance and efficiency. The commissioning process involves comprehensive system testing, verification, and optimization, ensuring maximum impact for building systems and services.
-
-Ongoing commissioning and retro-commissioning services help maintain efficiency. These strategies can uncover efficiency leverage facility optimization potential that may lose efficiency over time.
-
-## Future Trends and Innovations
-
-The sustainable infrastructure landscape continues to evolve rapidly, with emerging technologies promising even greater efficiency and environmental benefits:
-
-• **Advanced materials** with improved thermal performance and durability
-• **Artificial Intelligence** for predictive optimization and autonomous building operations
-• **Blockchain technology** for transparent energy trading and carbon credit management
-• **Biophilic design** integrating natural elements to enhance occupant well-being
-• **Net-zero and carbon negative buildings** achieving significant environmental impact
-• **Smart cities** integration for enhanced connectivity for improved urban-wide long
-
-## Conclusion
-
-Sustainable infrastructure represents a fundamental shift in how government agencies approach facility management. By embracing clean technologies and systems that prioritize energy efficiency, environmental responsibility, and operational economy, agencies can achieve significant cost savings, environmental benefits, and improved service delivery.
-
-The key to success lies in partnering with experienced contractors who understand both the technical requirements of sustainable technologies and the unique requirements of government operations.
-
-Ready to Transform Your Government Facilities?
-
-Discover how Centauri Pro's energy and sustainability solutions can help you achieve your environmental targets and cost savings.`
-    },
-    "digital-transformation": {
-      title: "Digital Transformation in Federal Programs",
-      date: "December 5, 2024",
-      category: "Technology",
-      content: `Federal agencies and related federal properties are undergoing a profound digital transformation, driven by the adoption of advanced technologies like Building Information Modeling (BIM) and digital twin systems. These innovations are revolutionizing how government projects are planned, executed, and monitored throughout their lifecycles.
-
-## The Evolution of Federal Construction Management
-
-Traditional federal construction projects have relied on disconnected systems, fragmented information sharing, and manual monitoring systems. These approaches often resulted in cost overruns, schedule delays, and reduced operational efficiency. Modern digital transformation represents a comprehensive shift toward connected, real-time project intelligence.
-
-The new methodologies integrate advanced modeling and management software that enable streamlined, continuous visibility throughout project lifecycles and seamless data flow between systems and oversight mechanisms.
-
-## Building Information Modeling: The Foundation of Digital Construction
-
-Building Information Modeling (BIM) has emerged as the cornerstone of digital federal construction projects. These comprehensive 3D models contain detailed information about every aspect of a building's design, construction, and anticipated operations.
-
-### 3D Modeling and Visualization
-
-BIM technology enables architects, engineers, and construction professionals to create detailed three-dimensional representations of proposed structures. This capability enables better decision-making, improved stakeholder communication, and enhanced validation of project details before construction begins.
-
-### 4D Scheduling Integration
-
-By integrating time data with 3D models, BIM extends 4D capabilities that show how construction processes are planned to unfold over time. This scheduling component enables early identification of potential scheduling conflicts and optimization of resource allocation.
-
-### 5D Cost Management
-
-The integration of cost data creates a 5D model that provides comprehensive budgeting and cost tracking capabilities. Federal agencies can monitor spending against budgets in real-time, enabling rapid identification and mitigation of cost overruns.
-
-## Digital Twins: The Next Frontier
-
-Digital twins represent advanced technology that creates dynamic, real-time digital representations of physical structures throughout their operational lifecycles. These systems integrate real-time sensor data, operational data, and maintenance logs to create living digital replicas of facilities.
-
-### Real-Time Monitoring and Analytics
-
-Digital twins continuously ingest data from IoT sensors throughout federal facilities, providing real-time information about HVAC performance, energy consumption, and operational efficiency. This capability enables system optimization and improved facility management.
-
-### Predictive Maintenance and Optimization
-
-By analyzing historical data and real-time sensor feeds, digital twins enable predictive maintenance approaches that can identify potential equipment failures, optimize maintenance schedules, and extend equipment operational lifespans while reducing unexpected downtime and repair costs.
-
-### Scenario Planning and Simulation
-
-Digital twins enable facility managers to test various operational scenarios and configurations before implementing changes in the physical environment. This capability supports data-driven decision-making and risk management throughout the facility lifecycle.
-
-## Federal Adoption and Implementation
-
-Federal agencies are increasingly embracing digital transformation technologies because they recognize the substantial benefits these approaches deliver in terms of cost efficiency, operational excellence, and mission effectiveness.
-
-### GSA's BIM Requirements
-
-The Federal GSA has instituted BIM requirements for federal construction projects, establishing the framework to ensure consistent application of these technologies across federal construction and renovation projects.
-
-### Department of Defense Initiatives
-
-The Department of Defense has implemented comprehensive BIM standards and has adopted digital twin capabilities for facility management. These initiatives are demonstrating significant improvements to both operational efficiency and cost management.
-
-### NASA's Advanced Implementations
-
-NASA has been a leader in digital transformation within federal agencies, using BIM and digital twins to support mission operations. These applications are driving operational efficiency improvements.
-
-## Measurable Benefits and ROI
-
-Federal agencies implementing digital transformation methodologies are achieving significant measurable benefits:
-
-• **15-25% reduction in project costs** through improved planning and reduced change orders
-• **20-30% faster project delivery** through enhanced coordination and reduced rework
-• **35-45% reduction in energy usage** through AI-driven energy optimization and automated management
-• **40-50% improvement in facility maintenance efficiency** through predictive maintenance and optimized scheduling
-• **Significant reduction in lifecycle costs** through optimized operations and predictive maintenance
-
-## Implementation Challenges and Solutions
-
-While the benefits of digital transformation are clear, successful implementation requires addressing several key challenges:
-
-### Data Integration and Interoperability
-
-Successful digital transformation systems and applications require integrating data from multiple sources. Integration and data management, Successful implementation requires additional planning and investment in comprehensive integration platforms.
-
-### Training and Change Management
-
-Digital transformation requires new skills and capabilities across project teams. Comprehensive training programs and change management strategies are essential for successful adoption and operational effectiveness.
-
-### Cybersecurity and Compliance
-
-Digital systems generate and store significant amounts of sensitive data about federal facilities and operations. Long-term data protection must incorporate robust cybersecurity and threat mitigation while fostering compliance with federal guidelines.
-
-## Best Practices for Federal Implementation
-
-Success in digital transformation in federal programs requires adherence to proven best practices:
-
-### Early Planning and Stakeholder Engagement
-
-Digital transformation should be planned from project conception, with buy-in from all stakeholders across the project development and delivery process. This requires an integrated adoption of systems, tools, and processes.
-
-### Phased Implementation Approach
-
-Federal agencies can adopt a phased implementation approach to manage complexity while minimizing risk and enabling iterative improvements. This approach can minimize the risk associated include comprehensive implementation strategies.
-
-### Performance Measurement and Continuous Improvement
-
-Success in digital transformation requires ongoing performance measurement and continuous improvement. Project assessment of technology costs and benefits should include both cost savings and effectiveness via long-term outcomes and outputs.
-
-## Future Trends and Emerging Technologies
-
-The digital transformation landscape continues to evolve rapidly, with emerging technologies promising even greater innovation and capabilities:
-
-• **Artificial Intelligence and Machine Learning** for automated design optimization and predictive analytics
-• **Blockchain Technology** for enhanced data security and contract management
-• **Augmented and Virtual Reality** for immersive project visualization and remote inspection
-• **Edge Computing** for real-time data processing and analytics
-
-## Conclusion
-
-Digital transformation in federal programs represents a fundamental shift toward more effective, efficient, and accountable project delivery. BIM technology and digital twins provide the foundation for these transformations, enabling federal agencies to achieve significant improvements in cost management, schedule performance, and operational excellence.
-
-As federal agencies continue to embrace these technologies, the benefits of pursuing electronic and automated project management will become even more pronounced. The agencies that implement comprehensive change management, training, and ongoing optimization strategies will be best positioned to realize these benefits.
-
-Ready to Embrace Digital Transformation?
-
-Learn how how Centauri Pro's advanced construction and BIM solutions can help you optimize your federal construction projects.`
-    }
-  };
-
-  const article = articleContent[slug];
+  const article = articleData[slug];
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Article Not Found</h1>
-          <Link to="/news" className="text-orange-600 hover:text-orange-700">
-            Back to News
-          </Link>
-        </div>
+      <div className="min-h-screen bg-white">
+        <section className="bg-gray-50 py-4">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-sm text-gray-600">
+              <Link to="/" className="hover:text-orange-600 transition">Home</Link>
+              <span className="mx-2">/</span>
+              <Link to="/news" className="hover:text-orange-600 transition">News</Link>
+              <span className="mx-2">/</span>
+              <span>Not Found</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+            <p className="text-lg text-gray-700 mb-8">
+              The article you are looking for does not exist or has been removed.
+            </p>
+            <Link
+              to="/news"
+              className="inline-block text-orange-600 font-semibold hover:text-orange-700 transition"
+            >
+              Back to News
+            </Link>
+          </div>
+        </section>
       </div>
     );
   }
@@ -309,117 +83,70 @@ Learn how how Centauri Pro's advanced construction and BIM solutions can help yo
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-orange-600">Home</Link>
-            <span>/</span>
-            <Link to="/news" className="hover:text-orange-600">News</Link>
-            <span>/</span>
-            <span className="text-gray-800">{article.title}</span>
+      <section className="bg-gray-50 py-4">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-sm text-gray-600">
+            <Link to="/" className="hover:text-orange-600 transition">Home</Link>
+            <span className="mx-2">/</span>
+            <Link to="/news" className="hover:text-orange-600 transition">News</Link>
+            <span className="mx-2">/</span>
+            <span>{article.title}</span>
           </div>
         </div>
-      </div>
-
-      {/* Back to News Link */}
-      <div className="py-4">
-        <div className="max-w-4xl mx-auto px-4">
-          <Link 
-            to="/news" 
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 transition-colors"
-          >
-            <span className="mr-2">←</span>
-            Back to News
-          </Link>
-        </div>
-      </div>
-
-      {/* Article Header */}
-      <div className="py-8">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-6">
-            <span className="text-gray-600 text-sm">{article.date}</span>
-          </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">{article.title}</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            {slug === "ai-government-contracting" 
-              ? "Exploring how artificial intelligence is transforming government project management and compliance oversight."
-              : slug === "sustainable-infrastructure"
-              ? "How energy optimization and smart building systems are revolutionizing government facilities."
-              : slug === "digital-transformation"
-              ? "The role of digital twins and BIM technology in modern construction project management."
-              : "Comprehensive insights into modern government solutions and innovations."
-            }
-          </p>
-          <div className="mb-8">
-            <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded text-sm font-medium">
-              {article.category}
-            </span>
-          </div>
-        </div>
-      </div>
+      </section>
 
       {/* Article Content */}
-      <div className="pb-16">
+      <article className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="prose prose-lg prose-gray max-w-none">
-            {article.content.split('\n\n').map((section, index) => {
-              if (section.startsWith('##')) {
-                return (
-                  <h2 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-                    {section.replace('##', '').trim()}
-                  </h2>
-                );
-              } else if (section.startsWith('###')) {
-                return (
-                  <h3 key={index} className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-                    {section.replace('###', '').trim()}
-                  </h3>
-                );
-              } else if (section.startsWith('•')) {
-                const listItems = section.split('\n').filter(item => item.trim().startsWith('•'));
-                return (
-                  <ul key={index} className="list-none space-y-2 my-4">
-                    {listItems.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start">
-                        <span className="text-orange-600 font-bold mr-2">•</span>
-                        <span className="text-gray-700">{item.replace('•', '').trim()}</span>
-                      </li>
-                    ))}
-                  </ul>
-                );
-              } else if (section.trim()) {
-                return (
-                  <p key={index} className="text-gray-700 mb-4 leading-relaxed">
-                    {section.trim()}
-                  </p>
-                );
-              }
-              return null;
-            })}
+          {/* Back Link */}
+          <Link
+            to="/news"
+            className="text-orange-600 font-semibold hover:text-orange-700 transition mb-8 inline-block"
+          >
+            Back to News
+          </Link>
+
+          {/* Article Header */}
+          <div className="mb-8">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-sm text-orange-600 font-semibold">
+                {article.date}
+              </span>
+              <span className="bg-orange-600 text-white px-3 py-1 rounded text-sm font-medium">
+                {article.category}
+              </span>
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              {article.title}
+            </h1>
           </div>
 
-          {/* Call to Action */}
-          <div className="bg-gray-50 rounded-lg p-8 mt-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Explore AI Solutions for Your Government Projects?
+          {/* Article Body */}
+          <div className="prose prose-lg max-w-none text-gray-700 space-y-5">
+            {article.content.map((paragraph, index) => (
+              <p key={index} className="text-lg leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          {/* CTA Box */}
+          <div className="bg-gray-50 p-8 rounded-lg mt-12">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Ready to Address Environmental Challenges?
             </h3>
-            <p className="text-gray-600 mb-6">
-              Learn how Centauri Pro's AI-driven approach can transform your project delivery and compliance oversight.
+            <p className="text-gray-700 mb-6">
+              Connect with Centauri-Pro Consulting to discuss how we can support your facility or project. Our team of certified professionals is ready to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                Learn About Our Approach
-              </button>
-              <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                Explore IT Solutions
-              </button>
-            </div>
+            <Link
+              to="/contact"
+              className="inline-block bg-orange-600 text-white px-8 py-3 rounded font-semibold hover:bg-orange-700 transition"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   );
-};
-
-export default NewsDetailPage;
+}
