@@ -62,8 +62,8 @@ export default function ProjectDetailPage() {
       <div className="min-h-screen bg-white">
         <section className="bg-gray-900 text-white py-20">
           <div className="max-w-6xl mx-auto px-6">
-            <h1 className="text-5xl font-bold mb-4">Project Not Found</h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Project Not Found</h1>
+            <p className="text-lg text-gray-300 mb-8">
               The project you are looking for does not exist.
             </p>
             <Link
@@ -92,7 +92,7 @@ export default function ProjectDetailPage() {
       {/* Project Header */}
       <section className="bg-white py-16 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">{project.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{project.title}</h1>
           <div className="mb-6 flex flex-wrap gap-6 items-center">
             <div>
               <p className="text-sm text-gray-600 font-semibold">Location</p>
@@ -113,7 +113,7 @@ export default function ProjectDetailPage() {
       {/* Scope of Work */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Scope of Work</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Scope of Work</h2>
           <ul className="space-y-4">
             {project.scopeItems.map((item, index) => (
               <li key={index} className="flex items-start text-lg text-gray-700">
@@ -128,7 +128,7 @@ export default function ProjectDetailPage() {
       {/* Project Outcomes */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Project Outcomes</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Project Outcomes</h2>
           <div className="bg-gray-100 p-8 rounded-lg">
             <p className="text-lg text-gray-900 leading-relaxed">
               {project.outcome}
