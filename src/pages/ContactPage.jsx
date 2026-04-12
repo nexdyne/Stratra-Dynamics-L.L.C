@@ -46,8 +46,8 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="bg-gray-900 text-white py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
           {/* Breadcrumb */}
           <div className="mb-8 text-sm text-gray-300">
             <Link to="/" className="hover:text-orange-600 transition-colors">Home</Link>
@@ -64,9 +64,9 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-5 gap-12">
+      <section className="bg-white py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
+          <div className="grid lg:grid-cols-5 gap-12 xl:gap-16">
             {/* Left Column - Contact Form */}
             <div className="lg:col-span-3">
               <h2 className="text-3xl font-bold mb-2 text-gray-900">Send Us a Message</h2>
@@ -282,8 +282,8 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-16">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <section className="bg-gray-900 text-white py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Prefer to discuss your project directly?</h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Our team is ready to schedule a consultation and discuss your environmental or construction management needs.
