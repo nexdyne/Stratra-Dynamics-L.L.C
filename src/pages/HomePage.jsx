@@ -311,10 +311,7 @@ const HomePage = () => {
             <div className="bg-gray-800 px-8 md:px-14 py-16 md:py-20 flex flex-col justify-center">
               <span className="text-orange-400 text-sm font-bold tracking-widest uppercase mb-6 block">Insights</span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-snug mb-8">
-                Every project we deliver is a commitment to
-                <span className="text-orange-400 font-semibold"> safer communities</span>,
-                <span className="text-orange-400 font-semibold"> healthier buildings</span>, and
-                <span className="text-orange-400 font-semibold"> lasting environmental impact</span>.
+                Every project we deliver is a commitment to safer communities, healthier buildings, and lasting environmental impact.
               </h2>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-px bg-orange-500/60"></div>
