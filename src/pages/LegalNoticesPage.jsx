@@ -6,7 +6,7 @@ const LegalNoticesPage = () => {
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 xl:px-8">
           <div className="text-sm text-gray-600">
             <Link to="/" className="hover:text-orange-600">Home</Link>
             <span className="mx-2">/</span>
@@ -16,8 +16,8 @@ const LegalNoticesPage = () => {
       </div>
 
       {/* Header */}
-      <div className="py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <div className="py-16 xl:py-20">
+        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">LEGAL NOTICES</h1>
           
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8">
