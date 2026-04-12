@@ -16,9 +16,9 @@ const LegalNoticesPage = () => {
       </div>
 
       {/* Header */}
-      <div className="py-16 xl:py-20">
+      <div className="py-10 md:py-16 xl:py-20">
         <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">LEGAL NOTICES</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">LEGAL NOTICES</h1>
           
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8">
             <p className="text-lg font-medium text-gray-900">
