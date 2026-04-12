@@ -79,12 +79,12 @@ const App = () => {
         <nav className="bg-white sticky top-0 z-50 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Utility Row */}
-            <div className="hidden md:flex justify-end items-center py-2 text-sm border-b border-gray-100">
-              <Link to="/careers" className="text-gray-500 hover:text-gray-900 transition-colors">
+            <div className="hidden lg:flex justify-end items-center py-2 text-sm border-b border-gray-100">
+              <Link to="/careers" className="text-gray-500 hover:text-gray-900 transition-colors py-1">
                 Careers
               </Link>
               <span className="text-gray-300 mx-3">|</span>
-              <Link to="/contact" className="text-gray-500 hover:text-gray-900 transition-colors">
+              <Link to="/contact" className="text-gray-500 hover:text-gray-900 transition-colors py-1">
                 Contact Us
               </Link>
             </div>
@@ -101,7 +101,7 @@ const App = () => {
               </div>
 
               {/* Desktop Navigation Links */}
-              <div className="hidden md:flex items-center space-x-10">
+              <div className="hidden lg:flex items-center space-x-10">
                 {/* About Us Dropdown */}
                 <div
                   className="relative"
@@ -172,10 +172,10 @@ const App = () => {
               </div>
 
               {/* Mobile Hamburger Menu Button */}
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <button
                   onClick={toggleMobileMenu}
-                  className="text-gray-700 hover:text-orange-600 focus:outline-none transition-colors"
+                  className="text-gray-700 hover:text-orange-600 focus:outline-none transition-colors p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
                   aria-label="Toggle mobile menu"
                 >
                   {isMobileMenuOpen ? (
@@ -189,29 +189,29 @@ const App = () => {
 
             {/* Mobile Navigation Menu */}
             {isMobileMenuOpen && (
-              <div className="md:hidden border-t border-gray-100">
-                <div className="py-3 space-y-1">
+              <div className="lg:hidden border-t border-gray-100">
+                <div className="py-3 space-y-0.5">
                   {/* Mobile About Us Accordion */}
                   <div>
                     <button
                       onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
-                      className="w-full flex items-center justify-between px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
+                      className="w-full flex items-center justify-between px-3 py-3 min-h-[48px] text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
                     >
                       About Us
                       <ChevronDown className={`w-4 h-4 transition-transform ${isMobileAboutOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {isMobileAboutOpen && (
-                      <div className="pl-4 pb-2 space-y-1">
+                      <div className="pl-4 pb-2 space-y-0.5">
                         <Link
                           to="/about/leadership"
-                          className="block px-3 py-2 text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md transition-colors"
+                          className="block px-3 py-3 min-h-[44px] text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md transition-colors flex items-center"
                           onClick={closeMobileMenu}
                         >
                           Leadership
                         </Link>
                         <Link
                           to="/about/contract-vehicles"
-                          className="block px-3 py-2 text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md transition-colors"
+                          className="block px-3 py-3 min-h-[44px] text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md transition-colors flex items-center"
                           onClick={closeMobileMenu}
                         >
                           Contract Vehicles
@@ -224,18 +224,18 @@ const App = () => {
                   <div>
                     <button
                       onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                      className="w-full flex items-center justify-between px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
+                      className="w-full flex items-center justify-between px-3 py-3 min-h-[48px] text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md"
                     >
                       Services
                       <ChevronDown className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {isMobileServicesOpen && (
-                      <div className="pl-6 space-y-1">
+                      <div className="pl-6 space-y-0.5">
                         {serviceLinks.map((service, i) => (
                           <Link
                             key={i}
                             to={service.path}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 transition-colors rounded-md"
+                            className="block px-3 py-3 min-h-[44px] text-sm text-gray-600 hover:text-orange-600 hover:bg-gray-50 transition-colors rounded-md flex items-center"
                             onClick={closeMobileMenu}
                           >
                             {service.name}
@@ -245,17 +245,17 @@ const App = () => {
                     )}
                   </div>
 
-                  <Link to="/projects" className="block px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md" onClick={closeMobileMenu}>
+                  <Link to="/projects" className="block px-3 py-3 min-h-[48px] text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md flex items-center" onClick={closeMobileMenu}>
                     Projects
                   </Link>
-                  <Link to="/news" className="block px-3 py-2.5 text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md" onClick={closeMobileMenu}>
+                  <Link to="/news" className="block px-3 py-3 min-h-[48px] text-gray-700 hover:text-orange-600 hover:bg-gray-50 font-semibold text-sm uppercase tracking-wider transition-colors rounded-md flex items-center" onClick={closeMobileMenu}>
                     News & Events
                   </Link>
                   <div className="border-t border-gray-100 mt-2 pt-2">
-                    <Link to="/careers" className="block px-3 py-2.5 text-gray-500 hover:text-orange-600 hover:bg-gray-50 text-sm transition-colors rounded-md" onClick={closeMobileMenu}>
+                    <Link to="/careers" className="block px-3 py-3 min-h-[44px] text-gray-500 hover:text-orange-600 hover:bg-gray-50 text-sm transition-colors rounded-md flex items-center" onClick={closeMobileMenu}>
                       Careers
                     </Link>
-                    <Link to="/contact" className="block px-3 py-2.5 text-gray-500 hover:text-orange-600 hover:bg-gray-50 text-sm transition-colors rounded-md" onClick={closeMobileMenu}>
+                    <Link to="/contact" className="block px-3 py-3 min-h-[44px] text-gray-500 hover:text-orange-600 hover:bg-gray-50 text-sm transition-colors rounded-md flex items-center" onClick={closeMobileMenu}>
                       Contact Us
                     </Link>
                   </div>
@@ -291,10 +291,10 @@ const App = () => {
         </Routes>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-8">
-              <div>
+        <footer className="bg-gray-900 text-white py-12 sm:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-8">
+              <div className="sm:col-span-2 lg:col-span-1">
                 <div className="text-2xl font-bold mb-4">
                   <span className="text-white">Centauri-</span>
                   <span className="text-orange-500">Pro</span>
@@ -310,10 +310,10 @@ const App = () => {
 
               <div>
                 <h3 className="text-sm font-semibold mb-4 uppercase tracking-wider text-gray-300">Services</h3>
-                <ul className="space-y-2 text-gray-400 text-sm">
+                <ul className="space-y-1 text-gray-400 text-sm">
                   {serviceLinks.map((service, i) => (
                     <li key={i}>
-                      <Link to={service.path} className="hover:text-white transition-colors">
+                      <Link to={service.path} className="hover:text-white transition-colors inline-flex items-center py-2 min-h-[44px] leading-snug">
                         {service.name.split(' & ')[0]}
                       </Link>
                     </li>
@@ -323,13 +323,13 @@ const App = () => {
 
               <div>
                 <h3 className="text-sm font-semibold mb-4 uppercase tracking-wider text-gray-300">Company</h3>
-                <ul className="space-y-2 text-gray-400 text-sm">
-                  <li><Link to="/about/leadership" className="hover:text-white transition-colors">Leadership</Link></li>
-                  <li><Link to="/about/contract-vehicles" className="hover:text-white transition-colors">Contract Vehicles</Link></li>
-                  <li><Link to="/projects" className="hover:text-white transition-colors">Projects</Link></li>
-                  <li><Link to="/news" className="hover:text-white transition-colors">News</Link></li>
-                  <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-                  <li><Link to="/legal-notices" className="hover:text-white transition-colors">Legal Notices</Link></li>
+                <ul className="space-y-1 text-gray-400 text-sm">
+                  <li><Link to="/about/leadership" className="hover:text-white transition-colors inline-flex items-center py-2 min-h-[44px]">Leadership</Link></li>
+                  <li><Link to="/about/contract-vehicles" className="hover:text-white transition-colors inline-flex items-center py-2 min-h-[44px]">Contract Vehicles</Link></li>
+                  <li><Link to="/projects" className="hover:text-white transition-colors inline-flex items-center py-2 min-h-[44px]">Projects</Link></li>
+                  <li><Link to="/news" className="hover:text-white transition-colors inline-flex items-center py-2 min-h-[44px]">News</Link></li>
+                  <li><Link to="/careers" className="hover:text-white transition-colors inline-flex items-center py-2 min-h-[44px]">Careers</Link></li>
+                  <li><Link to="/legal-notices" className="hover:text-white transition-colors inline-flex items-center py-2 min-h-[44px]">Legal Notices</Link></li>
                 </ul>
               </div>
 
@@ -337,23 +337,23 @@ const App = () => {
                 <h3 className="text-sm font-semibold mb-4 uppercase tracking-wider text-gray-300">Contact</h3>
                 <div className="space-y-3 text-gray-400 text-sm">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-orange-500" />
+                    <Phone className="w-4 h-4 text-orange-500 flex-shrink-0" />
                     <span>(555) 123-4567</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4 text-orange-500" />
+                    <Mail className="w-4 h-4 text-orange-500 flex-shrink-0" />
                     <span>info@centauripro.com</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-orange-500" />
+                    <MapPin className="w-4 h-4 text-orange-500 flex-shrink-0" />
                     <span>Detroit, Michigan</span>
                   </div>
                 </div>
-                <div className="flex space-x-3 mt-6">
-                  <a href="#" className="text-gray-500 hover:text-white transition-colors">
+                <div className="flex space-x-4 mt-6">
+                  <a href="#" className="text-gray-500 hover:text-white transition-colors p-1 min-w-[44px] min-h-[44px] flex items-center justify-center">
                     <Facebook className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-gray-500 hover:text-white transition-colors">
+                  <a href="#" className="text-gray-500 hover:text-white transition-colors p-1 min-w-[44px] min-h-[44px] flex items-center justify-center">
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
