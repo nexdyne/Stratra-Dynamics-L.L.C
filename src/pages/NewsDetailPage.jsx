@@ -64,7 +64,7 @@ export default function NewsDetailPage() {
 
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-lg text-gray-700 mb-8">
               The article you are looking for does not exist or has been removed.
             </p>
@@ -116,7 +116,7 @@ export default function NewsDetailPage() {
                 {article.category}
               </span>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {article.title}
             </h1>
           </div>
