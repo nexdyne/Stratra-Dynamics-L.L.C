@@ -248,16 +248,16 @@ const HomePage = () => {
               {projectsTop.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[380px] md:w-[480px] lg:w-[560px] h-[260px] md:h-[320px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                    <span className="text-orange-400 text-xs font-semibold tracking-wider uppercase mb-1 block opacity-0 group-hover:opacity-100 transition-opacity duration-500">{project.category}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500">
+                    <span className="text-orange-400 text-xs font-semibold tracking-wider uppercase mb-1 block opacity-70 group-hover:opacity-100 transition-opacity duration-500">{project.category}</span>
                     <h3 className="text-white text-lg font-bold">{project.title}</h3>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ const HomePage = () => {
           </div>
 
           {/* Bottom row - scrolls RIGHT as user scrolls down */}
-          <div className="overflow-hidden">
+          <div className="-mt-4 overflow-hidden">
             <div
               className="flex gap-6 transition-transform duration-100 ease-out"
               style={{
@@ -277,16 +277,16 @@ const HomePage = () => {
               {projectsBottom.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[380px] md:w-[480px] lg:w-[560px] h-[260px] md:h-[320px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                    <span className="text-orange-400 text-xs font-semibold tracking-wider uppercase mb-1 block opacity-0 group-hover:opacity-100 transition-opacity duration-500">{project.category}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500">
+                    <span className="text-orange-400 text-xs font-semibold tracking-wider uppercase mb-1 block opacity-70 group-hover:opacity-100 transition-opacity duration-500">{project.category}</span>
                     <h3 className="text-white text-lg font-bold">{project.title}</h3>
                   </div>
                 </div>
