@@ -5,7 +5,7 @@ const EnvironmentalConsultingPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-12">
+      <section className="bg-gray-900 text-white py-10 md:py-20 xl:py-24">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-sm text-gray-400 mb-8">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
@@ -14,7 +14,7 @@ const EnvironmentalConsultingPage = () => {
             <span className="mx-2">/</span>
             <span>Environmental Consulting & Industrial Hygiene</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">Environmental Consulting & Industrial Hygiene</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">Environmental Consulting & Industrial Hygiene</h1>
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl">CIH-backed environmental assessments and industrial hygiene surveys to ensure workplace safety, protect public health, and maintain regulatory compliance.</p>
         </div>
       </section>
@@ -28,7 +28,7 @@ const EnvironmentalConsultingPage = () => {
               <p className="text-gray-700 leading-relaxed mb-4">Environmental contamination and workplace health hazards pose serious risks to occupants, employees, and communities. Our environmental consulting and industrial hygiene services provide the expertise needed to identify, assess, and mitigate these risks through rigorous scientific analysis and regulatory compliance.</p>
               <p className="text-gray-700 leading-relaxed">From Phase I and Phase II Environmental Site Assessments to comprehensive industrial hygiene surveys and hazardous materials identification, our certified professionals deliver thorough, actionable insights using NIOSH-accredited sampling methods and industry-leading analytical protocols.</p>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
+            <div className="bg-gray-100 p-6 sm:p-8 rounded-lg">
               <h3 className="text-lg font-bold text-gray-900 mb-6">Key Credentials</h3>
               <div className="space-y-4">
                 <div className="flex items-start"><span className="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span><div><p className="font-semibold text-gray-900">Certified Industrial Hygienist (CIH)</p><p className="text-gray-600 text-sm">CIH-led workplace exposure assessments and environmental evaluations</p></div></div>
@@ -45,7 +45,7 @@ const EnvironmentalConsultingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Consulting & Assessment Services</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">We provide comprehensive environmental and occupational health assessments to help organizations manage risk, maintain compliance, and protect their people.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow"><h3 className="text-lg font-bold text-gray-900 mb-3">Environmental Site Assessments</h3><p className="text-gray-600 text-sm leading-relaxed">Phase I and Phase II ESA services to identify potential environmental liabilities, assess historical land use, and evaluate subsurface conditions for transactions and regulatory compliance.</p></div>
             <div className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow"><h3 className="text-lg font-bold text-gray-900 mb-3">Air Quality Testing</h3><p className="text-gray-600 text-sm leading-relaxed">Comprehensive indoor and outdoor air quality monitoring to assess pollutant levels, identify contamination sources, and provide actionable remediation recommendations.</p></div>
             <div className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow"><h3 className="text-lg font-bold text-gray-900 mb-3">Industrial Hygiene Surveys</h3><p className="text-gray-600 text-sm leading-relaxed">Workplace exposure assessments evaluating chemical, biological, and physical hazards to ensure OSHA compliance and implement effective worker protection controls.</p></div>
@@ -80,7 +80,7 @@ const EnvironmentalConsultingPage = () => {
                 {['Federal Government', 'Healthcare Facilities', 'K-12 Schools & Universities', 'Commercial Real Estate', 'Industrial & Manufacturing', 'Public Housing'].map((sector, i) => (<div key={i} className="flex items-center"><span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span><span className="text-gray-300 text-sm">{sector}</span></div>))}
               </div>
             </div>
-            <div className="bg-gray-800 rounded-lg p-8">
+            <div className="bg-gray-800 rounded-lg p-6 sm:p-8">
               <h3 className="text-lg font-bold text-white mb-6">Regulatory Framework</h3>
               <div className="space-y-4">
                 {[{agency:'EPA',rule:'CERCLA, SARA, RCRA'},{agency:'OSHA',rule:'PELs, RELs, TLVs'},{agency:'ASTM',rule:'E1527, E1528 ESA Standards'},{agency:'NIOSH',rule:'Exposure Assessment Methods'},{agency:'State',rule:'Michigan EGLE Environmental Standards'}].map((reg,i) => (<div key={i} className="flex items-start border-b border-gray-700 pb-3 last:border-0 last:pb-0"><span className="text-orange-500 font-bold text-sm w-14 flex-shrink-0">{reg.agency}</span><span className="text-gray-400 text-sm">{reg.rule}</span></div>))}
@@ -95,7 +95,7 @@ const EnvironmentalConsultingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Ready to assess your environmental and workplace health risks?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Contact our team of certified professionals to discuss your environmental consulting and industrial hygiene needs.</p>
-          <Link to="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded transition-colors">Request a Consultation</Link>
+          <Link to="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-4 text-base font-semibold rounded transition-colors min-h-[52px] w-full sm:w-auto text-center">Request a Consultation</Link>
         </div>
       </section>
     </div>
