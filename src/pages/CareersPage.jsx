@@ -48,7 +48,7 @@ export default function CareersPage() {
           </div>
 
           {/* Hero Content */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Careers at Centauri-Pro</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">Careers at Centauri-Pro</h1>
           <p className="text-lg text-gray-300 max-w-2xl">
             Join a team dedicated to environmental protection and public health. Help us build safer communities through expert environmental services and construction management.
           </p>
@@ -58,7 +58,7 @@ export default function CareersPage() {
       {/* Why Work Here Section */}
       <section className="bg-white py-10 md:py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 xl:gap-16">
             {/* Left Column - Editorial Content */}
             <div className="space-y-6">
               <div>
@@ -76,7 +76,7 @@ export default function CareersPage() {
 
             {/* Right Column - Benefits Card */}
             <div>
-              <div className="bg-gray-100 p-8 rounded-lg">
+              <div className="bg-gray-100 p-6 sm:p-8 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">What We Offer</h3>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -96,7 +96,7 @@ export default function CareersPage() {
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-12">Current Openings</h2>
 
-          <div className="grid md:grid-cols-1 gap-6 xl:gap-8">
+          <div className="grid grid-cols-1 gap-6 xl:gap-8">
             {jobOpenings.map((job) => (
               <div key={job.id} className="bg-white border border-gray-200 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
@@ -108,7 +108,7 @@ export default function CareersPage() {
                 <p className="text-gray-700 mb-6 leading-relaxed">{job.description}</p>
                 <Link
                   to="/contact"
-                  className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+                  className="inline-block w-full sm:w-auto bg-orange-600 text-white px-6 py-2 min-h-[44px] rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center"
                 >
                   Apply Now
                 </Link>
@@ -127,7 +127,7 @@ export default function CareersPage() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+            className="inline-block w-full sm:w-auto bg-orange-600 text-white px-6 sm:px-8 py-4 min-h-[48px] rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center"
           >
             Send Your Resume
           </Link>
