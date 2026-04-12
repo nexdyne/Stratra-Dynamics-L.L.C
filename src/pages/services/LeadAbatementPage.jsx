@@ -1,164 +1,124 @@
 import React from 'react'
-import { Button } from '@/components/ui/button.jsx'
-import { Shield, CheckCircle, ArrowRight, ChevronRight, AlertTriangle, Zap, Building, Award } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const LeadAbatementPage = () => {
+  const services = [
+    {
+      title: 'Lead-Based Paint Removal',
+      desc: 'Safe and compliant removal of lead-based paint from pre-1978 structures using EPA-certified methods. Our teams employ advanced containment systems to protect occupants and workers throughout the process.'
+    },
+    {
+      title: 'Asbestos Abatement',
+      desc: 'Professional removal and encapsulation of asbestos-containing materials with full regulatory compliance. We handle everything from initial surveys through final air clearance testing.'
+    },
+    {
+      title: 'Mold Remediation',
+      desc: 'Comprehensive mold assessment and remediation to eliminate health hazards and prevent recurrence. Our approach addresses root causes including moisture intrusion and ventilation deficiencies.'
+    },
+    {
+      title: 'PCB Removal',
+      desc: 'Identification and safe removal of polychlorinated biphenyls from electrical equipment, caulking, and building materials in compliance with TSCA regulations.'
+    },
+    {
+      title: 'Mercury Abatement',
+      desc: 'Safe mercury removal from lighting fixtures, thermostats, switches, and laboratory equipment with proper containment, decontamination, and disposal protocols.'
+    },
+    {
+      title: 'Hazardous Waste Disposal',
+      desc: 'Proper characterization, transportation, and certified disposal of all hazardous materials according to RCRA, DOT, and state regulatory standards.'
+    }
+  ]
+
+  const processSteps = [
+    {
+      num: '01',
+      title: 'Assessment',
+      desc: 'Comprehensive site survey, materials testing, and hazard identification using XRF analysis and laboratory sampling.'
+    },
+    {
+      num: '02',
+      title: 'Planning',
+      desc: 'Detailed work plan development including containment design, safety protocols, air monitoring strategy, and regulatory notifications.'
+    },
+    {
+      num: '03',
+      title: 'Abatement',
+      desc: 'Controlled removal using EPA-certified methods with continuous air monitoring, worker protection, and waste tracking documentation.'
+    },
+    {
+      num: '04',
+      title: 'Verification',
+      desc: 'Post-abatement clearance testing, final air monitoring, waste manifests, and project closeout documentation for regulatory compliance.'
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-orange-500">Home</Link>
-            <span>/</span>
-            <Link to="/#services" className="hover:text-orange-500">Services</Link>
-            <span>/</span>
-            <span className="text-gray-800">Lead Abatement & Hazardous Materials Removal</span>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/assets/Incident-and-Compliance-Management-for-Construction.webp')`
-          }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
+      <section className="bg-gray-900 py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <nav className="flex items-center text-sm text-gray-400 mb-10">
+            <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
+            <span className="mx-2">/</span>
+            <span className="text-gray-500">Services</span>
+            <span className="mx-2">/</span>
+            <span className="text-white">Lead Abatement & Hazardous Materials</span>
+          </nav>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Lead Abatement & Hazardous Materials Removal
             </h1>
-            <p className="text-xl text-gray-100 mb-8">
+            <p className="text-lg text-gray-300 leading-relaxed">
               EPA-certified lead-safe practices for residential, commercial, and government facilities. We ensure compliance with HUD, EPA, and state regulations while protecting occupants and workers.
             </p>
-            <Link to="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold transition-colors">
-              Request Assessment
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">What We Do</h2>
-            <div className="w-16 h-1 bg-orange-500"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <Shield className="w-10 h-10 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Lead-Based Paint Removal</h3>
-              <p className="text-gray-600">
-                Safe and compliant removal of lead-based paint from pre-1978 structures using EPA-certified methods.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <AlertTriangle className="w-10 h-10 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Asbestos Abatement</h3>
-              <p className="text-gray-600">
-                Professional removal and encapsulation of asbestos-containing materials with full regulatory compliance.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <Building className="w-10 h-10 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Mold Remediation</h3>
-              <p className="text-gray-600">
-                Comprehensive mold assessment and remediation to eliminate health hazards and prevent recurrence.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <Zap className="w-10 h-10 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">PCB Removal</h3>
-              <p className="text-gray-600">
-                Identification and safe removal of polychlorinated biphenyls from electrical equipment and structures.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <AlertTriangle className="w-10 h-10 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Mercury Abatement</h3>
-              <p className="text-gray-600">
-                Safe mercury removal from lighting fixtures, switches, and other fixtures with proper disposal.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <CheckCircle className="w-10 h-10 text-orange-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Hazardous Waste Disposal</h3>
-              <p className="text-gray-600">
-                Proper transportation and certified disposal of all hazardous materials according to federal standards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Why Choose Us</h2>
-            <div className="w-16 h-1 bg-orange-500"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* Narrative Introduction */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Expertise</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">EPA RRP Certified contractors with extensive field experience</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">State lead licenses and AHERA accreditation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">Full compliance with HUD, EPA, and state regulations</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">Specialized expertise in residential, commercial, and government facilities</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">Advanced containment and air monitoring technology</span>
-                </li>
-              </ul>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Protecting people and property from hazardous materials</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Hazardous materials in aging buildings pose serious health and regulatory risks. Lead-based paint, asbestos, mold, PCBs, and mercury require specialized expertise to identify, contain, and safely remove. Centauri-Pro delivers full-scope abatement services that keep projects on schedule while maintaining strict compliance with federal and state standards.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Our field teams hold EPA RRP certifications, state lead licenses, and AHERA accreditations. Every project is executed under detailed work plans with continuous air monitoring, proper containment, and documented chain-of-custody for all waste streams.
+              </p>
             </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Certifications</h3>
+            <div className="bg-gray-100 p-8 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-6">Key Credentials</h3>
               <div className="space-y-4">
-                <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <Award className="w-6 h-6 text-orange-600 mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">EPA RRP Certification</h4>
-                  <p className="text-gray-600 text-sm">Renovate, Repair and Paint rule compliance for all lead-safe work</p>
+                <div className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                  <div>
+                    <p className="font-semibold text-gray-900">EPA RRP Certified Firm</p>
+                    <p className="text-gray-600 text-sm">Renovate, Repair and Paint rule compliance for all lead-safe work</p>
+                  </div>
                 </div>
-
-                <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <Award className="w-6 h-6 text-orange-600 mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">State Lead Licenses</h4>
-                  <p className="text-gray-600 text-sm">Full authorization to conduct lead-based paint activities</p>
+                <div className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                  <div>
+                    <p className="font-semibold text-gray-900">State Lead Abatement Licenses</p>
+                    <p className="text-gray-600 text-sm">Michigan EGLE licensed for lead-based paint activities</p>
+                  </div>
                 </div>
-
-                <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <Award className="w-6 h-6 text-orange-600 mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">AHERA Accreditation</h4>
-                  <p className="text-gray-600 text-sm">Asbestos-containing materials assessment and management credentials</p>
+                <div className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                  <div>
+                    <p className="font-semibold text-gray-900">AHERA Accreditation</p>
+                    <p className="text-gray-600 text-sm">Asbestos Hazard Emergency Response Act certified inspectors and supervisors</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                  <div>
+                    <p className="font-semibold text-gray-900">40-Hour HAZWOPER Trained</p>
+                    <p className="text-gray-600 text-sm">Field personnel certified under OSHA 29 CFR 1910.120</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -166,53 +126,98 @@ const LeadAbatementPage = () => {
         </div>
       </section>
 
-      {/* Our Process Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Our Process</h2>
-            <div className="w-16 h-1 bg-orange-500"></div>
+      {/* Services Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Abatement & Remediation Services</h2>
+          <p className="text-gray-600 mb-12 max-w-2xl">
+            We provide end-to-end hazardous materials management, from initial assessment through final clearance and documentation.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, i) => (
+              <div key={i} className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="relative">
-              <div className="bg-orange-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mb-4">1</div>
-              <h3 className="font-bold text-gray-900 mb-2">Assessment</h3>
-              <p className="text-gray-600 text-sm">Comprehensive testing and hazard identification of all materials</p>
+      {/* Process Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">A disciplined, safety-first approach</h2>
+          <p className="text-gray-600 mb-12 max-w-2xl">
+            Every abatement project follows a structured lifecycle that prioritizes worker safety, regulatory compliance, and thorough documentation.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, i) => (
+              <div key={i} className="relative">
+                <span className="text-5xl font-bold text-gray-200 mb-4 block">{step.num}</span>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sectors Served */}
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Sectors we serve</h2>
+              <p className="text-gray-300 leading-relaxed mb-8">
+                Our abatement teams operate across a range of facility types, delivering compliant hazardous materials management for clients with the most demanding safety and schedule requirements.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {['Federal Government Facilities', 'Public Housing Authorities', 'K-12 Schools & Universities', 'Healthcare & Hospitals', 'Commercial & Industrial', 'State & Municipal Buildings'].map((sector, i) => (
+                  <div key={i} className="flex items-center">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
+                    <span className="text-gray-300 text-sm">{sector}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-
-            <div className="relative">
-              <div className="bg-orange-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mb-4">2</div>
-              <h3 className="font-bold text-gray-900 mb-2">Planning</h3>
-              <p className="text-gray-600 text-sm">Detailed remediation plan with containment and safety protocols</p>
-            </div>
-
-            <div className="relative">
-              <div className="bg-orange-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mb-4">3</div>
-              <h3 className="font-bold text-gray-900 mb-2">Abatement</h3>
-              <p className="text-gray-600 text-sm">EPA-certified removal using advanced safety and containment methods</p>
-            </div>
-
-            <div className="relative">
-              <div className="bg-orange-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mb-4">4</div>
-              <h3 className="font-bold text-gray-900 mb-2">Verification</h3>
-              <p className="text-gray-600 text-sm">Post-abatement testing and clearance documentation</p>
+            <div className="bg-gray-800 rounded-lg p-8">
+              <h3 className="text-lg font-bold text-white mb-6">Regulatory Framework</h3>
+              <div className="space-y-4">
+                {[
+                  { agency: 'EPA', rule: 'RRP Rule, TSCA, NESHAP, RCRA' },
+                  { agency: 'OSHA', rule: '29 CFR 1926.62 (Lead), 1926.1101 (Asbestos)' },
+                  { agency: 'HUD', rule: 'Lead Safe Housing Rule (24 CFR Part 35)' },
+                  { agency: 'DOT', rule: 'Hazardous Materials Transportation (49 CFR)' },
+                  { agency: 'State', rule: 'Michigan EGLE Lead Abatement Standards' }
+                ].map((reg, i) => (
+                  <div key={i} className="flex items-start border-b border-gray-700 pb-3 last:border-0 last:pb-0">
+                    <span className="text-orange-500 font-bold text-sm w-14 flex-shrink-0">{reg.agency}</span>
+                    <span className="text-gray-400 text-sm">{reg.rule}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-orange-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Protect Your Facility?
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Ready to address hazardous materials in your facility?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Contact us today for a comprehensive assessment of lead, asbestos, and hazardous material risks.
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Contact us today for a comprehensive site assessment. Our team will develop a compliant remediation plan tailored to your facility, schedule, and regulatory requirements.
           </p>
-          <Link to="/contact" className="inline-block bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold rounded transition-colors">
-            Schedule Your Assessment
+          <Link
+            to="/contact"
+            className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded transition-colors"
+          >
+            Request an Assessment
           </Link>
         </div>
       </section>
