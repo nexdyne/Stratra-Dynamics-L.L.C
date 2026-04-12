@@ -43,7 +43,7 @@ export default function ProjectsPage() {
           <div className="mb-6 text-sm text-gray-400">
             <Link to="/" className="hover:text-white">Home</Link> / Projects
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
           <p className="text-lg text-gray-300">
             Environmental remediation, construction management, and compliance solutions delivered with precision.
           </p>
@@ -53,7 +53,7 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="bg-white py-10 md:py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 xl:gap-10">
             {projects.map((project) => (
               <Link
                 key={project.id}
@@ -62,7 +62,7 @@ export default function ProjectsPage() {
               >
                 <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="h-2 bg-orange-600"></div>
-                  <div className="p-6">
+                  <div className="p-6 sm:p-8">
                     <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
                       {project.title}
                     </h3>
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
           </h2>
           <Link
             to="/contact"
-            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+            className="inline-block w-full sm:w-auto bg-orange-600 text-white px-6 sm:px-8 py-4 min-h-[48px] rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center"
           >
             Get in Touch
           </Link>
