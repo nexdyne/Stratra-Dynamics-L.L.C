@@ -106,18 +106,18 @@ const HomePage = () => {
 
   // Project showcase data
   const projectsTop = [
-    { image: "/assets/hero1.jpeg", title: "Federal Building Remediation", category: "Lead Abatement" },
-    { image: "/assets/Incident-and-Compliance-Management-for-Construction.webp", title: "Industrial Compliance Overhaul", category: "Environmental Consulting" },
-    { image: "/assets/iot.jpg", title: "Smart Monitoring Systems", category: "Industrial Hygiene" },
-    { image: "/assets/federal-pro.jpg", title: "Government Facility Renovation", category: "Construction Management" },
-    { image: "/assets/enery.jpg", title: "Energy Systems Commissioning", category: "Sustainability" },
+    { image: "https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Federal Building Remediation", category: "Lead Abatement" },
+    { image: "https://images.pexels.com/photos/8961004/pexels-photo-8961004.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Industrial Compliance Overhaul", category: "Environmental Consulting" },
+    { image: "https://images.pexels.com/photos/8292802/pexels-photo-8292802.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Smart Monitoring Systems", category: "Industrial Hygiene" },
+    { image: "https://images.pexels.com/photos/10202865/pexels-photo-10202865.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Government Facility Renovation", category: "Construction Management" },
+    { image: "https://images.pexels.com/photos/8293699/pexels-photo-8293699.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Energy Systems Commissioning", category: "Sustainability" },
   ];
   const projectsBottom = [
-    { image: "/assets/est.jpg", title: "Cost Forecasting Platform", category: "Risk Management" },
-    { image: "/assets/perdictive-analytics.webp", title: "Predictive Analytics Integration", category: "Scheduling" },
-    { image: "/assets/hero1.jpeg", title: "Municipal Water Treatment", category: "Environmental" },
-    { image: "/assets/Incident-and-Compliance-Management-for-Construction.webp", title: "HAZWOPER Training Campus", category: "Training" },
-    { image: "/assets/federal-pro.jpg", title: "Federal Compliance Audit", category: "Compliance" },
+    { image: "https://images.pexels.com/photos/3862628/pexels-photo-3862628.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Cost Forecasting Platform", category: "Risk Management" },
+    { image: "https://images.pexels.com/photos/7937365/pexels-photo-7937365.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Predictive Analytics Integration", category: "Scheduling" },
+    { image: "https://images.pexels.com/photos/10274179/pexels-photo-10274179.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Municipal Water Treatment", category: "Environmental" },
+    { image: "https://images.pexels.com/photos/8960942/pexels-photo-8960942.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "HAZWOPER Training Campus", category: "Training" },
+    { image: "https://images.pexels.com/photos/8293680/pexels-photo-8293680.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Federal Compliance Audit", category: "Compliance" },
   ];
 
   // Parallax refs
