@@ -133,7 +133,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section - Single powerful image */}
-      <section className="relative h-[85vh] min-h-[500px] max-h-[780px] md:max-h-[700px] lg:max-h-[780px] xl:max-h-[860px] overflow-hidden">
+      <section className="relative h-[75vh] md:h-[85vh] min-h-[400px] md:min-h-[500px] max-h-[600px] md:max-h-[700px] lg:max-h-[780px] xl:max-h-[860px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-[85%_center] bg-no-repeat transition-transform duration-[20000ms] ease-linear"
           style={{
@@ -167,7 +167,7 @@ const HomePage = () => {
 
               {/* Headline */}
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-[1.1] transition-all duration-1000 delay-200 ease-out"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-[1.1] transition-all duration-1000 delay-200 ease-out"
                 style={{
                   opacity: heroLoaded ? 1 : 0,
                   transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
@@ -220,7 +220,7 @@ const HomePage = () => {
       </section>
 
       {/* Project Showcase - Parallax Scroll */}
-      <section ref={parallaxRef} className="relative bg-white py-16 overflow-hidden">
+      <section ref={parallaxRef} className="relative bg-white py-10 md:py-16 overflow-hidden">
         <div className="relative z-10">
           {/* Section heading */}
           <div
@@ -231,7 +231,7 @@ const HomePage = () => {
               transform: showcaseTextVisible ? 'translateY(0)' : 'translateY(40px)',
             }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               Safe environments. Smart construction.
             </h2>
           </div>
@@ -308,9 +308,9 @@ const HomePage = () => {
             }}
           >
             {/* Left - Content */}
-            <div className="bg-gray-800 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-16 flex flex-col justify-center">
+            <div className="bg-gray-800 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-10 md:py-16 flex flex-col justify-center">
               <span className="text-orange-400 text-sm font-bold tracking-widest uppercase mb-6 block">Insights</span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-snug mb-8">
+              <h2 className="text-2xl md:text-2xl sm:text-3xl lg:text-4xl font-light text-white leading-snug mb-8">
                 Every project we deliver is a commitment to safer communities, healthier buildings, and lasting environmental impact.
               </h2>
               <div className="flex items-center gap-4">
@@ -320,7 +320,7 @@ const HomePage = () => {
             </div>
 
             {/* Right - Featured Card */}
-            <div className="bg-gray-200 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-16 flex flex-col justify-center">
+            <div className="bg-gray-200 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-10 md:py-16 flex flex-col justify-center">
               <span className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-4 block">Featured</span>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                 <div className="mb-4">
@@ -350,7 +350,7 @@ const HomePage = () => {
             }}
           >
             <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">What We Do</span>
-            <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">Our Services</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">Our Services</h2>
             <div className="w-16 h-1 bg-orange-500 mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl">
               We deliver a full range of environmental and construction services,
@@ -358,7 +358,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -413,10 +413,10 @@ const HomePage = () => {
             transform: aboutVisible ? 'translateY(0)' : 'translateY(30px)',
           }}
         >
-          <div className="grid md:grid-cols-2 gap-12 xl:gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 xl:gap-20 items-center">
             <div>
               <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Who We Are</span>
-              <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">About Centauri-Pro Consulting</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">About Centauri-Pro Consulting</h2>
               <div className="w-16 h-1 bg-orange-500 mb-6"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 We are an environmental services and construction management firm specializing in
@@ -495,7 +495,7 @@ const HomePage = () => {
           <div className="flex justify-between items-end mb-12">
             <div>
               <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Insights</span>
-              <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">Latest News</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">Latest News</h2>
               <div className="w-16 h-1 bg-orange-500"></div>
             </div>
             <Link to="/news" className="hidden md:inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
@@ -504,7 +504,7 @@ const HomePage = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 xl:gap-10">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
             {[
               {
                 date: "March 2026",
@@ -557,9 +557,9 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 py-16 xl:py-20">
+      <section className="bg-gray-900 py-16 xl:py-12 md:py-20">
         <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to start your project?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to start your project?</h2>
           <p className="text-gray-400 mb-8 text-lg">
             From lead assessment to full remediation — let's discuss how we can help.
           </p>
