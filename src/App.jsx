@@ -33,6 +33,10 @@ import ConstructionRenovationPage from './pages/services/ConstructionRenovationP
 import EnergySustainabilityPage from './pages/services/EnergySustainabilityPage';
 import RiskManagementPage from './pages/services/RiskManagementPage';
 import TrainingCompliancePage from './pages/services/TrainingCompliancePage';
+import ITSolutionsPage from './pages/services/ITSolutionsPage';
+import LogisticsPage from './pages/services/LogisticsPage';
+import SupplyProcurementPage from './pages/services/SupplyProcurementPage';
+import ConstructionManagementPage from './pages/services/ConstructionManagementPage';
 
 const serviceLinks = [
   { name: "Lead Abatement & Hazardous Materials", path: "/services/lead-abatement-hazardous-materials" },
@@ -41,6 +45,10 @@ const serviceLinks = [
   { name: "Commissioning, Energy & Sustainability", path: "/services/commissioning-energy-sustainability" },
   { name: "Estimating, Scheduling & Risk Management", path: "/services/estimating-scheduling-risk-management" },
   { name: "Training & Compliance Services", path: "/services/training-compliance-services" },
+  { name: "IT Solutions & Cybersecurity", path: "/services/it-solutions-cybersecurity" },
+  { name: "Logistics & Fleet Management", path: "/services/logistics-fleet-management" },
+  { name: "Supply Chain & Procurement", path: "/services/supply-chain-procurement" },
+  { name: "Construction & Program Management", path: "/services/construction-program-management" },
 ];
 
 // Main App Component with Navigation
@@ -276,6 +284,10 @@ const App = () => {
           <Route path="/services/commissioning-energy-sustainability" element={<EnergySustainabilityPage />} />
           <Route path="/services/estimating-scheduling-risk-management" element={<RiskManagementPage />} />
           <Route path="/services/training-compliance-services" element={<TrainingCompliancePage />} />
+          <Route path="/services/it-solutions-cybersecurity" element={<ITSolutionsPage />} />
+          <Route path="/services/logistics-fleet-management" element={<LogisticsPage />} />
+          <Route path="/services/supply-chain-procurement" element={<SupplyProcurementPage />} />
+          <Route path="/services/construction-program-management" element={<ConstructionManagementPage />} />
         </Routes>
 
         {/* Footer */}
