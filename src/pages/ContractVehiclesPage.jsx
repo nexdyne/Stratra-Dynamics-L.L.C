@@ -6,7 +6,7 @@ export default function ContractVehiclesPage() {
     <div className="bg-white">
       {/* Header with Breadcrumb */}
       <div className="bg-gray-100 border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-6 py-4">
+        <div className="max-w-5xl xl:max-w-6xl mx-auto px-6 xl:px-8 py-4">
           <nav className="flex items-center text-sm text-gray-600 mb-6">
             <Link to="/" className="hover:text-orange-600 transition-colors">
               Home
@@ -29,7 +29,7 @@ export default function ContractVehiclesPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-6 py-16">
+      <div className="max-w-5xl xl:max-w-6xl mx-auto px-6 xl:px-8 py-16 xl:py-20">
 
         {/* NAICS Codes Section */}
         <section className="mb-16">
@@ -79,7 +79,7 @@ export default function ContractVehiclesPage() {
             Centauri-Pro Consulting holds and pursues key business certifications and designations to serve government entities and maximize contracting opportunities:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
