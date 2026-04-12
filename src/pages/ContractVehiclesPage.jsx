@@ -6,7 +6,7 @@ export default function ContractVehiclesPage() {
     <div className="bg-white">
       {/* Header with Breadcrumb */}
       <div className="bg-gray-100 border-b border-gray-200">
-        <div className="max-w-5xl xl:max-w-6xl mx-auto px-6 xl:px-8 py-4">
+        <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 xl:px-8 py-4">
           <nav className="flex items-center text-sm text-gray-600 mb-6">
             <Link to="/" className="hover:text-orange-600 transition-colors">
               Home
@@ -19,7 +19,7 @@ export default function ContractVehiclesPage() {
             <span className="text-gray-900 font-medium">Contract Vehicles</span>
           </nav>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">
             Government Contract Vehicles
           </h1>
           <p className="text-lg text-gray-700 max-w-2xl">
@@ -29,11 +29,11 @@ export default function ContractVehiclesPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-5xl xl:max-w-6xl mx-auto px-6 xl:px-8 py-16 xl:py-20">
+      <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 xl:px-8 py-10 md:py-16 xl:py-20">
 
         {/* NAICS Codes Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">NAICS Codes</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">NAICS Codes</h2>
           <p className="text-gray-700 mb-6">
             Our firm operates under the following North American Industry Classification System (NAICS) codes, enabling us to serve diverse government contracting opportunities:
           </p>
@@ -74,12 +74,12 @@ export default function ContractVehiclesPage() {
 
         {/* Certifications Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Certifications & Set-Asides</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Certifications & Set-Asides</h2>
           <p className="text-gray-700 mb-6">
             Centauri-Pro Consulting holds and pursues key business certifications and designations to serve government entities and maximize contracting opportunities:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xl:gap-8">
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
@@ -124,7 +124,7 @@ export default function ContractVehiclesPage() {
 
         {/* Contract Vehicle Pursuit Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Active Contract Vehicle Pursuit</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Active Contract Vehicle Pursuit</h2>
           <p className="text-gray-700 mb-6">
             We are actively pursuing and developing relationships with government procurement vehicles to enhance our capacity to serve federal, state, and local agencies:
           </p>
@@ -158,7 +158,7 @@ export default function ContractVehiclesPage() {
 
         {/* Partner With Us CTA */}
         <section className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">Partner With Us</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Partner With Us</h2>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
             Centauri-Pro Consulting is committed to supporting government missions through reliable, compliant, and expert environmental and construction management services. Contact us to discuss partnership opportunities and how we can meet your agency's needs.
           </p>
