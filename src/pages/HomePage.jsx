@@ -248,7 +248,7 @@ const HomePage = () => {
               {projectsTop.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[380px] md:w-[480px] lg:w-[560px] h-[260px] md:h-[320px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
@@ -277,7 +277,7 @@ const HomePage = () => {
               {projectsBottom.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[380px] md:w-[480px] lg:w-[560px] h-[260px] md:h-[320px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
