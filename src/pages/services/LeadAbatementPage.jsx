@@ -79,7 +79,7 @@ const LeadAbatementPage = () => {
       {/* Narrative Introduction */}
       <section className="py-16 xl:py-20">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Protecting people and property from hazardous materials</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -168,7 +168,7 @@ const LeadAbatementPage = () => {
       {/* Sectors Served */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Sectors we serve</h2>
               <p className="text-gray-300 leading-relaxed mb-8">
