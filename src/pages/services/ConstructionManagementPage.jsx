@@ -82,7 +82,7 @@ const ConstructionManagementPage = () => {
             What Is Construction & Infrastructure Management?
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-center">
             <div>
               <p className="text-lg text-gray-600 mb-6">
                 Our Construction & Infrastructure Management service transforms traditional project oversight into 
