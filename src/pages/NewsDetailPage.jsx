@@ -63,8 +63,8 @@ export default function NewsDetailPage() {
         </section>
 
         <section className="py-10 md:py-16 xl:py-20">
-          <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+          <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 xl:px-8 text-center">
+            <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-lg text-gray-700 mb-8">
               The article you are looking for does not exist or has been removed.
             </p>
@@ -84,7 +84,7 @@ export default function NewsDetailPage() {
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 xl:px-8">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
           <div className="text-sm text-gray-600">
             <Link to="/" className="hover:text-orange-600 transition">Home</Link>
             <span className="mx-2">/</span>
@@ -97,7 +97,7 @@ export default function NewsDetailPage() {
 
       {/* Article Content */}
       <article className="py-10 md:py-16 xl:py-20">
-        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6">
+        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 xl:px-8">
           {/* Back Link */}
           <Link
             to="/news"
@@ -116,7 +116,7 @@ export default function NewsDetailPage() {
                 {article.category}
               </span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {article.title}
             </h1>
           </div>
@@ -131,7 +131,7 @@ export default function NewsDetailPage() {
           </div>
 
           {/* CTA Box */}
-          <div className="bg-gray-50 p-8 rounded-lg mt-12">
+          <div className="bg-gray-50 p-6 sm:p-8 md:p-12 rounded-lg mt-12">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Ready to Address Environmental Challenges?
             </h3>
@@ -140,7 +140,7 @@ export default function NewsDetailPage() {
             </p>
             <Link
               to="/contact"
-              className="inline-block bg-orange-600 text-white px-8 py-3 rounded font-semibold hover:bg-orange-700 transition"
+              className="inline-block w-full sm:w-auto bg-orange-600 text-white px-6 sm:px-8 py-4 min-h-[48px] rounded font-semibold hover:bg-orange-700 transition text-center"
             >
               Contact Us
             </Link>
