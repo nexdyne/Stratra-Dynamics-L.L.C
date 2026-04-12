@@ -133,7 +133,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section - Single powerful image */}
-      <section className="relative h-[85vh] min-h-[500px] max-h-[780px] overflow-hidden">
+      <section className="relative h-[85vh] min-h-[500px] max-h-[780px] xl:max-h-[860px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-[85%_center] bg-no-repeat transition-transform duration-[20000ms] ease-linear"
           style={{
@@ -147,8 +147,8 @@ const HomePage = () => {
         </div>
 
         <div className="relative z-10 flex items-center h-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl">
+          <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 w-full">
+            <div className="max-w-2xl xl:max-w-3xl">
               {/* Eyebrow */}
               <div
                 className="transition-all duration-1000 ease-out"
@@ -179,7 +179,7 @@ const HomePage = () => {
 
               {/* Subtitle - brief */}
               <p
-                className="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed max-w-xl transition-all duration-1000 delay-400 ease-out"
+                className="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed max-w-xl xl:max-w-2xl transition-all duration-1000 delay-400 ease-out"
                 style={{
                   opacity: heroLoaded ? 1 : 0,
                   transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
@@ -225,7 +225,7 @@ const HomePage = () => {
           {/* Section heading */}
           <div
             ref={showcaseTextRef}
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 transition-all duration-800 ease-out"
+            className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 mb-12 transition-all duration-800 ease-out"
             style={{
               opacity: showcaseTextVisible ? 1 : 0,
               transform: showcaseTextVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -248,7 +248,7 @@ const HomePage = () => {
               {projectsTop.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
@@ -277,7 +277,7 @@ const HomePage = () => {
               {projectsBottom.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
@@ -298,7 +298,7 @@ const HomePage = () => {
 
       {/* Insight Section */}
       <section className="bg-gray-100 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
           <div
             ref={insightRef}
             className="grid grid-cols-1 lg:grid-cols-2 transition-all duration-800 ease-out"
@@ -308,7 +308,7 @@ const HomePage = () => {
             }}
           >
             {/* Left - Content */}
-            <div className="bg-gray-800 px-8 md:px-14 py-10 md:py-12 flex flex-col justify-center">
+            <div className="bg-gray-800 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-16 flex flex-col justify-center">
               <span className="text-orange-400 text-sm font-bold tracking-widest uppercase mb-6 block">Insights</span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-snug mb-8">
                 Every project we deliver is a commitment to safer communities, healthier buildings, and lasting environmental impact.
@@ -320,7 +320,7 @@ const HomePage = () => {
             </div>
 
             {/* Right - Featured Card */}
-            <div className="bg-gray-200 px-8 md:px-14 py-10 md:py-12 flex flex-col justify-center">
+            <div className="bg-gray-200 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-16 flex flex-col justify-center">
               <span className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-4 block">Featured</span>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                 <div className="mb-4">
@@ -339,8 +339,8 @@ const HomePage = () => {
       </section>
 
       {/* Services Section - with scroll reveal */}
-      <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="services" className="py-20 xl:py-24 bg-white">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div
             ref={servicesRef}
             className="mb-16 transition-all duration-700 ease-out"
@@ -358,7 +358,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -373,7 +373,7 @@ const HomePage = () => {
                   }}
                 >
                   {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48 xl:h-56 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -404,16 +404,16 @@ const HomePage = () => {
       </section>
 
       {/* About Section - with scroll reveal */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 xl:py-24 bg-gray-50">
         <div
           ref={aboutRef}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-out"
+          className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 transition-all duration-700 ease-out"
           style={{
             opacity: aboutVisible ? 1 : 0,
             transform: aboutVisible ? 'translateY(0)' : 'translateY(30px)',
           }}
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
             <div>
               <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Who We Are</span>
               <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">About Centauri-Pro Consulting</h2>
@@ -483,10 +483,10 @@ const HomePage = () => {
       </section>
 
       {/* Latest News Section - with scroll reveal */}
-      <section className="py-20 bg-white">
+      <section className="py-20 xl:py-24 bg-white">
         <div
           ref={newsRef}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-out"
+          className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 transition-all duration-700 ease-out"
           style={{
             opacity: newsVisible ? 1 : 0,
             transform: newsVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -504,7 +504,7 @@ const HomePage = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 xl:gap-10">
             {[
               {
                 date: "March 2026",
@@ -557,8 +557,8 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="bg-gray-900 py-16 xl:py-20">
+        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to start your project?</h2>
           <p className="text-gray-400 mb-8 text-lg">
             From lead assessment to full remediation — let's discuss how we can help.
