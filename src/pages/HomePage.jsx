@@ -135,7 +135,7 @@ const HomePage = () => {
       {/* Hero Section - Single powerful image */}
       <section className="relative h-[85vh] min-h-[500px] max-h-[780px] overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[20000ms] ease-linear"
+          className="absolute inset-0 bg-cover bg-[75%_center] bg-no-repeat transition-transform duration-[20000ms] ease-linear"
           style={{
             backgroundImage: 'url(https://images.pexels.com/photos/8961070/pexels-photo-8961070.jpeg?auto=compress&cs=tinysrgb&w=2400)',
             transform: heroLoaded ? 'scale(1.08)' : 'scale(1)',
@@ -250,7 +250,7 @@ const HomePage = () => {
               className="flex gap-6 transition-transform duration-100 ease-out"
               style={{
                 transform: `translateX(${-scrollProgress * 250}px)`,
-                paddingLeft: '2rem',
+          paddingLeft: '2rem',
               }}
             >
               {projectsTop.map((project, i) => (
