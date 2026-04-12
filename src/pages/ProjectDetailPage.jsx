@@ -60,8 +60,8 @@ export default function ProjectDetailPage() {
   if (!project) {
     return (
       <div className="min-h-screen bg-white">
-        <section className="bg-gray-900 text-white py-20">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="bg-gray-900 text-white py-20 xl:py-24">
+          <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Project Not Found</h1>
             <p className="text-lg text-gray-300 mb-8">
               The project you are looking for does not exist.
@@ -82,7 +82,7 @@ export default function ProjectDetailPage() {
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4 border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
           <div className="text-sm text-gray-600">
             <Link to="/" className="hover:text-orange-600">Home</Link> / <Link to="/projects" className="hover:text-orange-600">Projects</Link> / {project.title}
           </div>
@@ -91,7 +91,7 @@ export default function ProjectDetailPage() {
 
       {/* Project Header */}
       <section className="bg-white py-16 border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{project.title}</h1>
           <div className="mb-6 flex flex-wrap gap-6 items-center">
             <div>
@@ -111,8 +111,8 @@ export default function ProjectDetailPage() {
       </section>
 
       {/* Scope of Work */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="bg-gray-50 py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Scope of Work</h2>
           <ul className="space-y-4">
             {project.scopeItems.map((item, index) => (
@@ -126,8 +126,8 @@ export default function ProjectDetailPage() {
       </section>
 
       {/* Project Outcomes */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="bg-white py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Project Outcomes</h2>
           <div className="bg-gray-100 p-8 rounded-lg">
             <p className="text-lg text-gray-900 leading-relaxed">
@@ -138,8 +138,8 @@ export default function ProjectDetailPage() {
       </section>
 
       {/* Navigation */}
-      <section className="bg-gray-50 py-12 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 text-center flex flex-col sm:flex-row justify-center gap-4">
+      <section className="bg-gray-50 py-12 xl:py-16 border-t border-gray-200">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8 text-center flex flex-col sm:flex-row justify-center gap-4">
           <Link
             to="/projects"
             className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
