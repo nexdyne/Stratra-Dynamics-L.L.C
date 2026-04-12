@@ -133,7 +133,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section - Single powerful image */}
-      <section className="relative h-[85vh] min-h-[500px] max-h-[780px] xl:max-h-[860px] overflow-hidden">
+      <section className="relative h-[85vh] min-h-[500px] max-h-[780px] md:max-h-[700px] lg:max-h-[780px] xl:max-h-[860px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-[85%_center] bg-no-repeat transition-transform duration-[20000ms] ease-linear"
           style={{
@@ -301,7 +301,7 @@ const HomePage = () => {
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
           <div
             ref={insightRef}
-            className="grid grid-cols-1 lg:grid-cols-2 transition-all duration-800 ease-out"
+            className="grid grid-cols-1 md:grid-cols-2 transition-all duration-800 ease-out"
             style={{
               opacity: insightVisible ? 1 : 0,
               transform: insightVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -413,7 +413,7 @@ const HomePage = () => {
             transform: aboutVisible ? 'translateY(0)' : 'translateY(30px)',
           }}
         >
-          <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-12 xl:gap-20 items-center">
             <div>
               <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Who We Are</span>
               <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">About Centauri-Pro Consulting</h2>
