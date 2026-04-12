@@ -220,18 +220,18 @@ const HomePage = () => {
       </section>
 
       {/* Project Showcase - Parallax Scroll */}
-      <section ref={parallaxRef} className="relative bg-white py-10 overflow-hidden">
+      <section ref={parallaxRef} className="relative bg-white py-16 overflow-hidden">
         <div className="relative z-10">
           {/* Section heading */}
           <div
             ref={showcaseTextRef}
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 transition-all duration-800 ease-out"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 transition-all duration-800 ease-out"
             style={{
               opacity: showcaseTextVisible ? 1 : 0,
               transform: showcaseTextVisible ? 'translateY(0)' : 'translateY(40px)',
             }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Built to move the industry forward
             </h2>
           </div>
