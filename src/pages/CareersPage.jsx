@@ -48,7 +48,7 @@ export default function CareersPage() {
           </div>
 
           {/* Hero Content */}
-          <h1 className="text-5xl font-bold mb-4">Careers at Centauri-Pro</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Careers at Centauri-Pro</h1>
           <p className="text-lg text-gray-300 max-w-2xl">
             Join a team dedicated to environmental protection and public health. Help us build safer communities through expert environmental services and construction management.
           </p>
@@ -91,7 +91,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Current Openings Section */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
