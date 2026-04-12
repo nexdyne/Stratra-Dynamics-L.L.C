@@ -38,12 +38,12 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20 xl:py-24">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
+      <section className="bg-gray-900 text-white py-12 md:py-20 xl:py-24">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
           <div className="mb-6 text-sm text-gray-400">
             <Link to="/" className="hover:text-white">Home</Link> / Projects
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
           <p className="text-lg text-gray-300">
             Environmental remediation, construction management, and compliance solutions delivered with precision.
           </p>
@@ -51,9 +51,9 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="bg-white py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="grid md:grid-cols-3 gap-8 xl:gap-10">
+      <section className="bg-white py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
             {projects.map((project) => (
               <Link
                 key={project.id}
@@ -82,9 +82,9 @@ export default function ProjectsPage() {
       </section>
 
       {/* Service Categories */}
-      <section className="bg-gray-50 py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+      <section className="bg-gray-50 py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-12">
             Services Across Our Projects
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
@@ -102,9 +102,9 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-100 py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+      <section className="bg-gray-100 py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
             Ready to Start Your Project?
           </h2>
           <Link
