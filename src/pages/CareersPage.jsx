@@ -38,8 +38,8 @@ export default function CareersPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-900 text-white py-20 xl:py-24">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           {/* Breadcrumb */}
           <div className="mb-6 text-sm">
             <Link to="/" className="hover:text-orange-600">Home</Link>
@@ -56,9 +56,9 @@ export default function CareersPage() {
       </section>
 
       {/* Why Work Here Section */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
+      <section className="bg-white py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid md:grid-cols-2 gap-12 xl:gap-16">
             {/* Left Column - Editorial Content */}
             <div className="space-y-6">
               <div>
@@ -92,11 +92,11 @@ export default function CareersPage() {
         </div>
       </section>
       {/* Current Openings Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-50 py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Current Openings</h2>
 
-          <div className="grid md:grid-cols-1 gap-6">
+          <div className="grid md:grid-cols-1 gap-6 xl:gap-8">
             {jobOpenings.map((job) => (
               <div key={job.id} className="bg-white border border-gray-200 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
@@ -119,8 +119,8 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gray-100 py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Don't See the Right Role?</h2>
           <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
             We are always looking for talented professionals who share our commitment to environmental excellence and public health. Send us your resume and let us talk about how you can grow with Centauri-Pro.
