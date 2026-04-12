@@ -51,7 +51,7 @@ export default function NewsDetailPage() {
     return (
       <div className="min-h-screen bg-white">
         <section className="bg-gray-50 py-4">
-          <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 xl:px-8">
             <div className="text-sm text-gray-600">
               <Link to="/" className="hover:text-orange-600 transition">Home</Link>
               <span className="mx-2">/</span>
@@ -62,8 +62,8 @@ export default function NewsDetailPage() {
           </div>
         </section>
 
-        <section className="py-16">
-          <div className="max-w-4xl mx-auto px-4 text-center">
+        <section className="py-16 xl:py-20">
+          <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-lg text-gray-700 mb-8">
               The article you are looking for does not exist or has been removed.
@@ -84,7 +84,7 @@ export default function NewsDetailPage() {
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 xl:px-8">
           <div className="text-sm text-gray-600">
             <Link to="/" className="hover:text-orange-600 transition">Home</Link>
             <span className="mx-2">/</span>
@@ -96,8 +96,8 @@ export default function NewsDetailPage() {
       </section>
 
       {/* Article Content */}
-      <article className="py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <article className="py-16 xl:py-20">
+        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6">
           {/* Back Link */}
           <Link
             to="/news"
