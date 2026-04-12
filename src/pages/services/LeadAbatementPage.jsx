@@ -55,8 +55,8 @@ const LeadAbatementPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gray-900 py-20 xl:py-24">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <nav className="flex items-center text-sm text-gray-400 mb-10">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
             <span className="mx-2">/</span>
@@ -77,8 +77,8 @@ const LeadAbatementPage = () => {
       </section>
 
       {/* Narrative Introduction */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Protecting people and property from hazardous materials</h2>
@@ -128,7 +128,7 @@ const LeadAbatementPage = () => {
 
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Abatement & Remediation Services</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">
             We provide end-to-end hazardous materials management, from initial assessment through final clearance and documentation.
@@ -146,8 +146,8 @@ const LeadAbatementPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">A disciplined, safety-first approach</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">
             Every abatement project follows a structured lifecycle that prioritizes worker safety, regulatory compliance, and thorough documentation.
@@ -167,7 +167,7 @@ const LeadAbatementPage = () => {
 
       {/* Sectors Served */}
       <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Sectors we serve</h2>
@@ -206,7 +206,7 @@ const LeadAbatementPage = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Ready to address hazardous materials in your facility?
           </h2>
