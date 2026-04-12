@@ -46,8 +46,8 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
+      <section className="bg-gray-900 text-white py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
           {/* Breadcrumb */}
           <div className="mb-8 text-sm text-gray-300">
             <Link to="/" className="hover:text-orange-600 transition-colors">Home</Link>
@@ -56,7 +56,7 @@ export default function ContactPage() {
           </div>
 
           {/* Hero Content */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg text-gray-300 max-w-2xl">
             Get in touch with our team of certified environmental and construction management professionals.
           </p>
@@ -64,12 +64,12 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="bg-white py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 xl:gap-16">
+      <section className="bg-white py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 xl:gap-16">
             {/* Left Column - Contact Form */}
             <div className="lg:col-span-3">
-              <h2 className="text-3xl font-bold mb-2 text-gray-900">Send Us a Message</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-gray-900">Send Us a Message</h2>
               <p className="text-gray-600 mb-8">
                 Have a question about our environmental consulting or construction management services? Fill out the form below and we'll get back to you as soon as possible.
               </p>
@@ -282,9 +282,9 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Prefer to discuss your project directly?</h2>
+      <section className="bg-gray-900 text-white py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Prefer to discuss your project directly?</h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Our team is ready to schedule a consultation and discuss your environmental or construction management needs.
           </p>
