@@ -1,158 +1,159 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Building } from 'lucide-react';
 
-const ProjectDetailPage = () => {
+export default function ProjectDetailPage() {
   const { id } = useParams();
-  
-  const projectDetails = {
+
+  const projectData = {
     1: {
-      title: "Federal Building IoT Monitoring System",
-      location: "Detroit, Michigan",
-      service: "Smart City & Government IT Solutions",
-      image: "/home/ubuntu/upload/search_images/NKCAxW5AQfGr.webp",
-      description: "In partnership with Southwest APEX Accelerator, developed IoT monitoring solutions for federal facility energy optimization.",
-      fullDescription: "Through a strategic partnership with the Southwest APEX Accelerator program, Centauri Pro contributed innovative IoT monitoring solutions designed to optimize energy efficiency in federal facilities. This pilot program demonstrated our capability to integrate cutting-edge sensor technology with AI-driven analytics to provide real-time facility management insights.",
-      keyResponsibilities: [
-        "Developed prototype IoT sensor network for building systems monitoring",
-        "Created AI-powered dashboard for energy consumption analysis", 
-        "Established data collection protocols compliant with federal security standards",
-        "Demonstrated 15% potential energy savings through predictive maintenance",
-        "Integrated real-time environmental monitoring sensors",
-        "Implemented machine learning algorithms for predictive maintenance"
+      title: 'HUD Lead-Safe Housing Initiative',
+      location: 'Detroit, Michigan',
+      serviceTag: 'Lead Abatement',
+      description: 'Comprehensive lead-based paint assessment and abatement for over 200 residential units under HUD Lead Hazard Control grant program. Full compliance with 24 CFR 35 and EPA RRP standards.',
+      fullDescription: 'This project involved a complete lead hazard reduction initiative across multiple residential buildings in Detroit. Our team conducted detailed risk assessments, designed and managed abatement work, and ensured full compliance with federal regulations throughout the process.',
+      scopeItems: [
+        'Lead-based paint risk assessments (XRF testing)',
+        'Abatement design and specifications',
+        'Contractor oversight and quality assurance',
+        'Occupant protection and relocation coordination',
+        'Post-abatement clearance testing',
+        'HUD compliance documentation and reporting'
       ],
-      partnership: "Southwest APEX Accelerator",
-      outcomes: "15% potential energy savings, NIST-compliant security protocols, real-time monitoring capabilities"
+      outcome: 'Successfully completed lead hazard reduction in 200+ residential units, achieving full HUD clearance standards. All work completed within grant timeline and budget, with zero safety incidents.'
     },
     2: {
-      title: "Predictive Analytics for Construction Risk",
-      location: "Ann Arbor, Michigan", 
-      service: "Estimating, Scheduling & Risk Management",
-      image: "/home/ubuntu/upload/search_images/etqUHyjqG5N9.jpg",
-      description: "Research collaboration with University of Michigan to develop AI-powered risk assessment tools for government construction projects.",
-      fullDescription: "Through a research partnership with the University of Michigan's College of Engineering, Centauri Pro contributed to the development of AI-powered risk assessment tools specifically designed for government construction projects. This academic collaboration allowed us to validate our predictive analytics capabilities in a controlled research environment.",
-      keyResponsibilities: [
-        "Developed machine learning models for construction risk prediction",
-        "Analyzed historical government project data for pattern recognition",
-        "Created automated risk scoring algorithms",
-        "Validated predictive accuracy against actual project outcomes",
-        "Integrated weather data, supply chain factors, and workforce availability",
-        "Developed early warning systems for project delays"
+      title: 'Federal Building Environmental Assessment',
+      location: 'Lansing, Michigan',
+      serviceTag: 'Environmental Consulting',
+      description: 'Phase I and Phase II Environmental Site Assessments for a federal government facility, including industrial hygiene surveys, air quality monitoring, and hazardous materials identification.',
+      fullDescription: 'A comprehensive environmental assessment of a major federal facility to establish baseline environmental conditions and identify potential contamination or hazardous materials. This work provided critical information for facility planning and renovation projects.',
+      scopeItems: [
+        'Phase I ESA (ASTM E1527-21)',
+        'Phase II subsurface investigation',
+        'Indoor air quality monitoring',
+        'Asbestos and lead-based paint surveys',
+        'Industrial hygiene exposure assessments',
+        'Regulatory compliance reporting'
       ],
-      partnership: "University of Michigan College of Engineering",
-      outcomes: "Validated predictive models, academic publication opportunities, proof-of-concept for government applications"
+      outcome: 'Delivered comprehensive environmental baseline documentation enabling facility renovation planning. Identified and characterized all regulated materials, providing actionable remediation recommendations.'
     },
     3: {
-      title: "Federal Procurement Efficiency Analysis", 
-      location: "Grand Rapids, Michigan",
-      service: "Government Supply & Procurement Solutions",
-      image: "/home/ubuntu/upload/search_images/hHFqGF4BV1lF.webp",
-      description: "Consulting support for regional government agencies on supply chain optimization and procurement process improvement.",
-      fullDescription: "Centauri Pro provided specialized consulting support to regional government agencies in West Michigan, focusing on supply chain optimization and procurement process improvement. This engagement allowed us to demonstrate our analytical capabilities and process improvement expertise in a government context.",
-      keyResponsibilities: [
-        "Comprehensive analysis of existing procurement workflows",
-        "Identification of bottlenecks and inefficiencies in current processes",
-        "Development of digital transformation recommendations", 
-        "Creation of performance metrics and tracking systems",
-        "Streamlined vendor qualification procedures",
-        "Automated compliance checking systems"
+      title: 'K-12 School District Asbestos & Lead Program',
+      location: 'Grand Rapids, Michigan',
+      serviceTag: 'Hazardous Materials',
+      description: 'District-wide AHERA inspections, asbestos management planning, and lead-based paint risk assessments across 45 school buildings with full regulatory compliance documentation.',
+      fullDescription: 'Established a comprehensive hazardous materials management program for a large school district covering 45 buildings and hundreds of staff members. The program ensures ongoing compliance with federal requirements and protects student and staff health.',
+      scopeItems: [
+        'AHERA three-year reinspections',
+        'Asbestos management plan updates',
+        'Lead-based paint risk assessments',
+        'Staff awareness training',
+        'Operations and maintenance procedures',
+        'Regulatory documentation and record-keeping'
       ],
-      partnership: "West Michigan Regional Government Agencies",
-      outcomes: "25% potential reduction in procurement cycle times, improved vendor diversity tracking, enhanced compliance documentation"
+      outcome: 'Established district-wide hazardous materials management program with updated AHERA plans for all 45 buildings. Delivered staff training to 500+ employees on hazard awareness and emergency procedures.'
     }
   };
 
-  const project = projectDetails[id];
-  
+  const project = projectData[id];
+
   if (!project) {
-    return <div>Project not found</div>;
+    return (
+      <div className="min-h-screen bg-white">
+        <section className="bg-gray-900 text-white py-20">
+          <div className="max-w-6xl mx-auto px-6">
+            <h1 className="text-5xl font-bold mb-4">Project Not Found</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              The project you are looking for does not exist.
+            </p>
+            <Link
+              to="/projects"
+              className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+            >
+              Back to Projects
+            </Link>
+          </div>
+        </section>
+      </div>
+    );
   }
 
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="bg-gray-50 py-4 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-sm text-gray-600">
-            <Link to="/" className="hover:text-orange-600">Home</Link>
-            <span className="mx-2">/</span>
-            <Link to="/projects" className="hover:text-orange-600">Projects</Link>
-            <span className="mx-2">/</span>
-            <span className="text-gray-900">{project.title}</span>
+            <Link to="/" className="hover:text-orange-600">Home</Link> / <Link to="/projects" className="hover:text-orange-600">Projects</Link> / {project.title}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Project Header */}
-      <div className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+      <section className="bg-white py-16 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-6">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">{project.title}</h1>
+          <div className="mb-6 flex flex-wrap gap-6 items-center">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">{project.title}</h1>
-              <p className="text-xl text-gray-600 mb-6 italic">{project.location}</p>
-              <div className="bg-orange-100 border-l-4 border-orange-500 p-4 mb-6">
-                <p className="text-orange-800 font-medium">Partnership: {project.partnership}</p>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {project.fullDescription}
-              </p>
+              <p className="text-sm text-gray-600 font-semibold">Location</p>
+              <p className="text-lg text-gray-900">{project.location}</p>
             </div>
             <div>
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
-              />
+              <span className="inline-block bg-orange-50 text-orange-700 text-sm font-semibold px-4 py-2 rounded">
+                {project.serviceTag}
+              </span>
             </div>
           </div>
+          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
+            {project.fullDescription}
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* Key Responsibilities */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Key Responsibilities</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {project.keyResponsibilities.map((responsibility, index) => (
-              <div key={index} className="flex items-start">
-                <div className="bg-orange-500 text-white p-2 rounded-full mr-4 mt-1 flex-shrink-0">
-                  <Building className="w-4 h-4" />
-                </div>
-                <p className="text-gray-700">{responsibility}</p>
-              </div>
+      {/* Scope of Work */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12">Scope of Work</h2>
+          <ul className="space-y-4">
+            {project.scopeItems.map((item, index) => (
+              <li key={index} className="flex items-start text-lg text-gray-700">
+                <span className="inline-flex items-center justify-center w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                <span>{item}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
-      </div>
+      </section>
 
-      {/* Outcomes */}
-      <div className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Project Outcomes</h2>
-          <div className="bg-green-50 border border-green-200 rounded-lg p-8">
-            <p className="text-lg text-green-800 leading-relaxed">
-              {project.outcomes}
+      {/* Project Outcomes */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12">Project Outcomes</h2>
+          <div className="bg-gray-100 p-8 rounded-lg">
+            <p className="text-lg text-gray-900 leading-relaxed">
+              {project.outcome}
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Navigation to Other Projects */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Explore Other Projects</h3>
-          <div className="flex justify-center space-x-8">
-            <Link to="/projects" className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-              View All Projects
-            </Link>
-            <Link to="/services" className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-              Our Services
-            </Link>
-          </div>
+      {/* Navigation */}
+      <section className="bg-gray-50 py-12 border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 text-center flex flex-col sm:flex-row justify-center gap-4">
+          <Link
+            to="/projects"
+            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+          >
+            View All Projects
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+          >
+            Contact Us
+          </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
-};
-
-export default ProjectDetailPage;
+}
