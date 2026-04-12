@@ -308,7 +308,7 @@ const HomePage = () => {
             }}
           >
             {/* Left - Content */}
-            <div className="bg-gray-800 px-8 md:px-14 py-16 md:py-20 flex flex-col justify-center">
+            <div className="bg-gray-800 px-8 md:px-14 py-10 md:py-12 flex flex-col justify-center">
               <span className="text-orange-400 text-sm font-bold tracking-widest uppercase mb-6 block">Insights</span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-snug mb-8">
                 Every project we deliver is a commitment to safer communities, healthier buildings, and lasting environmental impact.
@@ -320,17 +320,12 @@ const HomePage = () => {
             </div>
 
             {/* Right - Featured Card */}
-            <div className="bg-gray-200 px-8 md:px-14 py-16 md:py-20 flex flex-col justify-center">
+            <div className="bg-gray-200 px-8 md:px-14 py-10 md:py-12 flex flex-col justify-center">
               <span className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-4 block">Featured</span>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-900 font-bold text-sm">Environmental Safety</p>
-                    <p className="text-gray-500 text-xs">Latest from our team</p>
-                  </div>
+                <div className="mb-4">
+                  <p className="text-gray-900 font-bold text-sm">Environmental Safety</p>
+                  <p className="text-gray-500 text-xs">Latest from our team</p>
                 </div>
                 <h3 className="text-gray-900 text-lg font-bold mb-2">Why proactive environmental assessments save federal agencies millions</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">Early identification of hazardous materials during pre-renovation surveys reduces project timelines by an average of 40% and prevents costly change orders.</p>
