@@ -17,10 +17,10 @@ const LegalNoticesPage = () => {
 
       {/* Header */}
       <div className="py-10 md:py-16 xl:py-20">
-        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">LEGAL NOTICES</h1>
+        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 xl:px-8">
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">LEGAL NOTICES</h1>
           
-          <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8">
+          <div className="bg-orange-50 border-l-4 border-orange-500 p-4 sm:p-6 mb-8">
             <p className="text-lg font-medium text-gray-900">
               PLEASE READ THE FOLLOWING TERMS AND POLICIES CAREFULLY. WHEN YOU USE THIS WEBSITE YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS AND POLICIES.
             </p>
@@ -82,7 +82,7 @@ const LegalNoticesPage = () => {
             {/* Disclaimers and Limitation of Liability */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Disclaimers and Limitation of Liability</h2>
-              <div className="bg-gray-50 p-6 rounded-lg mb-4">
+              <div className="bg-gray-50 p-6 sm:p-8 rounded-lg mb-4">
                 <p className="text-gray-700 mb-4 font-medium">
                   THIS WEBSITE AND ALL INFORMATION, CONTENT, MATERIALS, PRODUCTS, AND SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THIS WEBSITE ARE PROVIDED BY THE COMPANY ON AN "AS IS" AND "AS AVAILABLE" BASIS, UNLESS OTHERWISE SPECIFIED IN WRITING.
                 </p>
@@ -104,7 +104,7 @@ const LegalNoticesPage = () => {
               <p className="text-gray-700 mb-4">
                 All legal notices, demands, and other formal communications regarding these Terms or your use of this website should be directed to our legal counsel:
               </p>
-              <div className="bg-gray-50 p-4 rounded-lg">
+              <div className="bg-gray-50 p-4 sm:p-6 rounded-lg">
                 <p className="text-gray-700">
                   <strong>Centauri Pro Consulting, LLC</strong><br />
                   <strong>Legal Department</strong><br />
