@@ -46,7 +46,7 @@ export default function LeadershipPage() {
 
           {/* Page Title and Subtitle */}
           <div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-3">Leadership</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">Leadership</h1>
             <p className="text-lg text-gray-700">Meet the experienced professionals driving Centauri-Pro's mission to deliver compliant, sustainable solutions in environmental services and construction management.</p>
           </div>
         </div>
