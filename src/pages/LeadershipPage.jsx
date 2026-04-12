@@ -46,22 +46,22 @@ export default function LeadershipPage() {
 
           {/* Page Title and Subtitle */}
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">Leadership</h1>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">Leadership</h1>
             <p className="text-lg text-gray-700">Meet the experienced professionals driving Centauri-Pro's mission to deliver compliant, sustainable solutions in environmental services and construction management.</p>
           </div>
         </div>
       </section>
 
       {/* Leadership Team Section */}
-      <section className="py-10 md:py-16 xl:py-20 px-4 sm:px-6 xl:px-8">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 xl:px-8">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-12">Our Leadership Team</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 xl:gap-10">
             {leaders.map((leader) => (
-              <div key={leader.id} className="border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+              <div key={leader.id} className="border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow h-full">
                 {/* Photo Placeholder */}
-                <div className="w-full h-64 bg-gray-300"></div>
+                <div className="w-full h-48 sm:h-56 md:h-64 bg-gray-300"></div>
 
                 {/* Content */}
                 <div className="p-6">
@@ -76,11 +76,11 @@ export default function LeadershipPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-10 md:py-16 px-4 sm:px-6 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-12">Our Values</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 xl:gap-10">
             {values.map((value, index) => (
               <div key={index} className="flex items-start">
                 <div className="w-3 h-3 bg-orange-600 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
@@ -94,10 +94,10 @@ export default function LeadershipPage() {
       {/* CTA Section */}
       <section className="py-10 md:py-16 xl:py-20 px-4 sm:px-6 xl:px-8">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
-          <div className="bg-orange-600 rounded-lg p-12 text-center">
+          <div className="bg-orange-600 rounded-lg p-6 sm:p-8 md:p-12 text-center min-h-[52px]">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
             <p className="text-orange-100 text-lg mb-8">Let's discuss how Centauri-Pro can support your next environmental or construction project.</p>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-orange-600 font-semibold px-6 py-3 rounded hover:bg-gray-100 transition-colors">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-white text-orange-600 font-semibold px-6 py-3 min-h-[44px] rounded hover:bg-gray-100 transition-colors">
               Get in Touch
               <ArrowRight size={20} />
             </Link>
