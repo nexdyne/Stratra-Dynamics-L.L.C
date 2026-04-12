@@ -231,7 +231,7 @@ const HomePage = () => {
               transform: showcaseTextVisible ? 'translateY(0)' : 'translateY(40px)',
             }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               Safe environments. Smart construction.
             </h2>
           </div>
@@ -350,7 +350,7 @@ const HomePage = () => {
             }}
           >
             <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">What We Do</span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-3 mb-4">Our Services</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">Our Services</h2>
             <div className="w-16 h-1 bg-orange-500 mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl">
               We deliver a full range of environmental and construction services,
@@ -416,7 +416,7 @@ const HomePage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Who We Are</span>
-              <h2 className="text-4xl font-bold text-gray-900 mt-3 mb-4">About Centauri-Pro Consulting</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">About Centauri-Pro Consulting</h2>
               <div className="w-16 h-1 bg-orange-500 mb-6"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 We are an environmental services and construction management firm specializing in
@@ -495,7 +495,7 @@ const HomePage = () => {
           <div className="flex justify-between items-end mb-12">
             <div>
               <span className="text-orange-600 text-sm font-semibold tracking-widest uppercase">Insights</span>
-              <h2 className="text-4xl font-bold text-gray-900 mt-3 mb-4">Latest News</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-4">Latest News</h2>
               <div className="w-16 h-1 bg-orange-500"></div>
             </div>
             <Link to="/news" className="hidden md:inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
