@@ -5,8 +5,8 @@ const ConstructionRenovationPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gray-900 py-20 xl:py-24">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <nav className="flex items-center text-sm text-gray-400 mb-10">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
             <span className="mx-2">/</span>
@@ -22,8 +22,8 @@ const ConstructionRenovationPage = () => {
       </section>
 
       {/* Narrative Intro */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Construction management with built-in environmental expertise</h2>
@@ -44,7 +44,7 @@ const ConstructionRenovationPage = () => {
       </section>
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Construction Management Services</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">We manage the full lifecycle of construction and renovation projects, with environmental compliance built into every phase.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -59,8 +59,8 @@ const ConstructionRenovationPage = () => {
       </section>
 
       {/* Process */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">An integrated, compliance-first approach</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">Our process ensures environmental compliance is addressed proactively, not reactively, throughout the construction lifecycle.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -73,7 +73,7 @@ const ConstructionRenovationPage = () => {
       </section>
       {/* Sectors & Hazards */}
       <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Sectors we serve</h2>
@@ -94,7 +94,7 @@ const ConstructionRenovationPage = () => {
 
       {/* CTA */}
       <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to plan your construction or renovation project?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Contact us to discuss how we can integrate environmental compliance into your project from day one, preventing delays and ensuring regulatory adherence.</p>
           <Link to="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded transition-colors">Schedule a Consultation</Link>
