@@ -232,7 +232,7 @@ const HomePage = () => {
             }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              From hazard to habitat
+              Safe environments. Smart construction.
             </h2>
           </div>
 
