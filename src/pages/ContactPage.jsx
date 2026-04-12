@@ -66,7 +66,7 @@ export default function ContactPage() {
       {/* Main Content */}
       <section className="bg-white py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="grid lg:grid-cols-5 gap-12 xl:gap-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 xl:gap-16">
             {/* Left Column - Contact Form */}
             <div className="lg:col-span-3">
               <h2 className="text-3xl font-bold mb-2 text-gray-900">Send Us a Message</h2>
