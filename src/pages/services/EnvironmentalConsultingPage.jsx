@@ -6,7 +6,7 @@ const EnvironmentalConsultingPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-sm text-gray-400 mb-8">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span className="mx-2">/</span>
@@ -20,7 +20,7 @@ const EnvironmentalConsultingPage = () => {
       </section>
 
       {/* Narrative Intro */}
-      <section className="py-16">
+      <section className="py-16 xl:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -57,7 +57,7 @@ const EnvironmentalConsultingPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16">
+      <section className="py-16 xl:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">A rigorous, science-based approach</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">Every assessment follows established scientific protocols and regulatory standards to deliver reliable, defensible results.</p>
