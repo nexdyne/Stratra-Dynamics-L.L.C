@@ -427,19 +427,19 @@ const HomePage = () => {
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Our Approach</h3>
                 <ul className="text-gray-700 space-y-2 text-sm">
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                     EPA, OSHA, and HUD regulatory compliance on every project
                   </li>
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                     Certified Industrial Hygienists and licensed abatement professionals
                   </li>
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                     Real-time project tracking with automated compliance documentation
                   </li>
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                     Single-source accountability from assessment through remediation
                   </li>
                 </ul>
@@ -455,34 +455,26 @@ const HomePage = () => {
                 <div className="space-y-5">
                   {[
                     {
-                      icon: Shield,
                       title: "Licensed & Certified",
                       desc: "EPA Lead-Safe certified, HAZWOPER trained, CIH-backed assessments"
                     },
                     {
-                      icon: HardHat,
                       title: "Full-Service Capability",
                       desc: "Assessment, abatement, construction, and commissioning under one roof"
                     },
                     {
-                      icon: BarChart3,
                       title: "Compliance Excellence",
                       desc: "NIST-aligned processes with automated audit readiness and documentation"
                     }
-                  ].map((item, i) => {
-                    const ItemIcon = item.icon;
-                    return (
-                      <div key={i} className="flex items-start gap-4">
-                        <div className="bg-orange-50 text-orange-600 p-2.5 rounded-lg flex-shrink-0">
-                          <ItemIcon className="w-5 h-5" />
-                        </div>
+                  ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-4 border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                        <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                         <div>
                           <h4 className="font-semibold text-gray-900">{item.title}</h4>
                           <p className="text-gray-600 text-sm">{item.desc}</p>
                         </div>
                       </div>
-                    );
-                  })}
+                  ))}
                 </div>
               </div>
             </div>
