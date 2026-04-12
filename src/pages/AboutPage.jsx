@@ -15,7 +15,7 @@ export default function AboutPage() {
           </div>
 
           {/* Hero Content */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">About Centauri-Pro Consulting</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">About Centauri-Pro Consulting</h1>
           <p className="text-lg text-gray-300 max-w-2xl">
             Leading environmental services and construction management solutions for government and commercial clients across the Great Lakes region.
           </p>
@@ -41,7 +41,7 @@ export default function AboutPage() {
 
             {/* Right Column - Mission & Values */}
             <div>
-              <div className="bg-gray-100 p-8 rounded-lg">
+              <div className="bg-gray-100 p-6 sm:p-8 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Our Mission</h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   To deliver comprehensive environmental and construction management solutions that protect public health, ensure regulatory compliance, and support sustainable industrial operations.
@@ -80,7 +80,7 @@ export default function AboutPage() {
             <p className="text-gray-600 mt-2">Specialized capabilities and credentials that drive client confidence</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Card 1 */}
             <div className="bg-white border border-gray-200 p-6 rounded-lg hover:border-orange-500 transition">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Licensed & Certified</h3>
@@ -119,7 +119,7 @@ export default function AboutPage() {
       {/* Core Values Section */}
       <section className="bg-gray-900 text-white py-10 md:py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 xl:gap-16">
             {/* Left Column */}
             <div>
               <h3 className="text-2xl font-bold mb-8">Our Values</h3>
@@ -144,7 +144,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Column */}
-            <div className="bg-gray-800 p-8 rounded-lg">
+            <div className="bg-gray-800 p-6 sm:p-8 rounded-lg">
               <h3 className="text-xl font-bold mb-6">Our Commitment</h3>
               <p className="text-gray-200 leading-relaxed mb-6">
                 We are committed to delivering exceptional results that go beyond regulatory compliance. Safety, quality, and environmental stewardship are embedded in everything we do\u2014from project planning through post-completion verification.
@@ -166,7 +166,7 @@ export default function AboutPage() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition"
+            className="inline-block w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 sm:px-8 py-4 min-h-[48px] rounded-lg transition text-center"
           >
             Get in Touch
           </Link>
