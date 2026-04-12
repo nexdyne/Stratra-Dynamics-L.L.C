@@ -62,9 +62,9 @@ export default function NewsDetailPage() {
           </div>
         </section>
 
-        <section className="py-16 xl:py-20">
+        <section className="py-10 md:py-16 xl:py-20">
           <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-lg text-gray-700 mb-8">
               The article you are looking for does not exist or has been removed.
             </p>
@@ -96,7 +96,7 @@ export default function NewsDetailPage() {
       </section>
 
       {/* Article Content */}
-      <article className="py-16 xl:py-20">
+      <article className="py-10 md:py-16 xl:py-20">
         <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6">
           {/* Back Link */}
           <Link
@@ -116,7 +116,7 @@ export default function NewsDetailPage() {
                 {article.category}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {article.title}
             </h1>
           </div>
