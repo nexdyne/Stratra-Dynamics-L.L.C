@@ -19,7 +19,7 @@ export default function ContractVehiclesPage() {
             <span className="text-gray-900 font-medium">Contract Vehicles</span>
           </nav>
 
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
             Government Contract Vehicles
           </h1>
           <p className="text-lg text-gray-700 max-w-2xl">
@@ -84,7 +84,7 @@ export default function ContractVehiclesPage() {
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Small Business (SB)</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">Small Business (SB)</h3>
                   <p className="text-gray-700">Certified and registered for small business set-asides at federal, state, and local levels.</p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function ContractVehiclesPage() {
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Minority Business Enterprise (MBE)</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">Minority Business Enterprise (MBE)</h3>
                   <p className="text-gray-700">Currently pursuing certification to expand opportunities with government and private sector contracts.</p>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function ContractVehiclesPage() {
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">State of Michigan Licensed Lead Abatement Contractor</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">State of Michigan Licensed Lead Abatement Contractor</h3>
                   <p className="text-gray-700">Fully licensed and compliant with Michigan Department of Environment, Great Lakes, and Energy standards.</p>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function ContractVehiclesPage() {
               <div className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">EPA Lead-Safe Certified Firm</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">EPA Lead-Safe Certified Firm</h3>
                   <p className="text-gray-700">Certified under EPA Lead-Safe Practices to ensure highest standards in lead remediation projects.</p>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function ContractVehiclesPage() {
             <div className="flex items-start">
               <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2.5 mr-4 flex-shrink-0"></span>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">GSA Multiple Award Schedule (MAS)</h3>
+                <h3 className="text-lg font-bold text-gray-900">GSA Multiple Award Schedule (MAS)</h3>
                 <p className="text-gray-700 mt-1">General Services Administration contract to provide environmental services and construction management to federal agencies.</p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function ContractVehiclesPage() {
             <div className="flex items-start">
               <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2.5 mr-4 flex-shrink-0"></span>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">OASIS+ Small Business</h3>
+                <h3 className="text-lg font-bold text-gray-900">OASIS+ Small Business</h3>
                 <p className="text-gray-700 mt-1">One Acquisition Solution for Integrated Services Plus for small business contractors supporting federal agencies.</p>
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function ContractVehiclesPage() {
             <div className="flex items-start">
               <span className="inline-block w-2 h-2 bg-orange-600 rounded-full mt-2.5 mr-4 flex-shrink-0"></span>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">State and Local Environmental Remediation BPAs</h3>
+                <h3 className="text-lg font-bold text-gray-900">State and Local Environmental Remediation BPAs</h3>
                 <p className="text-gray-700 mt-1">Blanket Purchase Agreements with state and municipal governments for environmental remediation and hazardous materials management.</p>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function ContractVehiclesPage() {
 
         {/* Partner With Us CTA */}
         <section className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Partner With Us</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">Partner With Us</h2>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
             Centauri-Pro Consulting is committed to supporting government missions through reliable, compliant, and expert environmental and construction management services. Contact us to discuss partnership opportunities and how we can meet your agency's needs.
           </p>
