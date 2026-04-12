@@ -20,7 +20,7 @@ const TrainingCompliancePage = () => {
 
       <section className="py-16 xl:py-20">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Building a certified, compliant workforce</h2>
               <p className="text-gray-700 leading-relaxed mb-4">Environmental remediation and construction projects demand workers with current, verifiable certifications. OSHA, EPA, and state regulations require specific training for anyone working with hazardous materials, and non-compliance exposes organizations to significant penalties, project shutdowns, and liability.</p>
@@ -67,7 +67,7 @@ const TrainingCompliancePage = () => {
       </section>
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Who we train</h2>
               <p className="text-gray-300 leading-relaxed mb-8">Our training programs serve professionals across the environmental, construction, and facility management industries who need current certifications and compliance knowledge.</p>
