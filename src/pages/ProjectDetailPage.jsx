@@ -62,13 +62,13 @@ export default function ProjectDetailPage() {
       <div className="min-h-screen bg-white">
         <section className="bg-gray-900 text-white py-20 xl:py-24">
           <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Project Not Found</h1>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">Project Not Found</h1>
             <p className="text-lg text-gray-300 mb-8">
               The project you are looking for does not exist.
             </p>
             <Link
               to="/projects"
-              className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+              className="inline-block bg-orange-600 text-white px-6 sm:px-8 py-4 min-h-[52px] rounded-lg font-semibold hover:bg-orange-700 transition-colors"
             >
               Back to Projects
             </Link>
@@ -92,7 +92,7 @@ export default function ProjectDetailPage() {
       {/* Project Header */}
       <section className="bg-white py-16 border-b border-gray-200">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">{project.title}</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">{project.title}</h1>
           <div className="mb-6 flex flex-wrap gap-6 items-center">
             <div>
               <p className="text-sm text-gray-600 font-semibold">Location</p>
@@ -129,7 +129,7 @@ export default function ProjectDetailPage() {
       <section className="bg-white py-10 md:py-16 xl:py-20">
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-12">Project Outcomes</h2>
-          <div className="bg-gray-100 p-8 rounded-lg">
+          <div className="bg-gray-100 p-6 sm:p-8 rounded-lg">
             <p className="text-lg text-gray-900 leading-relaxed">
               {project.outcome}
             </p>
@@ -142,13 +142,13 @@ export default function ProjectDetailPage() {
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 text-center flex flex-col sm:flex-row justify-center gap-4">
           <Link
             to="/projects"
-            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+            className="inline-block bg-gray-900 text-white px-6 sm:px-8 py-4 min-h-[52px] rounded-lg font-semibold hover:bg-gray-800 transition-colors"
           >
             View All Projects
           </Link>
           <Link
             to="/contact"
-            className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+            className="inline-block bg-orange-600 text-white px-6 sm:px-8 py-4 min-h-[52px] rounded-lg font-semibold hover:bg-orange-700 transition-colors"
           >
             Contact Us
           </Link>
