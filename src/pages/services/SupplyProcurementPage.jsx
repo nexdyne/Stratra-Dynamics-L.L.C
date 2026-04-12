@@ -37,7 +37,7 @@ const SupplyProcurementPage = () => {
         <div className="relative z-10 max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center">
             <Package className="w-16 h-16 text-white mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Government Supply & Procurement Solutions
             </h1>
             <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
@@ -53,11 +53,11 @@ const SupplyProcurementPage = () => {
       {/* What Are Section */}
       <section className="py-8 bg-white">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-12">
             What Are Government Supply & Procurement Solutions?
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-lg text-gray-600 mb-6">
                 Our Government Supply & Procurement Solutions streamline the complex world of federal procurement with AI-powered vendor management, automated compliance tracking, and intelligent sourcing strategies. We transform traditional procurement processes into strategic advantages that reduce costs while ensuring full regulatory compliance.
@@ -91,7 +91,7 @@ const SupplyProcurementPage = () => {
       {/* Key Capabilities */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Key Capabilities</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-12">Key Capabilities</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -161,13 +161,13 @@ const SupplyProcurementPage = () => {
       <section className="py-8 bg-white">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Why Choose Our Procurement Solutions</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Why Choose Our Procurement Solutions</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Transform your procurement from administrative burden to strategic advantage.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-6">What You Avoid</h3>
               <ul className="space-y-4">
@@ -226,7 +226,7 @@ const SupplyProcurementPage = () => {
       {/* Call to Action Section */}
       <section className="bg-[#f5f5f5] py-8">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Ready to Optimize Your Procurement Strategy?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Ready to Optimize Your Procurement Strategy?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Let's discuss how our AI-powered procurement solutions can reduce costs while ensuring full compliance and vendor performance.
           </p>
@@ -246,7 +246,7 @@ const SupplyProcurementPage = () => {
       {/* Other Services Navigation */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-12">
             Explore Our Other Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
