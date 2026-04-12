@@ -220,7 +220,7 @@ const HomePage = () => {
       </section>
 
       {/* Project Showcase - Parallax Scroll */}
-      <section ref={parallaxRef} className="relative bg-gray-950 py-24 overflow-hidden">
+      <section ref={parallaxRef} className="relative bg-gray-950 py-12 overflow-hidden">
         {/* Subtle background texture */}
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
 
@@ -228,17 +228,13 @@ const HomePage = () => {
           {/* Section heading */}
           <div
             ref={showcaseTextRef}
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 transition-all duration-800 ease-out"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 transition-all duration-800 ease-out"
             style={{
               opacity: showcaseTextVisible ? 1 : 0,
               transform: showcaseTextVisible ? 'translateY(0)' : 'translateY(40px)',
             }}
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-px bg-orange-500"></div>
-              <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">Our Work</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
               Built to move the industry
               <span className="block text-orange-400">forward.</span>
             </h2>
@@ -256,7 +252,7 @@ const HomePage = () => {
               {projectsTop.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[260px] md:h-[300px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
@@ -285,7 +281,7 @@ const HomePage = () => {
               {projectsBottom.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[260px] md:h-[300px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] h-[200px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
