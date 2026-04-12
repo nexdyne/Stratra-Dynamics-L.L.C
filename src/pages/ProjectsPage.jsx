@@ -43,8 +43,8 @@ export default function ProjectsPage() {
           <div className="mb-6 text-sm text-gray-400">
             <Link to="/" className="hover:text-white">Home</Link> / Projects
           </div>
-          <h1 className="text-5xl font-bold mb-4">Our Projects</h1>
-          <p className="text-xl text-gray-300">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
+          <p className="text-lg text-gray-300">
             Environmental remediation, construction management, and compliance solutions delivered with precision.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
       {/* Service Categories */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Services Across Our Projects
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
       {/* CTA Section */}
       <section className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Start Your Project?
           </h2>
           <Link
