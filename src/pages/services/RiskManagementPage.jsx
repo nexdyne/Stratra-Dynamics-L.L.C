@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const RiskManagementPage = () => {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gray-900 py-20 xl:py-24">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <nav className="flex items-center text-sm text-gray-400 mb-10">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
             <span className="mx-2">/</span><span className="text-gray-500">Services</span>
@@ -18,8 +18,8 @@ const RiskManagementPage = () => {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Data-driven project controls that protect your investment</h2>
@@ -39,7 +39,7 @@ const RiskManagementPage = () => {
         </div>
       </section>
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Project Controls Services</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">We provide comprehensive estimating, scheduling, and risk management services across the full project lifecycle.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,8 +53,8 @@ const RiskManagementPage = () => {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">A structured approach to project controls</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">Our methodology follows industry best practices to deliver reliable cost, schedule, and risk data throughout the project lifecycle.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -66,7 +66,7 @@ const RiskManagementPage = () => {
         </div>
       </section>
       <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Sectors we serve</h2>
@@ -86,7 +86,7 @@ const RiskManagementPage = () => {
       </section>
 
       <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to strengthen your project controls?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Contact us to discuss cost estimation, scheduling, and risk management support for your construction program.</p>
           <Link to="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded transition-colors">Schedule a Consultation</Link>
