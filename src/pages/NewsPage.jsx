@@ -38,8 +38,8 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="bg-gray-900 text-white py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 xl:px-8">
           <div className="text-sm text-gray-300 mb-4">
             <Link to="/" className="hover:text-orange-600 transition">Home</Link>
             <span className="mx-2">/</span>
@@ -53,8 +53,8 @@ export default function NewsPage() {
       </section>
 
       {/* Articles List */}
-      <section className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="bg-white py-16 xl:py-20">
+        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-6">
           {articles.map((article, index) => (
             <article
               key={index}
@@ -85,8 +85,8 @@ export default function NewsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-6xl mx-auto px-4 text-center">
+      <section className="bg-gray-100 py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 xl:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Informed</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             Contact us to learn how regulatory changes may affect your facility or project.
