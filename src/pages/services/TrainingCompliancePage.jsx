@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const TrainingCompliancePage = () => {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gray-900 py-20 xl:py-24">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <nav className="flex items-center text-sm text-gray-400 mb-10">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
             <span className="mx-2">/</span><span className="text-gray-500">Services</span>
@@ -18,8 +18,8 @@ const TrainingCompliancePage = () => {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Building a certified, compliant workforce</h2>
@@ -39,7 +39,7 @@ const TrainingCompliancePage = () => {
         </div>
       </section>
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Training & Compliance Services</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">We deliver certification training, compliance program development, and ongoing support to keep your workforce qualified and your organization audit-ready.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,8 +53,8 @@ const TrainingCompliancePage = () => {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">From assessment to ongoing compliance</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">Our training process is designed to build lasting competency and maintain continuous certification compliance.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -66,7 +66,7 @@ const TrainingCompliancePage = () => {
         </div>
       </section>
       <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Who we train</h2>
@@ -86,7 +86,7 @@ const TrainingCompliancePage = () => {
       </section>
 
       <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to certify your workforce?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Contact us to schedule training for your team and ensure compliance with all regulatory requirements.</p>
           <Link to="/contact" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-base font-semibold rounded transition-colors">Schedule Training</Link>
