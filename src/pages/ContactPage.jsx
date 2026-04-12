@@ -56,7 +56,7 @@ export default function ContactPage() {
           </div>
 
           {/* Hero Content */}
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg text-gray-300 max-w-2xl">
             Get in touch with our team of certified environmental and construction management professionals.
           </p>
@@ -240,7 +240,7 @@ export default function ContactPage() {
             {/* Right Column - Contact Info */}
             <div className="lg:col-span-2">
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">Get In Touch</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-8">Get In Touch</h3>
 
                 <div className="space-y-6 mb-8">
                   {/* Phone */}
