@@ -297,34 +297,51 @@ const HomePage = () => {
       </section>
 
       {/* Insight Section */}
-      <section className="bg-gray-900 py-20 relative overflow-hidden">
-        {/* Decorative accent */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
+      <section className="bg-gray-100 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div
+            ref={insightRef}
+            className="grid grid-cols-1 lg:grid-cols-2 transition-all duration-800 ease-out"
+            style={{
+              opacity: insightVisible ? 1 : 0,
+              transform: insightVisible ? 'translateY(0)' : 'translateY(30px)',
+            }}
+          >
+            {/* Left - Content */}
+            <div className="bg-gray-800 px-8 md:px-14 py-16 md:py-20 flex flex-col justify-center">
+              <span className="text-orange-400 text-sm font-bold tracking-widest uppercase mb-6 block">Insights</span>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-snug mb-8">
+                Every project we deliver is a commitment to
+                <span className="text-orange-400 font-semibold"> safer communities</span>,
+                <span className="text-orange-400 font-semibold"> healthier buildings</span>, and
+                <span className="text-orange-400 font-semibold"> lasting environmental impact</span>.
+              </h2>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-px bg-orange-500/60"></div>
+                <p className="text-gray-400 text-sm tracking-wider uppercase">Centauri-Pro Consulting</p>
+              </div>
+            </div>
 
-        <div
-          ref={insightRef}
-          className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-800 ease-out"
-          style={{
-            opacity: insightVisible ? 1 : 0,
-            transform: insightVisible ? 'translateY(0)' : 'translateY(30px)',
-          }}
-        >
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-8 h-px bg-orange-500"></div>
-            <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">Insight</span>
-            <div className="w-8 h-px bg-orange-500"></div>
-          </div>
-          <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed mb-8">
-            Every project we deliver is a commitment to
-            <span className="text-orange-400 font-semibold"> safer communities</span>,
-            <span className="text-orange-400 font-semibold"> healthier buildings</span>, and
-            <span className="text-orange-400 font-semibold"> lasting environmental impact</span>.
-          </blockquote>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-12 h-px bg-orange-500/50"></div>
-            <p className="text-gray-400 text-sm tracking-wider uppercase">Centauri-Pro Consulting</p>
-            <div className="w-12 h-px bg-orange-500/50"></div>
+            {/* Right - Featured Card */}
+            <div className="bg-gray-200 px-8 md:px-14 py-16 md:py-20 flex flex-col justify-center">
+              <span className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-4 block">Featured</span>
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-gray-900 font-bold text-sm">Environmental Safety</p>
+                    <p className="text-gray-500 text-xs">Latest from our team</p>
+                  </div>
+                </div>
+                <h3 className="text-gray-900 text-lg font-bold mb-2">Why proactive environmental assessments save federal agencies millions</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">Early identification of hazardous materials during pre-renovation surveys reduces project timelines by an average of 40% and prevents costly change orders.</p>
+                <Link to="/services" className="text-orange-600 text-sm font-semibold hover:text-orange-500 transition-colors inline-flex items-center gap-1">
+                  Read more <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
