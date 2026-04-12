@@ -97,25 +97,11 @@ const HomePage = () => {
     },
     {
       icon: GraduationCap,
-      title: "Training & Compliance Services",
-      description: "HAZWOPER, Lead-Safe RRP, asbestos supervisor, and safety certification training with regulatory compliance program development.",
+      title: "Training & Compliance Services",      description: "HAZWOPER, Lead-Safe RRP, asbestos supervisor, and safety certification training with regulatory compliance program development.",
       link: "/services/training-compliance-services",
       image: "https://images.pexels.com/photos/35082108/pexels-photo-35082108.jpeg?auto=compress&cs=tinysrgb&w=1200",
     }
-  ];
-
-  // Project showcase data
-  const projectsTop = [
-    { image: "https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Federal Building Remediation", category: "Lead Abatement" },
-    { image: "https://images.pexels.com/photos/8961004/pexels-photo-8961004.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Industrial Compliance Overhaul", category: "Environmental Consulting" },
-    { image: "https://images.pexels.com/photos/8292802/pexels-photo-8292802.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Smart Monitoring Systems", category: "Industrial Hygiene" },
-    { image: "https://images.pexels.com/photos/10202865/pexels-photo-10202865.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Government Facility Renovation", category: "Construction Management" },
-    { image: "https://images.pexels.com/photos/8293699/pexels-photo-8293699.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Energy Systems Commissioning", category: "Sustainability" },
-  ];
-  const projectsBottom = [
-    { image: "https://images.pexels.com/photos/3862628/pexels-photo-3862628.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Cost Forecasting Platform", category: "Risk Management" },
-    { image: "https://images.pexels.com/photos/7937365/pexels-photo-7937365.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Predictive Analytics Integration", category: "Scheduling" },
-    { image: "https://images.pexels.com/photos/10274179/pexels-photo-10274179.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Municipal Water Treatment", category: "Environmental" },
+  ];&cs=tinysrgb&w=1200", title: "Municipal Water Treatment", category: "Environmental" },
     { image: "https://images.pexels.com/photos/8960942/pexels-photo-8960942.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "HAZWOPER Training Campus", category: "Training" },
     { image: "https://images.pexels.com/photos/8293680/pexels-photo-8293680.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Federal Compliance Audit", category: "Compliance" },
   ];
@@ -133,7 +119,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section - Single powerful image */}
-      <section className="relative h-[75vh] md:h-[85vh] min-h-[400px] md:min-h-[500px] max-h-[600px] md:max-h-[700px] lg:max-h-[780px] xl:max-h-[860px] overflow-hidden">
+      <section className="relative h-[75vh] sm:h-[75vh] md:h-[85vh] min-h-[500px] sm:min-h-[400px] md:min-h-[500px] max-h-[700px] sm:max-h-[600px] md:max-h-[700px] lg:max-h-[780px] xl:max-h-[860px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-[85%_center] bg-no-repeat transition-transform duration-[20000ms] ease-linear"
           style={{
@@ -167,19 +153,19 @@ const HomePage = () => {
 
               {/* Headline */}
               <h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-[1.1] transition-all duration-1000 delay-200 ease-out"
+                className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 sm:mb-6 text-white leading-[1.15] sm:leading-[1.1] transition-all duration-1000 delay-200 ease-out"
                 style={{
                   opacity: heroLoaded ? 1 : 0,
                   transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
                 }}
               >
-                Built to protect people
+                Built to protect people{' '}
                 <span className="block text-orange-400">and restore environments.</span>
               </h1>
 
               {/* Subtitle - brief */}
               <p
-                className="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed max-w-xl xl:max-w-2xl transition-all duration-1000 delay-400 ease-out"
+                className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 text-gray-300 leading-relaxed max-w-xl xl:max-w-2xl transition-all duration-1000 delay-400 ease-out"
                 style={{
                   opacity: heroLoaded ? 1 : 0,
                   transform: heroLoaded ? 'translateY(0)' : 'translateY(30px)',
@@ -199,7 +185,7 @@ const HomePage = () => {
               >
                 <Link
                   to="/contact"
-                  className="group bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded font-semibold transition-all duration-300 inline-flex items-center gap-3 text-lg"
+                  className="group bg-orange-600 hover:bg-orange-500 text-white px-6 sm:px-8 py-4 rounded font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3 text-base sm:text-lg min-h-[52px] w-full sm:w-auto"
                 >
                   Start a Conversation
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -241,14 +227,14 @@ const HomePage = () => {
             <div
               className="flex gap-6 transition-transform duration-100 ease-out"
               style={{
-                transform: `translateX(${-(scrollProgress - 0.3) * 350}px)`,
+                transform: `translateX(${-(scrollProgress - 0.3) * (window.innerWidth < 640 ? 150 : 350)}px)`,
           paddingLeft: '2rem',
               }}
             >
               {projectsTop.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[240px] sm:w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[160px] sm:h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
@@ -270,14 +256,67 @@ const HomePage = () => {
             <div
               className="flex gap-6 transition-transform duration-100 ease-out"
               style={{
-                transform: `translateX(${(scrollProgress - 0.3) * 350 - 150}px)`,
+                transform: `translateX(${(scrollProgress - 0.3) * (window.innerWidth < 640 ? 150 : 350) - (window.innerWidth < 640 ? 60 : 150)}px)`,
                 paddingLeft: '2rem',
               }}
             >
               {projectsBottom.map((project, i) => (
                 <div
                   key={i}
-                  className="relative flex-shrink-0 w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
+                  className="relative flex-shrink-0 w-[240px] sm:w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[160px] sm:h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transfor construction.
+            </h2>
+          </div>
+
+          {/* Top row - scrolls LEFT as user scrolls down */}
+          <div className="mb-6 overflow-hidden">
+            <div
+              className="flex gap-6 transition-transform duration-100 ease-out"
+              style={{
+                transform: `translateX(${-(scrollProgress - 0.3) * (window.innerWidth < 640 ? 150 : 350)}px)`,
+          paddingLeft: '2rem',
+              }}
+            >
+              {projectsTop.map((project, i) => (
+                <div
+                  key={i}
+                  className="relative flex-shrink-0 w-[240px] sm:w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[160px] sm:h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500">
+                    <span className="text-orange-400 text-xs font-semibold tracking-wider uppercase mb-1 block opacity-70 group-hover:opacity-100 transition-opacity duration-500">{project.category}</span>
+                    <h3 className="text-white text-lg font-bold">{project.title}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom row - scrolls RIGHT as user scrolls down */}
+          <div className="-mt-4 overflow-hidden">
+            <div
+              className="flex gap-6 transition-transform duration-100 ease-out"
+              style={{
+                transform: `translateX(${(scrollProgress - 0.3) * (window.innerWidth < 640 ? 150 : 350) - (window.innerWidth < 640 ? 60 : 150)}px)`,
+                paddingLeft: '2rem',
+              }}
+            >
+              {projectsBottom.map((project, i) => (
+                <div
+                  key={i}
+                  className="relative flex-shrink-0 w-[240px] sm:w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[160px] sm:h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
                 >
                   <img
                     src={project.image}
@@ -308,9 +347,9 @@ const HomePage = () => {
             }}
           >
             {/* Left - Content */}
-            <div className="bg-gray-800 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-10 md:py-16 flex flex-col justify-center">
+            <div className="bg-gray-800 px-5 sm:px-8 md:px-14 xl:px-20 py-10 md:py-16 flex flex-col justify-center">
               <span className="text-orange-400 text-sm font-bold tracking-widest uppercase mb-6 block">Insights</span>
-              <h2 className="text-2xl md:text-2xl sm:text-3xl lg:text-4xl font-light text-white leading-snug mb-8">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-snug mb-8">
                 Every project we deliver is a commitment to safer communities, healthier buildings, and lasting environmental impact.
               </h2>
               <div className="flex items-center gap-4">
@@ -320,7 +359,7 @@ const HomePage = () => {
             </div>
 
             {/* Right - Featured Card */}
-            <div className="bg-gray-200 px-8 md:px-14 xl:px-20 py-10 md:py-12 xl:py-10 md:py-16 flex flex-col justify-center">
+            <div className="bg-gray-200 px-5 sm:px-8 md:px-14 xl:px-20 py-10 md:py-16 flex flex-col justify-center">
               <span className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-4 block">Featured</span>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                 <div className="mb-4">
@@ -329,7 +368,7 @@ const HomePage = () => {
                 </div>
                 <h3 className="text-gray-900 text-lg font-bold mb-2">Why proactive environmental assessments save federal agencies millions</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">Early identification of hazardous materials during pre-renovation surveys reduces project timelines by an average of 40% and prevents costly change orders.</p>
-                <Link to="/services" className="text-orange-600 text-sm font-semibold hover:text-orange-500 transition-colors inline-flex items-center gap-1">
+                <Link to="/services" className="text-orange-600 text-sm font-semibold hover:text-orange-500 transition-colors inline-flex items-center gap-1 py-2 min-h-[44px]">
                   Read more <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -339,7 +378,7 @@ const HomePage = () => {
       </section>
 
       {/* Services Section - with scroll reveal */}
-      <section id="services" className="py-20 xl:py-24 bg-white">
+      <section id="services" className="py-12 sm:py-20 xl:py-24 bg-white">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div
             ref={servicesRef}
@@ -373,7 +412,7 @@ const HomePage = () => {
                   }}
                 >
                   {/* Image */}
-                  <div className="relative h-48 xl:h-56 overflow-hidden">
+                  <div className="relative h-40 sm:h-48 xl:h-56 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -391,7 +430,7 @@ const HomePage = () => {
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">
                       {service.description}
                     </p>
-                    <span className="inline-flex items-center text-orange-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                    <span className="inline-flex items-center text-orange-600 font-semibold text-sm group-hover:gap-2 transition-all py-2 min-h-[44px]">
                       Learn More
                       <ChevronRight className="w-4 h-4 ml-1" />
                     </span>
@@ -404,7 +443,7 @@ const HomePage = () => {
       </section>
 
       {/* About Section - with scroll reveal */}
-      <section className="py-20 xl:py-24 bg-gray-50">
+      <section className="py-12 sm:py-20 xl:py-24 bg-gray-50">
         <div
           ref={aboutRef}
           className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 transition-all duration-700 ease-out"
@@ -444,7 +483,7 @@ const HomePage = () => {
                   </li>
                 </ul>
               </div>
-              <Link to="/about" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
+              <Link to="/about" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors py-2 min-h-[44px]">
                 Learn more about us
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -483,7 +522,7 @@ const HomePage = () => {
       </section>
 
       {/* Latest News Section - with scroll reveal */}
-      <section className="py-20 xl:py-24 bg-white">
+      <section className="py-12 sm:py-20 xl:py-24 bg-white">
         <div
           ref={newsRef}
           className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 transition-all duration-700 ease-out"
@@ -498,7 +537,7 @@ const HomePage = () => {
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">Latest News</h2>
               <div className="w-16 h-1 bg-orange-500"></div>
             </div>
-            <Link to="/news" className="hidden md:inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
+            <Link to="/news" className="hidden md:inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors py-2 min-h-[44px]">
               View all news
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -538,7 +577,7 @@ const HomePage = () => {
                   <div className="text-orange-600 text-sm font-semibold mb-3">{article.date}</div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">{article.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{article.description}</p>
-                  <Link to={article.link} className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm">
+                  <Link to={article.link} className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold text-sm py-2 min-h-[44px]">
                     Read more
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
@@ -548,7 +587,7 @@ const HomePage = () => {
           </div>
 
           <div className="mt-8 text-center md:hidden">
-            <Link to="/news" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
+            <Link to="/news" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors py-2 min-h-[44px]">
               View all news
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -557,13 +596,13 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 py-16 xl:py-12 md:py-20">
-        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 xl:px-8 text-center">
+      <section className="bg-gray-900 py-12 sm:py-16 md:py-20">
+        <div className="max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 xl:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to start your project?</h2>
-          <p className="text-gray-400 mb-8 text-lg">
-            From lead assessment to full remediation — let's discuss how we can help.
+          <p className="text-gray-400 mb-8 text-base sm:text-lg">
+            From lead assessment to full remediation â let's discuss how we can help.
           </p>
-          <Link to="/contact" className="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded font-semibold transition-all duration-300 inline-flex items-center gap-2 text-lg group">
+          <Link to="/contact" className="bg-orange-600 hover:bg-orange-500 text-white px-6 sm:px-8 py-4 rounded font-semibold transition-all duration-300 inline-flex items-center justify-center gap-2 text-base sm:text-lg group min-h-[52px] w-full sm:w-auto">
             Contact Us
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
