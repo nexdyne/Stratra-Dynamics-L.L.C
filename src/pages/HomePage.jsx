@@ -241,7 +241,7 @@ const HomePage = () => {
             <div
               className="flex gap-6 transition-transform duration-100 ease-out"
               style={{
-                transform: `translateX(${-scrollProgress * 250}px)`,
+                transform: `translateX(${-(scrollProgress - 0.3) * 350}px)`,
           paddingLeft: '2rem',
               }}
             >
@@ -270,7 +270,7 @@ const HomePage = () => {
             <div
               className="flex gap-6 transition-transform duration-100 ease-out"
               style={{
-                transform: `translateX(${scrollProgress * 250 - 300}px)`,
+                transform: `translateX(${(scrollProgress - 0.3) * 350 - 150}px)`,
                 paddingLeft: '2rem',
               }}
             >
