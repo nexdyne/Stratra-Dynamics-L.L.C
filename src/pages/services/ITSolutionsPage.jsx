@@ -37,9 +37,9 @@ const ITSolutionsPage = () => {
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-[#F4A300]">Home</Link>
+            <Link to="/" className="hover:text-[#F4A300] py-1">Home</Link>
             <span>/</span>
-            <Link to="/" className="hover:text-[#F4A300]">Services</Link>
+            <Link to="/" className="hover:text-[#F4A300] py-1">Services</Link>
             <span>/</span>
             <span className="text-gray-800">Smart City & Government IT Solutions</span>
           </div>
@@ -47,7 +47,7 @@ const ITSolutionsPage = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 overflow-hidden">
+      <section className="relative py-10 md:py-20 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -62,13 +62,13 @@ const ITSolutionsPage = () => {
         <div className="relative z-10 max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center">
             <Monitor className="w-16 h-16 text-white mx-auto mb-6" />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Smart City & Government IT Solutions
             </h1>
             <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
               Technology management and data-driven program support with AI/ML integration and digital twin ecosystems.
             </p>
-            <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
+            <Link to="/contact" className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-4 text-base sm:text-lg min-h-[52px] w-full sm:w-auto text-center">
               Request Consultation
             </Link>
           </div>
@@ -92,7 +92,7 @@ const ITSolutionsPage = () => {
               </p>
             </div>
             
-            <div className="bg-[#f1f0ed] text-gray-800 p-8 rounded-lg">
+            <div className="bg-[#f1f0ed] text-gray-800 p-6 sm:p-8 rounded-lg">
               <h3 className="text-xl font-bold mb-4">Why Smart City IT Matters</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -118,7 +118,7 @@ const ITSolutionsPage = () => {
         <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-12">Key Capabilities</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               {/* <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <Monitor className="w-6 h-6 text-white" />
