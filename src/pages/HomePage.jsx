@@ -65,42 +65,42 @@ const HomePage = () => {
       title: "Lead Abatement & Hazardous Materials Removal",
       description: "Safe, compliant removal of lead-based paint, asbestos, mold, PCBs, and other hazardous materials from federal, commercial, and residential facilities.",
       link: "/services/lead-abatement-hazardous-materials",
-      image: "/assets/Incident-and-Compliance-Management-for-Construction.webp",
+      image: "https://images.pexels.com/photos/36553071/pexels-photo-36553071.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       icon: FlaskConical,
       title: "Environmental Consulting & Industrial Hygiene",
       description: "Comprehensive environmental surveys, air quality testing, industrial hygiene assessments, and risk evaluation by certified professionals.",
       link: "/services/environmental-consulting-industrial-hygiene",
-      image: "/assets/iot.jpg",
+      image: "https://images.pexels.com/photos/8533061/pexels-photo-8533061.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       icon: HardHat,
       title: "Construction & Renovation Management",
       description: "Owner's representation, design management, and construction oversight for renovation and new-build projects requiring environmental compliance.",
       link: "/services/construction-renovation-management",
-      image: "/assets/federal-pro.jpg",
+      image: "https://images.pexels.com/photos/2217214/pexels-photo-2217214.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       icon: Leaf,
       title: "Commissioning, Energy & Sustainability",
       description: "Smart building commissioning, energy optimization, and sustainable systems integration for government and commercial facilities.",
       link: "/services/commissioning-energy-sustainability",
-      image: "/assets/enery.jpg",
+      image: "https://images.pexels.com/photos/16586151/pexels-photo-16586151.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       icon: BarChart3,
       title: "Estimating, Scheduling & Risk Management",
       description: "Project forecasting, cost estimating, schedule management, and predictive risk assessment for complex environmental and construction projects.",
       link: "/services/estimating-scheduling-risk-management",
-      image: "/assets/est.jpg",
+      image: "https://images.pexels.com/photos/8482865/pexels-photo-8482865.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       icon: GraduationCap,
       title: "Training & Compliance Services",
       description: "HAZWOPER, Lead-Safe RRP, asbestos supervisor, and safety certification training with regulatory compliance program development.",
       link: "/services/training-compliance-services",
-      image: "/assets/perdictive-analytics.webp",
+      image: "https://images.pexels.com/photos/35082108/pexels-photo-35082108.jpeg?auto=compress&cs=tinysrgb&w=1200",
     }
   ];
 
