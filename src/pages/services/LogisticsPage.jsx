@@ -8,7 +8,7 @@ const LogisticsPage = () => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       {/* <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex justify-between items-center py-4">
             <Link to="/" className="flex items-center">
               <div className="text-2xl font-bold text-gray-800">
@@ -35,7 +35,7 @@ const LogisticsPage = () => {
 
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <Link to="/" className="hover:text-[#F4A300]">Home</Link>
             <span>/</span>
@@ -58,7 +58,7 @@ const LogisticsPage = () => {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center">
             <Truck className="w-16 h-16 text-white mx-auto mb-6" />
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -76,7 +76,7 @@ const LogisticsPage = () => {
 
       {/* What Is Section */}
       <section className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
             What Is Public Sector Logistics & Distribution?
           </h2>
@@ -119,7 +119,7 @@ const LogisticsPage = () => {
 
       {/* Key Capabilities */}
       <section className="py-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Key Capabilities</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -188,7 +188,7 @@ const LogisticsPage = () => {
 
       {/* Benefits Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Why Choose Our Logistics Solutions</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -248,7 +248,7 @@ const LogisticsPage = () => {
 
       {/* Other Services Navigation */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Explore Our Other Services
           </h2>
