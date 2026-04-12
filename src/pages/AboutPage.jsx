@@ -5,8 +5,8 @@ export default function AboutPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20 xl:py-24">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
+      <section className="bg-gray-900 text-white py-12 md:py-20 xl:py-24">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
           {/* Breadcrumb */}
           <div className="text-sm text-gray-300 mb-8">
             <Link to="/" className="hover:text-orange-500 transition">Home</Link>
@@ -15,7 +15,7 @@ export default function AboutPage() {
           </div>
 
           {/* Hero Content */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Centauri-Pro Consulting</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">About Centauri-Pro Consulting</h1>
           <p className="text-lg text-gray-300 max-w-2xl">
             Leading environmental services and construction management solutions for government and commercial clients across the Great Lakes region.
           </p>
@@ -23,9 +23,9 @@ export default function AboutPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="bg-white py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 xl:gap-16">
+      <section className="bg-white py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 xl:gap-16">
             {/* Left Column - Company Story */}
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p>
@@ -73,14 +73,14 @@ export default function AboutPage() {
         </div>
       </section>
       {/* What Sets Us Apart */}
-      <section className="bg-gray-50 py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
+      <section className="bg-gray-50 py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">What Sets Us Apart</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">What Sets Us Apart</h2>
             <p className="text-gray-600 mt-2">Specialized capabilities and credentials that drive client confidence</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
             {/* Card 1 */}
             <div className="bg-white border border-gray-200 p-6 rounded-lg hover:border-orange-500 transition">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Licensed & Certified</h3>
@@ -117,9 +117,9 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="bg-gray-900 text-white py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 xl:gap-16">
+      <section className="bg-gray-900 text-white py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 xl:gap-16">
             {/* Left Column */}
             <div>
               <h3 className="text-2xl font-bold mb-8">Our Values</h3>
@@ -158,9 +158,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-100 py-16 xl:py-20">
-        <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 xl:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Work With Us?</h2>
+      <section className="bg-gray-100 py-10 md:py-16 xl:py-20">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 xl:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Ready to Work With Us?</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's discuss how Centauri-Pro Consulting can support your environmental and construction management needs.
           </p>
