@@ -220,10 +220,7 @@ const HomePage = () => {
       </section>
 
       {/* Project Showcase - Parallax Scroll */}
-      <section ref={parallaxRef} className="relative bg-gray-950 py-12 overflow-hidden">
-        {/* Subtle background texture */}
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
-
+      <section ref={parallaxRef} className="relative bg-white py-10 overflow-hidden">
         <div className="relative z-10">
           {/* Section heading */}
           <div
@@ -234,9 +231,8 @@ const HomePage = () => {
               transform: showcaseTextVisible ? 'translateY(0)' : 'translateY(40px)',
             }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-              Built to move the industry
-              <span className="block text-orange-400">forward.</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+              Built to move the industry forward
             </h2>
           </div>
 
