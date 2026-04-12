@@ -55,8 +55,8 @@ const LeadAbatementPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gray-900 py-20 xl:py-24">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
+      <section className="bg-gray-900 py-12 md:py-20 xl:py-24">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
           <nav className="flex items-center text-sm text-gray-400 mb-10">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
             <span className="mx-2">/</span>
@@ -66,7 +66,7 @@ const LeadAbatementPage = () => {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Lead Abatement & Hazardous Materials Removal
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed">
@@ -77,11 +77,11 @@ const LeadAbatementPage = () => {
       </section>
 
       {/* Narrative Introduction */}
-      <section className="py-16 xl:py-20">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <section className="py-10 md:py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Protecting people and property from hazardous materials</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Protecting people and property from hazardous materials</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Hazardous materials in aging buildings pose serious health and regulatory risks. Lead-based paint, asbestos, mold, PCBs, and mercury require specialized expertise to identify, contain, and safely remove. Centauri-Pro delivers full-scope abatement services that keep projects on schedule while maintaining strict compliance with federal and state standards.
               </p>
@@ -127,9 +127,9 @@ const LeadAbatementPage = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Abatement & Remediation Services</h2>
+      <section className="py-10 md:py-16 bg-gray-50">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Abatement & Remediation Services</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">
             We provide end-to-end hazardous materials management, from initial assessment through final clearance and documentation.
           </p>
@@ -146,9 +146,9 @@ const LeadAbatementPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 xl:py-20">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">A disciplined, safety-first approach</h2>
+      <section className="py-10 md:py-16 xl:py-20">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">A disciplined, safety-first approach</h2>
           <p className="text-gray-600 mb-12 max-w-2xl">
             Every abatement project follows a structured lifecycle that prioritizes worker safety, regulatory compliance, and thorough documentation.
           </p>
@@ -156,7 +156,7 @@ const LeadAbatementPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, i) => (
               <div key={i} className="relative">
-                <span className="text-5xl font-bold text-gray-200 mb-4 block">{step.num}</span>
+                <span className="text-4xl sm:text-5xl font-bold text-gray-200 mb-4 block">{step.num}</span>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
               </div>
@@ -166,11 +166,11 @@ const LeadAbatementPage = () => {
       </section>
 
       {/* Sectors Served */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="py-10 md:py-16 bg-gray-900">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Sectors we serve</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Sectors we serve</h2>
               <p className="text-gray-300 leading-relaxed mb-8">
                 Our abatement teams operate across a range of facility types, delivering compliant hazardous materials management for clients with the most demanding safety and schedule requirements.
               </p>
@@ -205,9 +205,9 @@ const LeadAbatementPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-6 xl:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-10 md:py-16 bg-gray-100">
+        <div className="max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
             Ready to address hazardous materials in your facility?
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
