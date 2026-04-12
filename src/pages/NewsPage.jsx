@@ -45,7 +45,7 @@ export default function NewsPage() {
             <span className="mx-2">/</span>
             <span>News</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">News & Insights</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">News & Insights</h1>
           <p className="text-lg text-gray-300">
             Industry updates, regulatory changes, and company announcements.
           </p>
@@ -93,7 +93,7 @@ export default function NewsPage() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-orange-600 text-white px-8 py-3 rounded font-semibold hover:bg-orange-700 transition"
+            className="inline-block w-full sm:w-auto bg-orange-600 text-white px-6 sm:px-8 py-4 min-h-[48px] rounded font-semibold hover:bg-orange-700 transition text-center"
           >
             Get in Touch
           </Link>
