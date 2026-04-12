@@ -1,218 +1,104 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NewsPage = () => {
-  const newsArticles = [
+export default function NewsPage() {
+  const articles = [
     {
-      id: 1,
-      title: "Centauri Pro Announces Strategic Partnership with Southwest APEX Accelerator",
-      date: "January 8, 2024",
-      content: `Advancing key government contracting capabilities and mentor-strategic support functions for small businesses and emerging contractors.
-
-Centauri Pro Consulting has formed an innovative strategic partnership with Southwest APEX Accelerator, strengthening our commitment to building high-performing contracting partnership entities.
-
-This collaboration represents our ability to provide comprehensive support to emerging contractors while expanding our talent pipeline. Southwest APEX serves as the catalyst to bolster our commitment to building high-performance contracting networks.
-
-"This partnership reinforces our talent need for fostering growth in the government contracting marketplace," said the CEO of Southwest Pro. "By combining resources, we can eliminate barriers to entry and improve systems and client contracting performance."
-
-The partnership will focus on "Market analysis program development • Government contract bidding and support services • Field and support specifications • Compliance and regulatory guidance
-
-Southwest APEX supports the small business ecosystem in supporting small businesses required federal contracting within the emerging federal contracting niche of the technology opportunity.`
+      slug: 'epa-lead-safe-rrp-update',
+      date: 'March 2026',
+      title: 'EPA Updates Lead-Safe RRP Rule: What Contractors Need to Know',
+      excerpt: 'New regulations expand renovation, repair, and painting requirements for pre-1978 buildings. Our team breaks down the key changes and compliance implications.',
     },
     {
-      id: 2,
-      title: "AI-Driven Project Management: Centauri Pro's Innovation in Federal Construction Oversight",
-      date: "December 18, 2023",
-      content: `How artificial intelligence and automation are transforming government project delivery and compliance oversight in the federal construction sector.
-
-As federal agencies increasingly embrace digital transformation, Centauri Pro Consulting is leading the charge in AI-driven project management solutions that deliver enhanced regulatory compliance, cost effectiveness and high performance.
-
-Our AI-driven oversight delivers automated data collection including real-time scheduling, activity scoring and quality control solutions. These innovations significantly streamline construction processes while enhancing client satisfaction.
-
-Strategic features of our platform include predictive analytics that help identify cost references before they become overruns:
-
-Risk AI capabilities include : Predictive risk modeling; project scheduling; and fiscal analytics that leverage significant construction information technologies for enhanced project planning, project scheduling delivery and cost controls.
-
-The platform was built from significant state-of-the-art innovations: risk mitigation; detecting 5% improvement reduces cost risk levels as well as government modernized management methods; estimated lifecycle improvement of project innovation.
-
-Our development activity involves USA clinical and electronic access multiple categories, emerging supply programs; enhanced quality control measures.`
+      slug: 'hazwoper-certification',
+      date: 'February 2026',
+      title: 'Centauri-Pro Achieves Advanced HAZWOPER Certification',
+      excerpt: 'Our field team completes 40-hour HAZWOPER training and site supervisor certification, expanding our capabilities for federal hazardous materials response projects.',
     },
     {
-      id: 3,
-      title: "Centauri Pro Achieves Small Business Certification and OASIS+ Readiness",
-      date: "December 10, 2023",
-      content: `Company completes certification process and positions for major federal contracting opportunities with comprehensive service capabilities.
-
-Centauri Pro Consulting has achieved its anticipated small business certification, positioning the company for enhanced opportunities in federal procurement with significant growth in small business performance.
-
-The company has expanded its capabilities in government contracting operations including strategic sourcing and subcontract management including OASIS+ readiness certification preparation.
-
-"This small business certification and OASIS+ readiness speaks to our government contracting game plan positioning from strong decades of experience from successful OASIS+ operations," said company leadership.
-
-OASIS+ represents the most significant federal contracting vehicle offering billions in professional services and technical services sector opportunities.
-
-Business within technology support flow with the competitive size capabilities for contracts at the highest levels.
-
-Our certification enables access to: • Small scale contracting opportunities • Federal and large program procurement, • OASIS+ procurement capabilities • Federal agency management
-
-The company is actively pursuing USA clinical and electronic access multiple categories, emerging supply programs; special service offerings."
-
-The company plans to enhance small procurement approaches to deploy developments in value federal innovation delivery.`
+      slug: 'michigan-lead-abatement-demand',
+      date: 'January 2026',
+      title: 'Michigan Lead Abatement: Growing Demand for Certified Contractors',
+      excerpt: 'State and federal funding is driving unprecedented demand for licensed lead abatement professionals. We examine the current landscape and what it means for property owners.',
     },
     {
-      id: 4,
-      title: "Smart City Infrastructure: The Future of Government Technology Integration",
-      date: "November 15, 2023",
-      content: `Exploring how IoT sensor technology and AI manufacturing are revolutionizing government infrastructure and federal operations.
-
-As the role of smart technology grows in government infrastructure and increasing demands for efficiency, smart city technologies are essential as the solution for multi-channel government operations.
-
-Centauri Pro's Data Hub & Procurement IT Solutions service is at the forefront of these transformations, integrating IoT sensors, database management systems and AI processing functionalities.
-
-"Smart city technology has been early, quality and smart IT global modern integrated business that provide innovative management approach in these development process," commented the technology chief.
-
-Federal buildings and infrastructure systems that need to adapt to a complete digital solutions for enhanced citizen services as well as operational efficiency:
-
-Key smart city capabilities include: • IoT sensor operation for real-time monitoring • Online interconnection for population database technology • Process efficiency • Municipal and utility optimization • Transportation security systems
-
-These smart city systems technology infrastructure components provide digital transformation services in transportation, security technologies, energy efficiency, advanced public services. • Predictive facility operations • HVAC automated management
-
-Key smart city capabilities include: • IoT sensor operation for real-time monitoring • Online interconnection for population database technology • Process efficiency • Municipal and utility optimization • Transportation security systems • Public facility infrastructure • Strategic overwatch is in real estate infrastructure • Management solutions and operations
-
-Central agencies are increasingly recognizing the value of smart infrastructure will deliver new incentive services derived by service delivery-centered access to deliver smart infrastructure with real automation technology development.
-
-Many federal agencies are in data protection administration to facilitate overwatch and operations under key's vision for smart city facilities.`
+      slug: null,
+      date: 'December 2025',
+      title: 'Understanding Phase I Environmental Site Assessments',
+      excerpt: 'A practical guide to ASTM E1527-21 Phase I ESAs \u2014 what they cover, when you need one, and how to prepare for the assessment process.',
     },
     {
-      id: 5,
-      title: "AI in Government Contracting: The Future is Now",
-      date: "December 15, 2024",
-      slug: "ai-government-contracting",
-      content: `Exploring how artificial intelligence is transforming government project management and compliance oversight.
-
-The landscape of government contracting is undergoing a revolutionary transformation, driven by the rapid adoption of artificial intelligence technologies.`
+      slug: null,
+      date: 'November 2025',
+      title: 'OSHA Industrial Hygiene Standards: 2025 Update Summary',
+      excerpt: 'Key changes to OSHA permissible exposure limits and industrial hygiene monitoring requirements that affect workplace health assessments.',
     },
-    {
-      id: 6,
-      title: "Sustainable Infrastructure: Building for Tomorrow",
-      date: "December 10, 2024",
-      slug: "sustainable-infrastructure",
-      content: `How energy optimization and smart building systems are revolutionizing government facilities.
-
-As climate change concerns intensify and energy costs continue to rise, government agencies are responding with innovative approaches to building design and construction. Modern sustainable infrastructure architecture leverages emerging technologies to reduce environmental impact, improve operational efficiency, and enhance service delivery.`
-    },
-    {
-      id: 7,
-      title: "Digital Transformation in Federal Programs",
-      date: "December 5, 2024",
-      slug: "digital-transformation",
-      content: `The role of digital twins and BIM technology in modern construction project management.
-
-Federal agencies and related federal properties are undergoing a profound digital transformation, driven by the adoption of advanced technologies like Building Information Modeling (BIM) and digital twin systems. These innovations are revolutionizing how government projects are planned, executed, and monitored throughout their lifecycles.`
-    }
-  ];
-
-  const latestUpdates = [
-    "Government Construction Strategies announced new Southwest and Central Government",
-    "AI-Driven Project Management: Complex high-Performance analytics",
-    "Centauri Pro Achieves Small Business Certification",
-    "Smart City Infrastructure",
-    "Categories",
-    "AI-Driven",
-    "Quality Reports",
-    "Technology",
-    "Project Management",
-    "Technical Support"
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-orange-600">Home</Link>
-            <span>/</span>
-            <span className="text-gray-800">News</span>
+      {/* Hero Section */}
+      <section className="bg-gray-900 text-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-sm text-gray-300 mb-4">
+            <Link to="/" className="hover:text-orange-600 transition">Home</Link>
+            <span className="mx-2">/</span>
+            <span>News</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">News & Insights</h1>
+          <p className="text-lg text-gray-300">
+            Industry updates, regulatory changes, and company announcements.
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* Header */}
-      <div className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900">NEWS</h1>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="py-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* News Articles - Main Content */}
-            <div className="lg:col-span-3">
-              <div className="space-y-12">
-                {newsArticles.map((article) => (
-                  <article key={article.id} className="bg-white">
-                    {/* Article Header with Orange Background */}
-                    <div className=" text-gray-800 font-bold p-4 rounded-t-lg">
-                      <h2 className="text-xl font-bold">{article.title}</h2>
-                    </div>
-                    
-                    {/* Article Content */}
-                    <div className="border border-gray-200 border-t-0 rounded-b-lg p-6">
-                      <div className="mb-4">
-                        <span className="text-gray-600 text-sm">{article.date}</span>
-                      </div>
-                      
-                      <div className="prose prose-gray max-w-none">
-                        {article.content.split('\n\n').map((paragraph, index) => (
-                          <p key={index} className="text-gray-700 mb-4 leading-relaxed">
-                            {paragraph}
-                          </p>
-                        ))}
-                      </div>
-                      
-                      <div className="mt-6">
-                        {article.slug ? (
-                          <Link 
-                            to={`/news/${article.slug}`}
-                            className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors"
-                          >
-                            Continue Reading
-                          </Link>
-                        ) : (
-                          <button className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
-                            Continue Reading
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  </article>
-                ))}
+      {/* Articles List */}
+      <section className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          {articles.map((article, index) => (
+            <article
+              key={index}
+              className={`pb-8 mb-8 ${index !== articles.length - 1 ? 'border-b border-gray-200' : ''}`}
+            >
+              <div className="text-sm text-orange-600 font-semibold mb-2">
+                {article.date}
               </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Latest Updates</h3>
-                  <ul className="space-y-2">
-                    {latestUpdates.map((update, index) => (
-                      <li key={index} className="text-sm text-gray-700 border-b border-gray-200 pb-2">
-                        {update}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {article.title}
+              </h3>
+              <p className="text-gray-700 mb-4">
+                {article.excerpt}
+              </p>
+              {article.slug ? (
+                <Link
+                  to={`/news/${article.slug}`}
+                  className="text-orange-600 font-semibold hover:text-orange-700 transition"
+                >
+                  Read More
+                </Link>
+              ) : (
+                <span className="text-gray-400 text-sm">Full article coming soon</span>
+              )}
+            </article>
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gray-100 py-16">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Informed</h2>
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            Contact us to learn how regulatory changes may affect your facility or project.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-orange-600 text-white px-8 py-3 rounded font-semibold hover:bg-orange-700 transition"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default NewsPage;
+}
