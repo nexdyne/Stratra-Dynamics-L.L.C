@@ -480,65 +480,6 @@ const HomePage = () => {
                           <ItemIcon className="w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-semibob-6 leading-relaxed">
-                We are an environmental services and construction management firm specializing in
-                hazardous materials abatement, industrial hygiene consulting, and compliance-driven
-                project delivery for government and commercial clients.
-              </p>
-              <div className="bg-white border-l-4 border-orange-500 p-6 mb-6 rounded-r-lg shadow-sm">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Our Approach</h3>
-                <ul className="text-gray-700 space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                    EPA, OSHA, and HUD regulatory compliance on every project
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                    Certified Industrial Hygienists and licensed abatement professionals
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                    Real-time project tracking with automated compliance documentation
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                    Single-source accountability from assessment through remediation
-                  </li>
-                </ul>
-              </div>
-              <Link to="/about" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
-                Learn more about us
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Why Choose Us</h3>
-                <div className="space-y-5">
-                  {[
-                    {
-                      icon: Shield,
-                      title: "Licensed & Certified",
-                      desc: "EPA Lead-Safe certified, HAZWOPER trained, CIH-backed assessments"
-                    },
-                    {
-                      icon: HardHat,
-                      title: "Full-Service Capability",
-                      desc: "Assessment, abatement, construction, and commissioning under one roof"
-                    },
-                    {
-                      icon: BarChart3,
-                      title: "Compliance Excellence",
-                      desc: "NIST-aligned processes with automated audit readiness and documentation"
-                    }
-                  ].map((item, i) => {
-                    const ItemIcon = item.icon;
-                    return (
-                      <div key={i} className="flex items-start gap-4">
-                        <div className="bg-orange-50 text-orange-600 p-2.5 rounded-lg flex-shrink-0">
-                          <ItemIcon className="w-5 h-5" />
-                        </div>
-                        <div>
                           <h4 className="font-semibold text-gray-900">{item.title}</h4>
                           <p className="text-gray-600 text-sm">{item.desc}</p>
                         </div>
