@@ -97,11 +97,25 @@ const HomePage = () => {
     },
     {
       icon: GraduationCap,
-      title: "Training & Compliance Services",      description: "HAZWOPER, Lead-Safe RRP, asbestos supervisor, and safety certification training with regulatory compliance program development.",
+      title: "Training & Compliance Services",
+      description: "HAZWOPER, Lead-Safe RRP, asbestos supervisor, and safety certification training with regulatory compliance program development.",
       link: "/services/training-compliance-services",
       image: "https://images.pexels.com/photos/35082108/pexels-photo-35082108.jpeg?auto=compress&cs=tinysrgb&w=1200",
     }
-  ];&cs=tinysrgb&w=1200", title: "Municipal Water Treatment", category: "Environmental" },
+  ];
+
+  // Project showcase data
+  const projectsTop = [
+    { image: "https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Federal Building Remediation", category: "Lead Abatement" },
+    { image: "https://images.pexels.com/photos/8961004/pexels-photo-8961004.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Industrial Compliance Overhaul", category: "Environmental Consulting" },
+    { image: "https://images.pexels.com/photos/8292802/pexels-photo-8292802.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Smart Monitoring Systems", category: "Industrial Hygiene" },
+    { image: "https://images.pexels.com/photos/10202865/pexels-photo-10202865.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Government Facility Renovation", category: "Construction Management" },
+    { image: "https://images.pexels.com/photos/8293699/pexels-photo-8293699.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Energy Systems Commissioning", category: "Sustainability" },
+  ];
+  const projectsBottom = [
+    { image: "https://images.pexels.com/photos/3862628/pexels-photo-3862628.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Cost Forecasting Platform", category: "Risk Management" },
+    { image: "https://images.pexels.com/photos/7937365/pexels-photo-7937365.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Predictive Analytics Integration", category: "Scheduling" },
+    { image: "https://images.pexels.com/photos/10274179/pexels-photo-10274179.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Municipal Water Treatment", category: "Environmental" },
     { image: "https://images.pexels.com/photos/8960942/pexels-photo-8960942.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "HAZWOPER Training Campus", category: "Training" },
     { image: "https://images.pexels.com/photos/8293680/pexels-photo-8293680.jpeg?auto=compress&cs=tinysrgb&w=1200", title: "Federal Compliance Audit", category: "Compliance" },
   ];
@@ -219,59 +233,6 @@ const HomePage = () => {
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               Safe environments. Smart construction.
-            </h2>
-          </div>
-
-          {/* Top row - scrolls LEFT as user scrolls down */}
-          <div className="mb-6 overflow-hidden">
-            <div
-              className="flex gap-6 transition-transform duration-100 ease-out"
-              style={{
-                transform: `translateX(${-(scrollProgress - 0.3) * (window.innerWidth < 640 ? 150 : 350)}px)`,
-          paddingLeft: '2rem',
-              }}
-            >
-              {projectsTop.map((project, i) => (
-                <div
-                  key={i}
-                  className="relative flex-shrink-0 w-[240px] sm:w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[160px] sm:h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
-                >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500">
-                    <span className="text-orange-400 text-xs font-semibold tracking-wider uppercase mb-1 block opacity-70 group-hover:opacity-100 transition-opacity duration-500">{project.category}</span>
-                    <h3 className="text-white text-lg font-bold">{project.title}</h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom row - scrolls RIGHT as user scrolls down */}
-          <div className="-mt-4 overflow-hidden">
-            <div
-              className="flex gap-6 transition-transform duration-100 ease-out"
-              style={{
-                transform: `translateX(${(scrollProgress - 0.3) * (window.innerWidth < 640 ? 150 : 350) - (window.innerWidth < 640 ? 60 : 150)}px)`,
-                paddingLeft: '2rem',
-              }}
-            >
-              {projectsBottom.map((project, i) => (
-                <div
-                  key={i}
-                  className="relative flex-shrink-0 w-[240px] sm:w-[340px] md:w-[420px] lg:w-[480px] xl:w-[560px] h-[160px] sm:h-[200px] md:h-[240px] xl:h-[280px] rounded-xl overflow-hidden group cursor-pointer"
-                >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transfor construction.
             </h2>
           </div>
 
